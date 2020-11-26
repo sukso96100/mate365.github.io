@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 | CLOUDMATE Tech</title>
+
+<meta name="keywords" content="Azure Devops, AKS, Devops, Monitoring" />
+<meta name="description" content="Azure Devops 프로젝트 위치
+Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된 어플리케이션을 배포하는 방법은 여러가지 방법이 있다. 통합된 Devops 툴을 사용하기 전에는 Jenkins와 같은 빌드서버에서 Ansible과 같은 배포툴로 서버에 배포했다. 그러기 위해서는 어플리케이션에 따른 빌드환경과 배포환경을 직접 셋팅이 필요했다. 통합된 Devops와 Cloud Service는 이러한 작업을 상당히 줄여준다.
+아래는 전체 아키텍쳐이다. 상당히 통합되어 있어보인다.  여러개의 어플리케이션 구현을 위해 Mysql을 직접 배포해보았다.
+ 2편 구현 목표  Artifact 배포 Manifest 파일을 통해 Kubernetes에 Application을 배포.">
+<meta name="author" content="
+  박영진&nbsp;·&nbsp;
+  
+">
+<link rel="canonical" href="https://cloudmatelabs.github.io/2020/07/22/azuredevopsonaks2/" />
+<link href="https://cloudmatelabs.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+<link href="/assets/css/style.css" rel="stylesheet"/>
+
+<link rel="icon" href="https://cloudmatelabs.github.io/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cloudmatelabs.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cloudmatelabs.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://cloudmatelabs.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://cloudmatelabs.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.78.2" />
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://cloudmatelabs.github.io" accesskey="h">
+                <img src="/assets/images/CMLOGO_SHADOW.png" alt="logo" aria-label="logo"
+                    height="50"> </a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://cloudmatelabs.github.io/archives/">
+                    <span>
+                        Archives
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://cloudmatelabs.github.io/tags/">
+                    <span>
+                        Tags
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.wanted.co.kr/company/14239">
+                    <span>
+                        Careers
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://cloudmt.co.kr">
+                    <span>
+                        cloudmt.co.kr
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포
+    </h1>
+    <div class="post-meta">
+
+2020. 07. 22.&nbsp;·&nbsp;
+  <a href="https://cloudmatelabs.github.io/authors/youngjin-park/">박영진</a>&nbsp;·&nbsp;
+  
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<p><a href="https://dev.azure.com/TestingProjectCM/DevopsEverything">Azure Devops 프로젝트 위치</a></p>
+<h1 id="azure-devops와-aks배포-관리-2편---docker-이미지의-aks-배포">Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포<a hidden class="anchor" aria-hidden="true" href="#azure-devops와-aks배포-관리-2편---docker-이미지의-aks-배포">#</a></h1>
+<p>빌드된 어플리케이션을 배포하는 방법은 여러가지 방법이 있다. 통합된 Devops 툴을 사용하기 전에는 Jenkins와 같은 빌드서버에서 Ansible과 같은 배포툴로 서버에 배포했다. 그러기 위해서는 어플리케이션에 따른 빌드환경과 배포환경을 직접 셋팅이 필요했다. 통합된 Devops와 Cloud Service는 이러한 작업을 상당히 줄여준다.</p>
+<p>아래는 전체 아키텍쳐이다. 상당히 통합되어 있어보인다.
+
+<img src="/files/blog/2020-07-22/%ec%95%84%ed%82%a4%ed%85%8d%ec%b3%90.png">
+</p>
+<blockquote>
+<p>여러개의 어플리케이션 구현을 위해 Mysql을 직접 배포해보았다.</p>
+</blockquote>
+<h1 id="2편-구현-목표">2편 구현 목표<a hidden class="anchor" aria-hidden="true" href="#2편-구현-목표">#</a></h1>
+<ol>
+<li>Artifact 배포</li>
+<li>Manifest 파일을 통해 Kubernetes에 Application을 배포.</li>
+<li>모니터링 Kubernetes Prometheus, Grafana 배포.</li>
+<li>ARM template으로 IaC 구현.</li>
+</ol>
+<h2 id="kubernetes-배포">Kubernetes 배포<a hidden class="anchor" aria-hidden="true" href="#kubernetes-배포">#</a></h2>
+<p>1편에서 어플리케이션의 도커 이미지 생성까지 구현했다. 그리고 Kubernetes는 컨테이너 기반 어플리케이션을 관리한다고 했다. 따라서, 빌드된 도커 이미지를 기준으로 Manifest 작성으로 Kubernetes에 어플리케이션을 배포할 수 있다. 작성된 Manifest를 배포 파이프라인에서 사용하도록 Artifact에 저장하고, Kubernetes에 배포해보자.</p>
+<blockquote>
+<p><strong>Artifact?</strong>
+소프트웨어 개발을 진행하면서 생성되는 다양한 산출물을 의미하며, 각종 설계문서, 소스코드, 라이브러리 등 이 있다.</p>
+</blockquote>
+<h3 id="kubernetes-리소스-생성">Kubernetes 리소스 생성<a hidden class="anchor" aria-hidden="true" href="#kubernetes-리소스-생성">#</a></h3>
+<p>Azure Shell에서 AKS를 생성하자.</p>
+<pre><code>ACR_NAME=CMACR            # ACR 이름 변수 지정
+RESOURCE_GROUP=CM_Devops  # 리소스 그룹 지정
+REGION_NAME=koreacentral  # AKS 리전 지정
+AKS_NAME = aksclusterdevops
+
+# Kubernetes 최신버전(preview 제외)
+VERSION=$(az aks get-versions \
+    --location $REGION_NAME \
+    --query 'orchestrators[?!isPreview] | [-1].orchestratorVersion' \
+    --output tsv)
+
+# 예제환경에서는 1개의 노드와 가장 작은 사이즈의 VM을 사용
+# attack-acr을 통해 1편에서 만든 ACR 권한 부여
+az aks create \
+--resource-group $RESOURCE_GROUP \
+--name $AKS_NAME \
+--location $REGION_NAME \
+--kubernetes-version $VERSION \
+--generate-ssh-keys \
+--node-vm-size Standard_B2s \
+--node-count 1 \
+--attach-acr $ACR_NAME
+
+</code></pre><h3 id="manifest-생성">Manifest 생성.<a hidden class="anchor" aria-hidden="true" href="#manifest-생성">#</a></h3>
+<p>Yaml이나 Json형식으로 Kubernetes가 유지할 객체의 원하는 상태를 지정한다. pod, replica set, configmap, secret, deployment 등과 같은 리소스를 Manifest를 통해 생성해보자. 예제 Manifests는 <a href="https://dev.azure.com/TestingProjectCM/_git/DevopsEverything?path=%2FManifests">&gt; Manifest 위치</a> 를 참고하자.</p>
+<p>기존 Docker image를 Kubernetes 환경에 올리기 위해서는 Deployment, Service, Config 등을 고려해야한다. Config 부분은 예를들면 Database 접속정보, 어플리케이션의 Config, Docker pull을 위한 인증정보 등이 있다. 이러한 정보는 Secret이나 configmap을 통해 배포할 수 있다. 이 부분까지 Manifest에 포함 시킬 예정이다.</p>
+<ul>
+<li>
+<p>Set Deployment <a href="https://dev.azure.com/TestingProjectCM/_git/DevopsEverything?path=%2FManifests%2Fapp-deployment.yaml">&gt; 위치</a></p>
+<pre><code># MYSQL + PV  Deployment
+apiVersion: &quot;apps/v1&quot; # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+name: simpleapp-mysql
+labels:
+    app: simpleapp
+spec:
+selector:
+    matchLabels:
+    app: simpleapp
+    tier: mysql
+strategy:
+    type: Recreate
+template:
+    metadata:
+    labels:
+        app: simpleapp
+        tier: mysql
+    spec:
+    containers:
+    - image: mysql:5.7
+        name: mysql
+        args:
+        - &quot;--ignore-db-dir=lost+found&quot;
+        env:
+        - name: MYSQL_DATABASE
+        value: simpleapp
+        - name: MYSQL_USER
+        value: user
+        - name: MYSQL_PASSWORD      # Secret 값 사용
+        valueFrom:
+            secretKeyRef:
+            name: mysql-secret
+            key: password
+        - name: MYSQL_PORT
+        value: &quot;3306&quot;
+        - name: MYSQL_ROOT_PASSWORD     # Secret 값 사용
+        valueFrom:
+            secretKeyRef:
+            name: mysql-secret
+            key: password
+        ports:
+        - containerPort: 3306
+        name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+        mountPath: /var/lib/mysql
+    volumes:
+    - name: mysql-persistent-storage
+        persistentVolumeClaim:
+        claimName: mysql-pv-claim
+  ---
+  # 예제 어플리케이션 Deployment.
+  apiVersion: &quot;apps/v1&quot; # for versions before 1.9.0 use apps/v1beta2
+  kind: Deployment
+  metadata:
+  name: simpleapp
+  labels:
+      app: simpleapp
+  spec:
+  selector:
+      matchLabels:
+      app: simpleapp
+      tier: frontend
+  strategy:
+      type: Recreate
+  template:
+      metadata:
+      labels:
+          app: simpleapp
+          tier: frontend
+      spec:
+      containers:
+      # 예제 어플리케이션 - Django
+      - image: acrdevopse.azurecr.io/simple-app:latest
+          name: simpleapp
+          env:
+          - name: DJANGO_SETTINGS_MODULE
+          value: simpleapp.settings.production
+          - name: MYSQL_DATABASE
+          value: simpleapp
+          - name: MYSQL_USER
+          value: user
+          - name: MYSQL_PASSWORD      # Secret 값 사용
+          valueFrom:
+              secretKeyRef:
+              name: mysql-secret
+              key: password
+          - name: MYSQL_PORT
+          value: &quot;3306&quot;
+          - name: MYSQL_HOST
+          value: simpleapp-mysql.simple-app
+          - name: MYSQL_ROOT_PASSWORD     # Secret 값 사용
+          valueFrom:
+              secretKeyRef:
+              name: mysql-secret
+              key: password
+          ports:
+          - containerPort: 8000
+          name: simpleapp
+          volumeMounts: # django의 staticfiles들을 nginx와 공유
+          - name: staticfiles
+          mountPath: /staticfiles
+      # nginx
+      - image: nginx
+          name: simpleapp-nginx
+          ports:
+          - containerPort: 80
+          volumeMounts: # django의 staticfiles들을 nginx와 공유
+          - name: staticfiles
+          mountPath: /staticfiles
+          - mountPath: /etc/nginx/conf.d
+          name: nginx-conf
+          readOnly: true
+      volumes: # django의 staticfiles들을 nginx와 공유
+          - name: staticfiles
+          emptyDir: {}
+          - name: nginx-conf
+          configMap:
+              name: nginx-conf
+
+</code></pre></li>
+<li>
+<p>Set Service <a href="https://dev.azure.com/TestingProjectCM/_git/DevopsEverything?path=%2FManifests%2Fapp-service.yaml">&gt; 위치</a></p>
+<pre><code># 예제 어플리케이션 Service
+# MYSQL
+apiVersion: v1
+kind: Service
+metadata:
+  name: simpleapp-mysql
+  labels:
+    app: simpleapp
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: simpleapp
+    tier: mysql
+  clusterIP: None
+--- # MYSQL PVC
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+  labels:
+    app: simpleapp
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+--- # Django 어플리케이션 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: simpleapp
+  labels:
+    app: simpleapp
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: simpleapp
+    tier: frontend
+  type: LoadBalancer
+</code></pre></li>
+<li>
+<p>Set Configmap - nginx config <a href="https://dev.azure.com/TestingProjectCM/_git/DevopsEverything?path=%2FManifests%2Fdefault.conf">(default.conf)</a></p>
+<pre><code>upstream website {
+  server 127.0.0.1:8000;
+}
+
+server {
+
+  location /static/ {
+    autoindex on;
+    alias /staticfiles/;
+  }
+
+  location / {
+    proxy_pass http://website/;
+    proxy_read_timeout 60;
+    proxy_connect_timeout 60;
+    proxy_send_timeout 60;
+  }
+
+  listen 80;
+  server_name localhost;
+}
+</code></pre></li>
+</ul>
+<h2 id="artifact-배포">Artifact 배포<a hidden class="anchor" aria-hidden="true" href="#artifact-배포">#</a></h2>
+<p>작성된 Manifest를 Release 파이프라인에서 사용하기위해 Artifact에 저장해야한다. Build Pipeline에서 Git에 저장된 Manifest를 Artifact로 보내는 작업을 추가한다. 준비한 Manifest를 프로젝트의 특정 위치에 업로드 후 아래와 같이 Artifact로 drop 한다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-15-10-32-31.png">
+<br>
+
+<img src="/files/blog/2020-07-22/2020-07-15-10-33-13.png">
+</p>
+<h2 id="release-파이프라인">Release 파이프라인<a hidden class="anchor" aria-hidden="true" href="#release-파이프라인">#</a></h2>
+<p>배포한 AKS, Artifact를 통해 어플리케이션을 Kubernetes환경에 올릴 차례이다. Release 파이프라인에 아래와 같이 설정을 배포하기만 하면된다.</p>
+<h3 id="apply-secret">apply secret<a hidden class="anchor" aria-hidden="true" href="#apply-secret">#</a></h3>
+<p>어플리케이션 배포시 <code>Keyvault</code>에서 관리되는 <code>환경변수</code>들을 Kubernetes <code>Secret</code>으로 배포할 수 있다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-20-09-32-37.png">
+</p>
+<h3 id="apply-imagepullsecret">apply imagepullsecret<a hidden class="anchor" aria-hidden="true" href="#apply-imagepullsecret">#</a></h3>
+<p>ACR에서 Pull 하기위한 인증을 위해 <code>Imagepullsecret</code>을 설정하자.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-20-09-41-25.png">
+</p>
+<h3 id="apply-configmap">apply configmap<a hidden class="anchor" aria-hidden="true" href="#apply-configmap">#</a></h3>
+<p><code>configmap</code>은 데이터를 저장하는데 사용하는 API오브젝트이다. 파일을 통한 저장이 가능하다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-20-09-45-23.png">
+</p>
+<h3 id="apply-deployment">apply deployment<a hidden class="anchor" aria-hidden="true" href="#apply-deployment">#</a></h3>
+<p>Artifact에 저장한 yaml을 경로로 deployment를 설정하고, Deploy를 해준다. <code>ImagePullSecret</code>은 위에서 설정한 값 그대로 써준다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-20-09-47-14.png">
+</p>
+<h3 id="apply-service">apply service<a hidden class="anchor" aria-hidden="true" href="#apply-service">#</a></h3>
+<p>위처럼 Service도 설정해준다.
+
+<img src="/files/blog/2020-07-22/2020-07-20-09-57-15.png">
+</p>
+<h3 id="성공">성공<a hidden class="anchor" aria-hidden="true" href="#성공">#</a></h3>
+<p>배포가 성공되면 아래와 같이 <code>Azure shell</code>에서 명령어를 통해 목록을 볼 수있다. 실패시 파이프라인의 로그를 보고 슈팅을 하도록하자.
+
+<img src="/files/blog/2020-07-22/2020-07-10-13-55-58.png">
+</p>
+<h2 id="모니터링">모니터링<a hidden class="anchor" aria-hidden="true" href="#모니터링">#</a></h2>
+<h3 id="helm-chart">Helm Chart<a hidden class="anchor" aria-hidden="true" href="#helm-chart">#</a></h3>
+<p><code>Helm</code>이란, 쿠버네티스를 패키지로 해서 관리해주는 것으로 Python의 pip, Node.js의 npm의 역할로 보면된다. <code>Helm Chart</code>란 패키지 포멧으로 쿠버네티스를 설명하는 파일의 집합이라고 볼 수 있다.</p>
+<p>모니터링 도구로써 Prometheus와 대시보드 Grafana를 함께 많이 사용하고 있다. Helm Chart의 실습을 통해 모니터링 구성을 해보았다. Azure Shell을 통해 우선 배포 테스트를 해보았으며, 추후 배포 파이프라인에 추가해볼 예정이다.</p>
+<ul>
+<li>Prometheus 배포</li>
+</ul>
+<pre><code>kubectl create namespace monitoring
+
+helm search repo prometheus
+
+helm install monitoring stable/prometheus
+
+</code></pre><ul>
+<li>Grafana 배포</li>
+</ul>
+<pre><code>helm install prometheus stable/prometheus -n monitoring
+
+helm install grafana stable/grafana --set persistence.enabled=true --set service.type=Loadbalancer --set persistence.size=8Gi --namespace monitoring
+
+</code></pre><p>위 명령어를 통해 기본 설정으로 배포해주었다. 그 다음 <code>kubectl get service -n monitoring</code> 명령어를 통해 Grafana IP로 접속해서, 대시보드를 Import 해보자.</p>
+<p>
+<img src="/files/blog/2020-07-22/2020-07-21-15-01-00.png">
+</p>
+<ul>
+<li>위 스크린샷처럼 접속 후 왼쪽에 있는 <code>+</code> 메뉴에서 <code>Import</code>로 들어간다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-21-15-02-29.png">
+</li>
+<li>위 칸에 <code>6417</code>를 적으면 아래 스크린샷처럼 나온다. <a href="https://grafana.com/grafana/dashboards/6417">Grafana Labs 참조</a><br>
+
+<img src="/files/blog/2020-07-22/2020-07-21-15-03-21.png">
+</li>
+<li>Import를 하고 생성한 대시보드를 띄우면 아래와 같이 나온다.<br>
+
+<img src="/files/blog/2020-07-22/2020-07-21-15-04-42.png">
+</li>
+</ul>
+<p>이렇게 쉬운 셋팅으로 쿠버네티스의 인프라에 대해 모니터링을 할 수있게 되었다. 필요한 Metric을 설정하고 alert 설정도 가능하다. 자세한 사용방법은 넘어가겠다.</p>
+<h2 id="iac-infrastructure-as-code---azure-arm-template">IaC (Infrastructure as Code) - Azure ARM Template<a hidden class="anchor" aria-hidden="true" href="#iac-infrastructure-as-code---azure-arm-template">#</a></h2>
+<p>사실 이 포스팅의 의도는, ARM Template으로 AKS, ACR을 자동 배포 후 어플리케이션을 올려보기 위함이었다. 하지만 구현 중 많은 어려움이 존재해 ARM template를 통한 적절한 IaC방법을 찾지 못했다.</p>
+<blockquote>
+<p><strong>ARM Template?</strong><br>
+Azure resource를 코드로써 배포하기위한, 인프라 및 구성을 정의하는 JSON 파일이다. 이러한 선언적 배포를 통해 일관적인 리소스를 오케스트레이션 할 수 있다.</p>
+</blockquote>
+<ul>
+<li>ARM template 배포시, Azure Devops에서 Connection을 가지고 오기가 힘들다.
+<ul>
+<li>Azure Devops에서는 Service간 connection을 한번의 설정만으로 관리해준다.</li>
+<li>
+<img src="/files/blog/2020-07-22/2020-07-20-10-10-23.png">
+</li>
+</ul>
+</li>
+<li>ACR과의 Pull권한 연결
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/azure-docs/issues/39508">Github Issue</a> 를 보면 이 방법은 전에 이미 논의했던 흔적을 볼 수있고, 불가능하다라고 적혀있다.</li>
+<li>그래서 빌드파이프라인에서 ARM template이 아닌, Azure Cli의 명령어를 통해 배포해보았다. (Attach가능) 하지만, 위에서 말한 Service connection문제가 있어 어려웠다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="정리">정리<a hidden class="anchor" aria-hidden="true" href="#정리">#</a></h2>
+<p><code>Azure</code> 서비스를 통해 인프라를 구성하고 <code>Azure Devops</code>를 통해 어플리케이션을 도커화하고 <code>Manifest</code>로 <code>Azure Kubernetes Service</code>에 서비스를 배포해 보았고 동시에 모니터링 서비스까지 구축해보았다. <code>Azure Devops</code>에서 인프라 구성 자동화까지는 어려운점이 있었지만, 간단한 명령어만으로 <code>Kubernetes Cluster</code> 생성이 가능했다.</p>
+<p>이렇게 만들어진 <code>Kubernetes Cluster</code>위에 컨테이너화된 <code>마이크로서비스</code>들은 <code>Manifest</code>만으로 배포하면서 개발주기가 엄청나게 향상될것을 기대할수있다. 초기 도입은 힘들겠지만 엄청나게 큰 서비스를 개발하기에는 <code>Kubernetes</code>는 정말 매력적인것같다.</p>
+
+</div>
+  <div class="post-content">
+      <hr/>
+  <div style="display: flex; flex-direction: row; margin: 10px;">
+    <div style="background: url(/files/authors/%eb%b0%95%ec%98%81%ec%a7%84.jpg) no-repeat center; 
+        background-size: cover; width: 80px; height: 80px; 
+        border-radius: 100%;">
+    </div>
+      <div style="margin-left: 10px; padding-top: 5px;">
+        <strong>박영진</strong>
+        <p>
+            <a href="https://cloudmatelabs.github.io/authors/youngjin-park/">저자의 글 더 보기.</a>
+        </p>
+      </div>
+  </div>
+  
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://cloudmatelabs.github.io/tags/azure-devops">Azure Devops</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/aks">AKS</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/devops">Devops</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/monitoring">Monitoring</a></li>
+    </ul>
+
+
+
+
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on twitter"
+        href="https://twitter.com/intent/tweet/?text=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f&amp;hashtags=AzureDevops%2cAKS%2cDevops%2cMonitoring">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f&amp;title=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac&amp;summary=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac&amp;source=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f&title=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on whatsapp"
+        href="https://api.whatsapp.com/send?text=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac%20-%20https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 on telegram"
+        href="https://telegram.me/share/url?text=Azure%20Devops%ec%99%80%20AKS%eb%b0%b0%ed%8f%ac%20%ea%b4%80%eb%a6%ac%202%ed%8e%b8%20-%20Docker%20%ec%9d%b4%eb%af%b8%ec%a7%80%ec%9d%98%20AKS%20%eb%b0%b0%ed%8f%ac&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f07%2f22%2fazuredevopsonaks2%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2020 <a href="https://cloudmatelabs.github.io">CLOUDMATE Tech</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://cloudmatelabs.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

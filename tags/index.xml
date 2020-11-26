@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on CLOUDMATE Tech</title>
+    <link>https://cloudmatelabs.github.io/tags/</link>
+    <description>Recent content in Tags on CLOUDMATE Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon Web Services</title>
+      <link>https://cloudmatelabs.github.io/tags/amazon-web-services/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/amazon-web-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>https://cloudmatelabs.github.io/tags/aws/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://cloudmatelabs.github.io/tags/cloud/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DB Migration</title>
+      <link>https://cloudmatelabs.github.io/tags/db-migration/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/db-migration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DMS</title>
+      <link>https://cloudmatelabs.github.io/tags/dms/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/dms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EC2</title>
+      <link>https://cloudmatelabs.github.io/tags/ec2/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/ec2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://cloudmatelabs.github.io/tags/mysql/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On-premise</title>
+      <link>https://cloudmatelabs.github.io/tags/on-premise/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/on-premise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://cloudmatelabs.github.io/tags/oracle/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SCT</title>
+      <link>https://cloudmatelabs.github.io/tags/sct/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/sct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>App Service</title>
+      <link>https://cloudmatelabs.github.io/tags/app-service/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/app-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://cloudmatelabs.github.io/tags/azure/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Devops</title>
+      <link>https://cloudmatelabs.github.io/tags/azure-devops/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/azure-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft Azure</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft-azure/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft-azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev Test Labs</title>
+      <link>https://cloudmatelabs.github.io/tags/dev-test-labs/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/dev-test-labs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://cloudmatelabs.github.io/tags/data-science/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://cloudmatelabs.github.io/tags/machine-learning/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://cloudmatelabs.github.io/tags/devops/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IoT</title>
+      <link>https://cloudmatelabs.github.io/tags/iot/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://cloudmatelabs.github.io/tags/architecture/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AKS</title>
+      <link>https://cloudmatelabs.github.io/tags/aks/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/aks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://cloudmatelabs.github.io/tags/monitoring/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVO</title>
+      <link>https://cloudmatelabs.github.io/tags/cvo/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/cvo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NetApp</title>
+      <link>https://cloudmatelabs.github.io/tags/netapp/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/netapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logic App</title>
+      <link>https://cloudmatelabs.github.io/tags/logic-app/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/logic-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft-365/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft-365/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microsoft teams</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft-teams/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft-teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Office 365</title>
+      <link>https://cloudmatelabs.github.io/tags/office-365/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/office-365/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teams</title>
+      <link>https://cloudmatelabs.github.io/tags/teams/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Cloudfront</title>
+      <link>https://cloudmatelabs.github.io/tags/aws-cloudfront/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/aws-cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure CDN</title>
+      <link>https://cloudmatelabs.github.io/tags/azure-cdn/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/azure-cdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDN</title>
+      <link>https://cloudmatelabs.github.io/tags/cdn/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/cdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codespace</title>
+      <link>https://cloudmatelabs.github.io/tags/codespace/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/codespace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Studio</title>
+      <link>https://cloudmatelabs.github.io/tags/visual-studio/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/visual-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VScode</title>
+      <link>https://cloudmatelabs.github.io/tags/vscode/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCodespace</title>
+      <link>https://cloudmatelabs.github.io/tags/vscodespace/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vscodespace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSonline</title>
+      <link>https://cloudmatelabs.github.io/tags/vsonline/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vsonline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Active Directory</title>
+      <link>https://cloudmatelabs.github.io/tags/azure-active-directory/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/azure-active-directory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure AD</title>
+      <link>https://cloudmatelabs.github.io/tags/azure-ad/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/azure-ad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>G Suite</title>
+      <link>https://cloudmatelabs.github.io/tags/g-suite/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/g-suite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Access Package</title>
+      <link>https://cloudmatelabs.github.io/tags/access-package/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/access-package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compliance Center</title>
+      <link>https://cloudmatelabs.github.io/tags/compliance-center/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/compliance-center/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compliance Score</title>
+      <link>https://cloudmatelabs.github.io/tags/compliance-score/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/compliance-score/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Entitlement management</title>
+      <link>https://cloudmatelabs.github.io/tags/entitlement-management/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/entitlement-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Provisioning</title>
+      <link>https://cloudmatelabs.github.io/tags/provisioning/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/provisioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sync</title>
+      <link>https://cloudmatelabs.github.io/tags/sync/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ignite 2019</title>
+      <link>https://cloudmatelabs.github.io/tags/ignite-2019/</link>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/ignite-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft Ignite</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft-ignite/</link>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft-ignite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft Ignite 2019</title>
+      <link>https://cloudmatelabs.github.io/tags/microsoft-ignite-2019/</link>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/microsoft-ignite-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>후기</title>
+      <link>https://cloudmatelabs.github.io/tags/%ED%9B%84%EA%B8%B0/</link>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/%ED%9B%84%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Fabric</title>
+      <link>https://cloudmatelabs.github.io/tags/data-fabric/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/data-fabric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GCP</title>
+      <link>https://cloudmatelabs.github.io/tags/gcp/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NetApp Insight</title>
+      <link>https://cloudmatelabs.github.io/tags/netapp-insight/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/netapp-insight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NetApp Insight 2019</title>
+      <link>https://cloudmatelabs.github.io/tags/netapp-insight-2019/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/netapp-insight-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service Fabric</title>
+      <link>https://cloudmatelabs.github.io/tags/service-fabric/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/service-fabric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tip</title>
+      <link>https://cloudmatelabs.github.io/tags/tip/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/tip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hands on Lab</title>
+      <link>https://cloudmatelabs.github.io/tags/hands-on-lab/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/hands-on-lab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HOL</title>
+      <link>https://cloudmatelabs.github.io/tags/hol/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/hol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peering</title>
+      <link>https://cloudmatelabs.github.io/tags/peering/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/peering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://cloudmatelabs.github.io/tags/terraform/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VGW</title>
+      <link>https://cloudmatelabs.github.io/tags/vgw/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vgw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vNet</title>
+      <link>https://cloudmatelabs.github.io/tags/vnet/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPC</title>
+      <link>https://cloudmatelabs.github.io/tags/vpc/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>https://cloudmatelabs.github.io/tags/vpn/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

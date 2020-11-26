@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>Logic App을 이용하여 Website 모니터링 하기 | CLOUDMATE Tech</title>
+
+<meta name="keywords" content="Microsoft, Microsoft Azure, Cloud, Azure, logic App, Microsoft 365, Office 365, teams, microsoft teams" />
+<meta name="description" content="주저리주저리 웹사이트가 죽었다. 모니터링을 별도로 할 만큼 중요한 서비스는 아니었지만, 이대로 두다간 우리가 멍청이가 될 것 같아 모니터링을 설정하기로 했다. 우선 대응은 휴먼 드리븐으로 결정! 대응까지 자동화 하기엔 아직 이 사이트의 경험치가 부족하다고 판단되었기 때문이다. 그럼 어디 한번 모니터링을 걸어볼까? 그런데 문제가 생겼다. 이 사이트는 돈을 1원도 벌어오지 못하고 오히려 돈을 써서 유지해야 하는 사이트다 보니 유료 모니터링이 부담스러웠다. 그래서 예~~~전 Global Azure BootCamp 2017때 김영재님께서 공유해주셨던 Logic App으로 웹사이트 모니터링 하기를 설정하기로 했다.">
+<meta name="author" content="
+  김세준&nbsp;·&nbsp;
+  
+">
+<link rel="canonical" href="https://cloudmatelabs.github.io/2020/06/16/website_monitoring_with_logicapp/" />
+<link href="https://cloudmatelabs.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+<link href="/assets/css/style.css" rel="stylesheet"/>
+
+<link rel="icon" href="https://cloudmatelabs.github.io/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cloudmatelabs.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cloudmatelabs.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://cloudmatelabs.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://cloudmatelabs.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.78.2" />
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://cloudmatelabs.github.io" accesskey="h">
+                <img src="/assets/images/CMLOGO_SHADOW.png" alt="logo" aria-label="logo"
+                    height="50"> </a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://cloudmatelabs.github.io/archives/">
+                    <span>
+                        Archives
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://cloudmatelabs.github.io/tags/">
+                    <span>
+                        Tags
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.wanted.co.kr/company/14239">
+                    <span>
+                        Careers
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://cloudmt.co.kr">
+                    <span>
+                        cloudmt.co.kr
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Logic App을 이용하여 Website 모니터링 하기
+    </h1>
+    <div class="post-meta">
+
+2020. 06. 16.&nbsp;·&nbsp;
+  <a href="https://cloudmatelabs.github.io/authors/sejun-kim/">김세준</a>&nbsp;·&nbsp;
+  
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="주저리주저리">주저리주저리<a hidden class="anchor" aria-hidden="true" href="#주저리주저리">#</a></h2>
+<p>웹사이트가 죽었다.
+모니터링을 별도로 할 만큼 중요한 서비스는 아니었지만, 이대로 두다간 우리가 멍청이가 될 것 같아 모니터링을 설정하기로 했다. 우선 대응은 휴먼 드리븐으로 결정! 대응까지 자동화 하기엔 아직 이 사이트의 경험치가 부족하다고 판단되었기 때문이다. 그럼 어디 한번 모니터링을 걸어볼까?
+그런데 문제가 생겼다. 이 사이트는 돈을 1원도 벌어오지 못하고 오히려 돈을 써서 유지해야 하는 사이트다 보니 유료 모니터링이 부담스러웠다. 그래서 예~~~전 Global Azure BootCamp 2017때 김영재님께서 공유해주셨던 Logic App으로 웹사이트 모니터링 하기를 설정하기로 했다.</p>
+<p>Global Azure BootCamp 2017은 <a href="https://www.youtube.com/watch?v=fkgo8a4EO0s">여기</a>서 다시보자! <strong>49:35초</strong>부터 시작한다.</p>
+<h2 id="준비물">준비물<a hidden class="anchor" aria-hidden="true" href="#준비물">#</a></h2>
+<ol>
+<li>Azure 구독</li>
+<li>모니터링을 해야 하는 웹 사이트 URL(s)</li>
+<li>Teams의 특정 채널의 접근 권한 (읽기 &amp; 쓰기)</li>
+<li>하고자 하는 의지</li>
+</ol>
+<h2 id="logic-app을-만들어-보자">Logic App을 만들어 보자!<a hidden class="anchor" aria-hidden="true" href="#logic-app을-만들어-보자">#</a></h2>
+<p>Logic App은 워크플로(Workflow)를 GUI를 통하여 구성하면 Serverless로 동작하는 PaaS이다. 말은 복잡하지만 쉽게 이야기 하자면 GUI를 통해 드래그&amp;드랍을 이용하여 원하는 워크플로를 구현할 수 있다는 말이다. 또한 Microsoft가 많은 Plug-in들을 만들어서 거의 대부분의 워크플로는 <strong>코딩(Coding) 없이(codeless)</strong> 구현할 수 있다. 개발자가 개입하여 Azure Functions나 Logic App Plug-ins를 개발할 수도 있지만 우선 codeless로 구성할 수 있다는 점과 Serverless로 동작한다는 점이 꽤 매력적이다.</p>
+<p>한번 해보자! 우선 <a href="https://portal.azure.com/">Azure Portal</a>에 접속하여 Logic App을 새로 만든다.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/create_logic_app.PNG" alt="Logic App 만들기">
+    <figcaption>Logic App 만들기</figcaption>
+</figure>
+</p>
+<blockquote>
+<p>Logic App은 한글로 논리 앱이라고 부르나보다.</p>
+</blockquote>
+<p>2020년 5월 21일 기준 한국 중부와 한국 남부에 Logic App을 사용할 수 있다. (lol)</p>
+<h2 id="logic-app에-기본-골격을-잡아보자">Logic App에 기본 골격을 잡아보자!<a hidden class="anchor" aria-hidden="true" href="#logic-app에-기본-골격을-잡아보자">#</a></h2>
+<p>Logic App을 만들었으면 이제 기본 워크플로를 만들 차례인데&hellip; 뭘 해야 할까? 우선 문제를 해결하기 위한 목표를 생각해 보자.</p>
+<ol>
+<li>웹사이트가 죽은걸 먼저 알고 싶어요.</li>
+<li>죽은 웹사이트를 고치기 위해 특정 사람을 호출하고 싶어요.</li>
+</ol>
+<p>우선 첫번째 문제를 해결하기 위해서 어떤 작업을 하면 되는지 생각해 보자. 웹사이트가 죽었다는 정의는 뭘까? 보통 웹사이트가 죽었다는 것은 특정 URL을 요청했을 때 응답을 하지 않을 때 우리는 <strong>웹사이트가 죽었다</strong>고 표현한다. <em>(만약 다른 의견이 있다면, 별도로 알려주세요! 저도 배우게요.)</em> 이를 사람이 한다면 보통 다음과 같은 작업을 할 것이다.</p>
+<ol>
+<li>URL을 접속해 본다.</li>
+<li>주기적으로 페이지를 리프레쉬 해본다.</li>
+<li>페이지가 뜨지 않을 때 담당자에게 알린다.</li>
+</ol>
+<p>이를 워크플로로 정의해보면,</p>
+<ol>
+<li>일정한 주기를 가지고</li>
+<li>특정 URL에 요청을 보내어</li>
+<li>URL의 상태코드가 OK가 아니면</li>
+<li>담당자에게 알린다.</li>
+</ol>
+<p>그렇다면 이 워크플로를 그대로 Logic App에 구현해 보자. 위에서 정의한 워크플로를 살펴보면 첫번째 하는 일이 <strong>주기를 가지고</strong> 작업이 된다. 우리는 이를 스케줄에 의한 작업으로 이야기 한다. 워크플로의 가장 처음은 **&ldquo;언제 시작 해야 하는가?&quot;**를 정의하기에 특정한 시점을 지칭하는 <code>트리거</code>와 반복적인 주기 또는 지정한 시각을 지칭하는 <code>스케줄</code>로 나눌 수 있다. 이번 사례에선 <code>스케줄</code>로 시작한다. Logic App에서 <strong>일정</strong>을 검색하여 <strong>되풀이</strong>를 이용하여 일정한 주기를 통해 작업을 수행해 보자. 웹사이트의 중요도에 따라 <strong>요청 주기</strong>를 설정할 수 있을 건데, 여기서 주의할 점은 Logic App이 Serverless라는 것에 있다. Serverless는 사용한 만큼 비용을 지불하기 때문에 자주 사용할 수록 비용이 높은 특징일 가진다. 앞서 설명했듯이 그리 중요하지 않은 웹사이트를 모니터링 하기에 1시간에 한번 정도 웹사이트의 상태를 체크하기로 하자.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/1_hour_interval.PNG" alt="Logic App 만들기">
+    <figcaption>Logic App 만들기</figcaption>
+</figure>
+</p>
+<p>그 다음은 특정 URL에 요청을 보내야 한다. 일반적으로 <code>curl</code> 또는 <code>invoke-webrequest</code>와 같은 요청을 CLI로 수행하면 얻어낼 수 있는 결과이다. 다행히도 Logic App에 기본적인 Plug-in이 있으며 이를 이용하여 URL에 요청해 보자. 일반적인 요청만 하면 되기 때문에 GET 메서드를 사용할 것이고, 테스트 할 URI는 <code>https://tech.cloudmt.co.kr</code>을 모니터링 할 것이다. 우리가 모니터링 할 웹사이트는 단순한 웹 페이지이며 Query String이나 Custom header는 별도로 필요로 하지 않는다.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/request_http.PNG" alt="URL 요청">
+    <figcaption>URL 요청</figcaption>
+</figure>
+</p>
+<p>한가지 재밌는 부분은 Logic App에서 동적 콘텐츠를 지원한다는 점이다. 동적 컨텐츠는 이전 결과 값을 이용하여 다음 작업을 수행할 때 도움을 받는 콘텐츠인데 이게 꽤 유용하다. 다음에 그것을 구현해 보자.</p>
+<p>그 다음은 프로그램에 ㅍ을 건드려본 사람은 다 아는 if문이다. <strong>URL의 상태코드가 OK가 아니면</strong>을 구현하려면 URL 요청의 결과값이 OK여야 한다는 것을 의미하거나, URL 요청의 결과값이 NO여야 한다는 것을 의미한다. 그렇다면 워크플로에 if문을 집어넣어야 한다.(!) 이를 가능하게 하는 것이 바로 조건(if, Condition)이다. Logic App의 <code>조건</code>은 <code>컨트롤</code>이라는 작업 내에 존재하기에 컨트롤을 먼저 검색한 후 조건을 찾아 들어가자.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/condition_control.PNG" alt="컨트롤 검색">
+    <figcaption>컨트롤 검색</figcaption>
+</figure>
+</p>
+<p>여러가지 조건을 And 또는 Or 조건으로 묶을 수 있지만, 중복으로 설정할 수 없다. 우리는 하나의 조건만 가지고 분류를 할 것이기 때문에 무엇이든 상관 없다. 일반적으로 웹사이트를 요청했을 때 HTTP 상태 코드에 2xx와 3xx 가 출력되는 것은 <code>문제로 보지 않는다.</code> 그렇다고 해서 2xx와 3xx 상태코드를 전부 <code>정상</code>으로 조작하기엔 문제가 있다. 우리가 모니터링 하는 목표를 다시 한번 확인해 보자. 우리의 목표는 특정 URL을 가진 웹사이트가 죽었는지를 확인하는 절차이다. 그렇다면 특정 URL의 상태 코드가 <strong>고정</strong>이거나 <strong>일정 범위 내에</strong>있을 가능성이 높다. 그렇다면 우리는 그 범위를 초과할 시 알람을 하면 되지 않을까?</p>
+<p>우리가 모니터링을 해야 할 페이지는 고정이고, 그 페이지의 응답코드도 고정이라면 해당 HTTP 상태코드를 기준으로 Alert설정이 가능할 것이다. 따라서 다음과 같이 <code>컨트롤</code>을 설정한다. 설정할 때 앞서 출력된 결과인 HTTP의 상태 코드를 가져온다.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/control_options.PNG" alt="컨트롤 조건 입력">
+    <figcaption>컨트롤 조건 입력</figcaption>
+</figure>
+</p>
+<p>화면에서 보는 것 같이 <code>컨트롤</code>을 추가하면 <strong>Ture</strong>와 <strong>False</strong>인 경우를 입력할 수 있다. 우리는 상태코드가 고정인 페이지를 확인하는 것이기 때문에 <strong>True</strong>인 경우 웹사이트가 예상치 않게 동작하는 것임을 알 수 있다. 따라서 <strong>True</strong>에 작업을 추가해 보도록 하자. 다음과 같이 <code>Microsoft Teams</code>를 입력하여 Teams 채널에 연결해 보도록 하자. Slack이나 다른 Plug-In을 사용할 경우 검색 또는 Azure Functions를 연결하여 사용하자. <code>Microsoft Teams</code>를 선택하면 로그인 창이 뜰 것이고, 해당 계정으로 Microsoft Teams에 메시지가 게시될 것이다. 인증 값은 Microsoft Azure에 암호화되어 저장되며 이는 다음과 같이 <code>API 연결</code>로 저장된다.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/APIConnection.PNG" alt="API 연결">
+    <figcaption>API 연결</figcaption>
+</figure>
+</p>
+<blockquote>
+<p>최근 Teams Flow bot을 통한 메시지 게시도 할 수 있도록 기능이 추가되었다.</p>
+</blockquote>
+<p>여러가지 작업 중에 <code>메시지 게시(V3) (미리 보기)</code>를 선택하고 메시지를 게시할 팀과 채널을 선택한다. 앞서 Microsoft Teams에 로그인한 계정이 접근 가능한 팀과 채널을 선택할 수 있다. 그런 후 다음과 같이 메시지를 입력하면 선택된 팀 채널에 메시지가 게시된다.</p>
+<p>
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/post_a_message.PNG" alt="메시지 게시">
+    <figcaption>메시지 게시</figcaption>
+</figure>
+
+
+<figure style="text-align: center;">
+    <img src="/files/blog/2020-06-16/posted_a_message.PNG" alt="채널에 게시된 메시지">
+    <figcaption>채널에 게시된 메시지</figcaption>
+</figure>
+</p>
+<blockquote>
+<p>정상적인 메시지가 확인된다!</p>
+</blockquote>
+<p>이렇게 모니터링을 설정해 두면 해당 채널에 메시지가 게시될 때 우리의 웹사이트는 장애를 겪게 될 것이며 누구든지 이 이슈를 해결해야 할 것이다! 하지만 메시지만 게시되는 것이라면 좀 불편하지 않을까? 그래서 다음엔 특정 사용자를 @멘션 하여 호출하는 방법에 대해 알아보자!</p>
+
+</div>
+  <div class="post-content">
+      <hr/>
+  <div style="display: flex; flex-direction: row; margin: 10px;">
+    <div style="background: url(/files/authors/%ea%b9%80%ec%84%b8%ec%a4%80.jpg) no-repeat center; 
+        background-size: cover; width: 80px; height: 80px; 
+        border-radius: 100%;">
+    </div>
+      <div style="margin-left: 10px; padding-top: 5px;">
+        <strong>김세준</strong>
+        <p>
+            <a href="https://cloudmatelabs.github.io/authors/sejun-kim/">저자의 글 더 보기.</a>
+        </p>
+      </div>
+  </div>
+  
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://cloudmatelabs.github.io/tags/microsoft">Microsoft</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/microsoft-azure">Microsoft Azure</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/cloud">Cloud</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/azure">Azure</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/logic-app">logic App</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/microsoft-365">Microsoft 365</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/office-365">Office 365</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/teams">teams</a></li>
+      <li><a href="https://cloudmatelabs.github.io/tags/microsoft-teams">microsoft teams</a></li>
+    </ul>
+
+
+
+
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on twitter"
+        href="https://twitter.com/intent/tweet/?text=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f&amp;hashtags=Microsoft%2cMicrosoftAzure%2cCloud%2cAzure%2clogicApp%2cMicrosoft365%2cOffice365%2cteams%2cmicrosoftteams">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f&amp;title=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0&amp;summary=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0&amp;source=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f&title=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on whatsapp"
+        href="https://api.whatsapp.com/send?text=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0%20-%20https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Logic App을 이용하여 Website 모니터링 하기 on telegram"
+        href="https://telegram.me/share/url?text=Logic%20App%ec%9d%84%20%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac%20Website%20%eb%aa%a8%eb%8b%88%ed%84%b0%eb%a7%81%20%ed%95%98%ea%b8%b0&amp;url=https%3a%2f%2fcloudmatelabs.github.io%2f2020%2f06%2f16%2fwebsite_monitoring_with_logicapp%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2020 <a href="https://cloudmatelabs.github.io">CLOUDMATE Tech</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://cloudmatelabs.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

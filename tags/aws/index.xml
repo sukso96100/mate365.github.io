@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on CLOUDMATE Tech</title>
+    <link>https://cloudmatelabs.github.io/tags/aws/</link>
+    <description>Recent content in AWS on CLOUDMATE Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS DMS를 활용하여 Oracle에서 MySQL로 DB 마이그레이션 하기</title>
+      <link>https://cloudmatelabs.github.io/2020/11/16/db_migration_from_oracle_to_mysql_in_aws_ec2/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2020/11/16/db_migration_from_oracle_to_mysql_in_aws_ec2/</guid>
+      <description>시작하기 전에 현대차, 카카오, KT, 대한항공 등 에서 촉발된 탈(脫) Oracle 프로젝트(escape from oracle)는 오픈소스 DB, 클라우드 DB 의 안정성이 높아지면서 국내 뿐만 아니라 해외에서 먼저 트렌드로 자리잡았으나, 그럼에도 불구하고 현존 RDBMS 중 성능 최강인 (가격도 최강) Oracle 을 100% 대체할 수 있는 RDBMS는 안타깝게도 아직까지는 없다고 생각합니다. (2020년말기준) 그렇기 때문에 Oracle에서 벗어나려면 Oracle에서만 지원하는 기능을 어떻게 타겟DB에서 대체 또는 구현할지 에 대한 깊은 고민이 필요합니다. (굳은 신념도 필요합니다.)
+이번 C고객사에서는 시범적으로 기존 온프레미스 Oracle 의 레플리카를 퍼블릭 클라우드 환경으로 마이그레이션 하여 향후에 있을 감사 등 에 대응할 수 있길 원하셨습니다.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Volume Ontap으로 AWS-Azure data migration 하기 (1편 CVO 소개)</title>
+      <link>https://cloudmatelabs.github.io/2020/07/13/cloudontap-%EC%86%8C%EA%B0%9C/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2020/07/13/cloudontap-%EC%86%8C%EA%B0%9C/</guid>
+      <description>Netapp의 Cloud volume ontap 서비스를 구축 밎 사용해봄으로서 느꼈던점등을 리뷰하고자 합니다.
+CVO는 스토리지로 유명한 Netapp 에서 출시한 제품으로 운용 및 관리의 편의성에 주요 초점이 맞춰저 있는것이 느껴졌습니다.
+Netapp CVO 소개 Netapp Ontap 제품군을 통해 그 데이터가 어디에 어떤형식으로 보관되어 있든 엑세스 및 관리를 일원화 할 수 있습니다.
+IDC나 서버에 있는 파일 시스템 기반 데이터와 오브젝트나 블록기반에 스토리지에 분산되어 저장되어 있더라도 Ontap 제품군을 통해 migration 및 동기화 백업등이 가능하며 데이터관리자가 각기 필요로 하는 곳에 데이터 제공하는 작업이 매우 간결해집니다.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Volume Ontap으로 AWS-Azure data migration 하기 (2편 AWS-Azure 환경구성 및 설치)</title>
+      <link>https://cloudmatelabs.github.io/2020/07/13/cloudontap-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2020/07/13/cloudontap-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</guid>
+      <description>CVO 라이선스 발급이 늦어져서 어쩔수 없이 Azure-AWS 네트워크 환경구성부터 포스팅하게 되었습니다. 먼저 Cloudmanager를 배포하시는것을 권장드립니다.
+CVO를 배포하기위한 네트워크 환경 만들기 Azure와 AWS console을 양쪽에 켜두고 작업해야 하기떄문에 복잡할 수 있습니다.
+네트워크 구성에 고민하고 싶지 않다고 생각하시는 분은 김세준님이 작성한 AWS-Azure VPN 테라폼으로 자동생성하기 게시물을 참조하여 기본설정으로 진행하시기 바랍니다.
+Azure와 AWS간 VPN 연결하기 (Terraform)
+아무래도 스토리지관련 서비스이다보니 네트워크가 빠르고 안정적인것이 필요합니다. AWS DX와 같이 전용선 서비스를 사용하여 AWS 와 Azure 사이에 대역폭을 확보한다면 좀 더 강력한 성능을 확인 하실 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>NetApp Insight 2019 후기(1/2)</title>
+      <link>https://cloudmatelabs.github.io/2019/11/28/insight2019_1/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2019/11/28/insight2019_1/</guid>
+      <description>주저리주저리 10월 28일~30일에 라스베가스에서 NetApp의 최대 행사인 NetApp Insight 2019를 다녀왔습니다. 이미 한달(!!)이나 지난 후기입니다만, 그래도 너그러운 마음으로 봐주시면 감사하겠습니다. 우선 행사에 참석할 수 있게 많은 도움을 주신 NetApp 관계자 여러분들께 진심으로 감사의 말씀 올립니다.(열심히 하겠습니다!) 이번 행사는 곧이어 쓸 Microsoft Ignite 2019 행사와 패키지(?)로 가게되어 앞뒤로 휴가를 붙여서 샌프란시스코-라스베가스(행사)-올랜도(행사)-뉴욕 이렇게 다녀왔습니다. 이번 라스베가스에서 느낀 점은 사막은 사막이라는 겁니다. 엄청 건조해서 로션을 하루에 두번씩 발라도 몸이 갈라지는게 느껴질 정도네요. 사막인데다 미국은 온풍기가 돌기에 물에 젖은 수건이 4시간만에 마르는 기적을 볼 수 있었습니다.</description>
+    </item>
+    
+    <item>
+      <title>NetApp Insight 2019 후기(2/2)</title>
+      <link>https://cloudmatelabs.github.io/2019/11/28/insight2019_2/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2019/11/28/insight2019_2/</guid>
+      <description>Insight 2019 행사 2일차 행사 2일차엔 Keynote가 있어서 모든 행사가 9시에 시작합니다. 오전 내내 Keynote를 하는 일정입니다. 동영상과 행사 스케치는 NetApp Insight Keynote에서 확인하실 수 있습니다. Keynote에서 주요하게 다룬 내용은 총 5가지입니다.
+  Build Your Data Fabric 앞서 1일차때 들었던 두번째 세션의 내용입니다. Data Fabric은 온프레스 및 멀티클라우드 환경에 걸친 다양한 엔드 포인트에서 일관된 기능을 제공하는 아키텍처 및 데이터 서비스 세트입니다. 최근 많은 기업이 디지털 트랜스포밍을 하고 인프라를 혁신하는 가운데 데이터 관리에 대한 고민이 깊어질 것입니다.</description>
+    </item>
+    
+    <item>
+      <title>Azure와 AWS간 VPN 연결하기 (Terraform)</title>
+      <link>https://cloudmatelabs.github.io/2019/08/09/post/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2019/08/09/post/</guid>
+      <description>Azure Virtual Network와 AWS VPC(Virtual Private Cloud)를 논리적으로 연동하고 싶은 분들이 계실 것입니다. Azure를 사용하면서 AWS도 함께 사용하고 싶고, 각각 Cloud 업체의 장점을 활용하고 싶을 수도 있습니다. 그러한 경우 두 개의 Network를 논리적으로 연결하고 싶은 욕망이 생길 것이고 이를 관리하길 원하실 것입니다.
+그러한 요구사항을 해소하기 위해 Azure Virtual Network Gateway와 AWS VPN Connection을 연결하여 Azure Virtual Network와 AWS VPC를 논리적으로 연결하는 방법에 대해 알아봅시다.
+ Azure_to_AWS_VPN  Azure Virtual Network Gateway Azure Virtual Network Gateway(Network GW)는 IPSec VPN(Site-to-Site)과 SSL VPN(Point to Site)을 모두 지원합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

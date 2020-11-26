@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>G Suite on CLOUDMATE Tech</title>
+    <link>https://cloudmatelabs.github.io/tags/g-suite/</link>
+    <description>Recent content in G Suite on CLOUDMATE Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/g-suite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Active Directory와 G Suite간의 계정 연동</title>
+      <link>https://cloudmatelabs.github.io/2020/05/11/gsuitsyncazuread/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudmatelabs.github.io/2020/05/11/gsuitsyncazuread/</guid>
+      <description>Azure Active Directory와 G Suite 연동하기 Azure AD 에서 사용자를 관리하고 있지만, G Suite를 사용해야 하는 경우가 발생할 수 있습니다. 이 상태에서 사용자의 생성 및 삭제와 관련된 모든 작업은 Azure AD에서만 진행 하고, G Suite에서는 메일 및 메신저와 같은 기능을 사용할 때, 관리자는 어떤 작업이 필요하게 될 지 고민하게 됩니다.
+이런 상황에서 관리자는 고민을 하게 됩니다.
+하나의 관리 지점에서 어떻게 하면 Azure Active Directory와 G Suite를 사용할 수 있을까?
+위 질문은 Azure Active Directory와 G Suite 간의 SSO (Single Sign-On) 기능 구현으로 도달하게 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

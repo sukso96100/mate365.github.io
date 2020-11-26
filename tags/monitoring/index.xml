@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monitoring on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/monitoring/</link>
+    <link>https://tech.cloudmt.co.kr/tags/monitoring/</link>
     <description>Recent content in Monitoring on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포</title>
-      <link>https://cloudmatelabs.github.io/2020/07/22/azuredevopsonaks2/</link>
+      <link>https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/</link>
       <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/07/22/azuredevopsonaks2/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/</guid>
       <description>Azure Devops 프로젝트 위치
 Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된 어플리케이션을 배포하는 방법은 여러가지 방법이 있다. 통합된 Devops 툴을 사용하기 전에는 Jenkins와 같은 빌드서버에서 Ansible과 같은 배포툴로 서버에 배포했다. 그러기 위해서는 어플리케이션에 따른 빌드환경과 배포환경을 직접 셋팅이 필요했다. 통합된 Devops와 Cloud Service는 이러한 작업을 상당히 줄여준다.
 아래는 전체 아키텍쳐이다. 상당히 통합되어 있어보인다.  여러개의 어플리케이션 구현을 위해 Mysql을 직접 배포해보았다.
@@ -20,10 +20,10 @@ Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된
     
     <item>
       <title>Azure Devops와 AKS배포 관리 1편 - 프로젝트 생성부터 Docker 빌드</title>
-      <link>https://cloudmatelabs.github.io/2020/07/10/azuredevopsonaks1/</link>
+      <link>https://tech.cloudmt.co.kr/2020/07/10/azuredevopsonaks1/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/07/10/azuredevopsonaks1/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/07/10/azuredevopsonaks1/</guid>
       <description>Azure Devops 프로젝트 위치
 Azure Devops와 AKS배포 관리 1편 - 프로젝트 생성부터 Docker 이미지 빌드 목차  Azure Devops, AKS란? 구현 목표 Devops 구현   Board Repo Build  ACR(Azure Container Repository) Azure KeyVault Environment Variable 파이프라인 구성    Azure Devops 그리고 AKS Azure Devops란? Azure Devops는 아래와 같이 많은 기능들을 제공하고있다.
   Dashboard - 프로젝트의 전반적인 현황을 한눈에 볼 수 있다. Board - 에자일 방법론에 맞게 계획을 세우고 반복할 수있다.</description>

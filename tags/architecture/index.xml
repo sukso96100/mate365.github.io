@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/architecture/</link>
+    <link>https://tech.cloudmt.co.kr/tags/architecture/</link>
     <description>Recent content in Architecture on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure IoT Architecture</title>
-      <link>https://cloudmatelabs.github.io/2020/07/27/azure-iot-architecture/</link>
+      <link>https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/07/27/azure-iot-architecture/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/</guid>
       <description>IoT란 각종 사물에 센서와 통신 기능을 내장하여 무선 네트워크 상에서 데이터를 수집하고 전송하는 시스템을 말합니다. Azure Architecture Center에서 제안하는 IoT 참조 아키텍처를 설명합니다.
 Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component를 이용한 아키텍처는 다음과 같습니다. Edge Device와 IoT 디바이스로부터 온 데이터의 형식을 변환해서 Cold Path와 Warm Path로 데이터를 나눠서 처리하고, 미리 수집한 데이터와 디바이스 데이터를 결합하여 머신러닝을 적용해 비즈니스 인사이트를 도출합니다.
  Cold Path, Warm Path? 측정 데이터 처리 방식에 따라 나눌 수 있습니다.</description>

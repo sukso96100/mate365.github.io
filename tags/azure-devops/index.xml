@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure Devops on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/azure-devops/</link>
+    <link>https://tech.cloudmt.co.kr/tags/azure-devops/</link>
     <description>Recent content in Azure Devops on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/azure-devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/azure-devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASP.NET앱 개발과 Azure 관리형 서비스로 배포하기 - 1. 코드 자동 생성을 통한 개발시간 단축</title>
-      <link>https://cloudmatelabs.github.io/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part1/</link>
+      <link>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part1/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part1/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part1/</guid>
       <description>목차 이 글은 내용이 길어서 둘로 나눠져 있다. 아래 목차를 참고하여 읽는것을 권장한다.
  1부. 코드 자동 생성을 통한 개발시간 단축 👈  서론 그냥 데이터만 간단히 쌓아주는 백엔드 ASP.NET Core 백엔드 만들기 Open API 명세로 코드를, 코드에서 다시 API 문서 생성하기. EF Core ORM 코드도 자동으로 생성하기   2부. 관리형 서비스로 빠르게 구축하고 배포하기  배포 인증기능 구현하기 이메일 발송 API Management Azure Front Door 결론    서론 이번에 고객사가 기획중인 서비스에 RESTful API 백엔드가 필요하게 되어 백엔드 개발과 Azure 에서 배포와 운영을 어떻게 할지 등을 계획하여 진행하게 되었는데, 이를 통해 간단한 .</description>
     </item>
     
     <item>
       <title>ASP.NET앱 개발과 Azure 관리형 서비스로 배포하기 - 2. 관리형 서비스로 빠르게 구축하고 배포하기</title>
-      <link>https://cloudmatelabs.github.io/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part2/</link>
+      <link>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part2/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part2/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part2/</guid>
       <description>목차 이 글은 내용이 길어서 둘로 나눠져 있다. 아래 목차를 참고하여 읽는것을 권장한다.
  1부. 코드 자동 생성을 통한 개발시간 단축  서론 그냥 데이터만 간단히 쌓아주는 백엔드 ASP.NET Core 백엔드 만들기 Open API 명세로 코드를, 코드에서 다시 API 문서 생성하기. EF Core ORM 코드도 자동으로 생성하기   2부. 관리형 서비스로 빠르게 구축하고 배포하기 👈  배포 인증기능 구현하기 이메일 발송 API Management Azure Front Door 결론    배포 자.</description>
     </item>
     
     <item>
       <title>Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포</title>
-      <link>https://cloudmatelabs.github.io/2020/07/22/azuredevopsonaks2/</link>
+      <link>https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/</link>
       <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/07/22/azuredevopsonaks2/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/</guid>
       <description>Azure Devops 프로젝트 위치
 Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된 어플리케이션을 배포하는 방법은 여러가지 방법이 있다. 통합된 Devops 툴을 사용하기 전에는 Jenkins와 같은 빌드서버에서 Ansible과 같은 배포툴로 서버에 배포했다. 그러기 위해서는 어플리케이션에 따른 빌드환경과 배포환경을 직접 셋팅이 필요했다. 통합된 Devops와 Cloud Service는 이러한 작업을 상당히 줄여준다.
 아래는 전체 아키텍쳐이다. 상당히 통합되어 있어보인다.  여러개의 어플리케이션 구현을 위해 Mysql을 직접 배포해보았다.
@@ -40,10 +40,10 @@ Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된
     
     <item>
       <title>Azure Devops와 AKS배포 관리 1편 - 프로젝트 생성부터 Docker 빌드</title>
-      <link>https://cloudmatelabs.github.io/2020/07/10/azuredevopsonaks1/</link>
+      <link>https://tech.cloudmt.co.kr/2020/07/10/azuredevopsonaks1/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/07/10/azuredevopsonaks1/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/07/10/azuredevopsonaks1/</guid>
       <description>Azure Devops 프로젝트 위치
 Azure Devops와 AKS배포 관리 1편 - 프로젝트 생성부터 Docker 이미지 빌드 목차  Azure Devops, AKS란? 구현 목표 Devops 구현   Board Repo Build  ACR(Azure Container Repository) Azure KeyVault Environment Variable 파이프라인 구성    Azure Devops 그리고 AKS Azure Devops란? Azure Devops는 아래와 같이 많은 기능들을 제공하고있다.
   Dashboard - 프로젝트의 전반적인 현황을 한눈에 볼 수 있다. Board - 에자일 방법론에 맞게 계획을 세우고 반복할 수있다.</description>

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visual Studio on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/visual-studio/</link>
+    <link>https://tech.cloudmt.co.kr/tags/visual-studio/</link>
     <description>Recent content in Visual Studio on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Visual Studio Online 리뷰2 - 협업(Live Share)</title>
-      <link>https://cloudmatelabs.github.io/2020/06/01/vsonlinereview2/</link>
+      <link>https://tech.cloudmt.co.kr/2020/06/01/vsonlinereview2/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/06/01/vsonlinereview2/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/06/01/vsonlinereview2/</guid>
       <description>Visual Studio Codespace 협업기능 사용방법 1. Azure Account 설치  account_extension.png  2. Live Share Extension 설치  liveshare_extension.png   Live Share Extension Pack Live Share Whiteboard 설치 후 Reload  3. Start (세션 시작)  session_start.png   협업 세션 시작을 통해 시작할 수 있으며, 세션 만들어지고 url공유 또는 초대 메일를 통해 세션에 참가 가능하다. 읽기전용 세션은 참가자는 수정권한이 없으며, 오직 읽기만 가능하다.  4. Join (세션 참가)  session_join.</description>
     </item>
     
     <item>
       <title>Visual Studio Online 리뷰</title>
-      <link>https://cloudmatelabs.github.io/2020/04/22/vsonlinereview/</link>
+      <link>https://tech.cloudmt.co.kr/2020/04/22/vsonlinereview/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/04/22/vsonlinereview/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/04/22/vsonlinereview/</guid>
       <description>Visual Studio Codespace.  (추가) 5월 1일 일자로 서비스 명 변경.
 Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프로그래밍 언어를 지원하는 가상 환경(Cloud-hosted)을 제공하고, 최소한의 IDE 셋팅으로 어디서든 같은환경에서 작업 혹은 협업이 가능하다. VS의 확장기능을 그대로 사용하고있어, 확장성이 뛰어나다.  사용법 로그인  https://online.visualstudio.com/login 로그인 후 초기 화면
 로그인 후 첫화면    Setting  Billing이 이루어질 Azure Subscription에 Plan을 생성한다. 생성한 Plan에서 Codespace(프로젝트 단위)들을 생성할 수 있다.</description>

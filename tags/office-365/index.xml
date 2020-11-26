@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Office 365 on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/office-365/</link>
+    <link>https://tech.cloudmt.co.kr/tags/office-365/</link>
     <description>Recent content in Office 365 on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/office-365/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/office-365/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logic App을 이용하여 Website 모니터링 하기</title>
-      <link>https://cloudmatelabs.github.io/2020/06/16/website_monitoring_with_logicapp/</link>
+      <link>https://tech.cloudmt.co.kr/2020/06/16/website_monitoring_with_logicapp/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/06/16/website_monitoring_with_logicapp/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/06/16/website_monitoring_with_logicapp/</guid>
       <description>주저리주저리 웹사이트가 죽었다. 모니터링을 별도로 할 만큼 중요한 서비스는 아니었지만, 이대로 두다간 우리가 멍청이가 될 것 같아 모니터링을 설정하기로 했다. 우선 대응은 휴먼 드리븐으로 결정! 대응까지 자동화 하기엔 아직 이 사이트의 경험치가 부족하다고 판단되었기 때문이다. 그럼 어디 한번 모니터링을 걸어볼까? 그런데 문제가 생겼다. 이 사이트는 돈을 1원도 벌어오지 못하고 오히려 돈을 써서 유지해야 하는 사이트다 보니 유료 모니터링이 부담스러웠다. 그래서 예~~~전 Global Azure BootCamp 2017때 김영재님께서 공유해주셨던 Logic App으로 웹사이트 모니터링 하기를 설정하기로 했다.</description>
     </item>
     

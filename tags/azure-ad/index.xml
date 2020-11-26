@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure AD on CLOUDMATE Tech</title>
-    <link>https://cloudmatelabs.github.io/tags/azure-ad/</link>
+    <link>https://tech.cloudmt.co.kr/tags/azure-ad/</link>
     <description>Recent content in Azure AD on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudmatelabs.github.io/tags/azure-ad/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/azure-ad/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Active Directory와 G Suite간의 계정 연동</title>
-      <link>https://cloudmatelabs.github.io/2020/05/11/gsuitsyncazuread/</link>
+      <link>https://tech.cloudmt.co.kr/2020/05/11/gsuitsyncazuread/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/05/11/gsuitsyncazuread/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/05/11/gsuitsyncazuread/</guid>
       <description>Azure Active Directory와 G Suite 연동하기 Azure AD 에서 사용자를 관리하고 있지만, G Suite를 사용해야 하는 경우가 발생할 수 있습니다. 이 상태에서 사용자의 생성 및 삭제와 관련된 모든 작업은 Azure AD에서만 진행 하고, G Suite에서는 메일 및 메신저와 같은 기능을 사용할 때, 관리자는 어떤 작업이 필요하게 될 지 고민하게 됩니다.
 이런 상황에서 관리자는 고민을 하게 됩니다.
 하나의 관리 지점에서 어떻게 하면 Azure Active Directory와 G Suite를 사용할 수 있을까?
@@ -20,10 +20,10 @@
     
     <item>
       <title>Azure AD Cloud Provisioning</title>
-      <link>https://cloudmatelabs.github.io/2020/01/09/azadsyncprovisioning/</link>
+      <link>https://tech.cloudmt.co.kr/2020/01/09/azadsyncprovisioning/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudmatelabs.github.io/2020/01/09/azadsyncprovisioning/</guid>
+      <guid>https://tech.cloudmt.co.kr/2020/01/09/azadsyncprovisioning/</guid>
       <description>Azure AD Cloud Provisioning은 Azure AD에 대 한 사용자, 그룹 및 연락처의 동기화를 위해 하이브리드 id 목표를 충족 하 고 달성 하기 위해 설계 된 새로운 Microsoft 에이전트입니다.
 •	Azure AD Sync의 경우 온프레미스의 AD에서 Azure AD로의 단일 포리스트를 지원했었지만, Azure AD Cloud Provisioning은 다중 온프레미스 AD를 추가할 수 있습니다.
 •	에이전트가 간소화되어, 프로비저닝 작업 및 설치에 대한 부담이 줄었습니다. 이제 동기화 작업 수행은 Azure AD에서 실행할 수 있습니다.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/authors/junha-hwang/</link>
-    <description>Recent content on CLOUDMATE Tech</description>
+    <title>Datadog on CLOUDMATE Tech</title>
+    <link>https://tech.cloudmt.co.kr/tags/datadog/</link>
+    <description>Recent content in Datadog on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 16:12:00 +0900</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/authors/junha-hwang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2020 16:12:00 +0900</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/datadog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Datadog 알람을 Terraform으로 만들어 보자.</title>
       <link>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</link>

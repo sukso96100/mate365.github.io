@@ -3,27 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/authors/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/aws/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/datadog/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/post/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/terraform/</loc>
+    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/authors/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/aws/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/aws-iam%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-private-%EB%A7%9D-ec2-%EC%A0%91%EA%B7%BC%EA%B3%BC-%EB%A1%9C%EA%B9%85%ED%95%98%EA%B8%B0/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,22 +68,12 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/post/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/tags/session-manager/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/tags/systems-manager/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -533,11 +553,6 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/tags/terraform/</loc>
-    <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/tags/vgw/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
   </url>
@@ -563,10 +578,6 @@
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/jinchul-jung/</loc>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
   </url>
   
   <url>

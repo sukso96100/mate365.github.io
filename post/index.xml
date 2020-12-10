@@ -5,7 +5,19 @@
     <link>https://tech.cloudmt.co.kr/post/</link>
     <description>Recent content in Posts on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2020 16:12:00 +0900</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datadog 알람을 Terraform으로 만들어 보자.</title>
+      <link>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</link>
+      <pubDate>Thu, 10 Dec 2020 16:12:00 +0900</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</guid>
+      <description>여러 클라우드 환경에서 이곳저곳 산재되어 있는 클라우드 리소스들을 통합적으로 모니터링이 가능하게 해주는 모니터링 솔루션인 Datadog을 알아 보자.
+Datadog은 Monitor 기능을 통해 리소스들에 문제가 발생 시 알람을 받을 수 있도록 하는 기능을 제공 한다.
+여러 서비스를 신규 런칭을 위해 이러한 알람을 새롭게 생성할 때 마다 Datadog Console에서 마우스로 직접 할 때의 과정은 여간 귀찮은게 아니다. -_-;
+여러 서비스에 대해 알람을 설정할 때마다 마우스로 직접하려고 하니 미쳐 날 뛸 뻔한 경험을 겪어왔다. 이러한 흔히 말하는 노가다성 작업을 할 때 마다 시간을 줄일 수 있는 방법이 있나 여러 고민을 하게 됬다.</description>
+    </item>
+    
     <item>
       <title>AWS IAM을 사용한 Private 망 EC2 인스턴스 접근과 로깅</title>
       <link>https://tech.cloudmt.co.kr/2020/12/10/aws-iam%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-private-%EB%A7%9D-ec2-%EC%A0%91%EA%B7%BC%EA%B3%BC-%EB%A1%9C%EA%B9%85%ED%95%98%EA%B8%B0/</link>

@@ -4,12 +4,42 @@
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/datadog/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-log-indexing/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/logs/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/post/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/</loc>
+    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
   </url>
   
   <url>
@@ -18,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/datadog/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/post/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/</loc>
     <lastmod>2020-12-10T16:12:00+09:00</lastmod>
   </url>
   

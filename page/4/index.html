@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name=" robots" content="noindex, nofollow">
-<title>Datadog | CLOUDMATE Tech</title>
+<title>CLOUDMATE Tech</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="클라우드메이트는 고객의 비즈니스 환경을 우선으로 생각하고, 사용자로서의 직접 경험을 공유합니다.">
 <meta name="author" content="">
-<link rel="canonical" href="https://tech.cloudmt.co.kr/tags/datadog/" />
+<link rel="canonical" href="https://tech.cloudmt.co.kr/" />
 <link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.9b41f1fca0ecd98165aaa98ef85e6717a95f6621f6190ac064cd8c42a8334c28.css" integrity="sha256-m0Hx/KDs2YFlqqmO&#43;F5nF6lfZiH2GQrAZM2MQqgzTCg=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.79.0" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://tech.cloudmt.co.kr/tags/datadog/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://tech.cloudmt.co.kr/index.xml">
 
 
 
@@ -114,52 +114,34 @@
 </header>
 
     <main class="main"> 
-<header class="page-header">
-  <h1>Datadog</h1>
-</header>
 
 
 
-<article class="post-entry tag-entry"> 
+<article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Datadog에 Indexing 되는 로그에 대한 비용 최적화 하는 방법
+      Azure와 AWS간 VPN 연결하기 (Terraform)
     </h2>
   </header>
   <section class="entry-content">
-    <p>Log Management Indexing Log Management에서 Log Event는 매 월 말에 인덱스 된 총 로그 이벤트 수를 계산하여 발생합니다. (온디멘드 Retention 15일 기준 100만개 당 $2.55요금 청구) 따라서 요금을 줄이기 위해서는 인덱스 되는 로그의 양을 줄이는 방법이 최선입니다. 이를 위해 Retention 기간을 줄이는 방법과 Exclusion Filter를 이용하여 인덱스된 로그를 줄이는 방법이 있습니다. 추가로 Retention기간을 줄이는 경우 저장된 로그의 장기 저장을 위하여 별도 저장소로 아카이빙 하는 방법이 있습니다.
-Log Management Index 비용 ● Set retention period 기간별 가격 (한 달, 백만 로그 이벤트 기준) – 2020....</p>
+    <p>Azure Virtual Network와 AWS VPC(Virtual Private Cloud)를 논리적으로 연동하고 싶은 분들이 계실 것입니다. Azure를 사용하면서 AWS도 함께 사용하고 싶고, 각각 Cloud 업체의 장점을 활용하고 싶을 수도 있습니다. 그러한 경우 두 개의 Network를 논리적으로 연결하고 싶은 욕망이 생길 것이고 이를 관리하길 원하실 것입니다.
+그러한 요구사항을 해소하기 위해 Azure Virtual Network Gateway와 AWS VPN Connection을 연결하여 Azure Virtual Network와 AWS VPC를 논리적으로 연결하는 방법에 대해 알아봅시다.
+ Azure_to_AWS_VPN  Azure Virtual Network Gateway Azure Virtual Network Gateway(Network GW)는 IPSec VPN(Site-to-Site)과 SSL VPN(Point to Site)을 모두 지원합니다....</p>
   </section>
   <footer class="entry-footer">
 
-2020. 12. 10.&nbsp;·&nbsp;
-  <a href="https://tech.cloudmt.co.kr/authors/junha-hwang/">황준하</a>&nbsp;·&nbsp;
+2019. 08. 09.&nbsp;·&nbsp;
+  <a href="https://tech.cloudmt.co.kr/authors/sejun-kim/">김세준</a>&nbsp;·&nbsp;
   
 </footer>
-  <a class="entry-link" aria-label="post link to Datadog에 Indexing 되는 로그에 대한 비용 최적화 하는 방법" href="https://tech.cloudmt.co.kr/2020/12/10/datadog-log-indexing/"></a>
+  <a class="entry-link" aria-label="post link to Azure와 AWS간 VPN 연결하기 (Terraform)" href="https://tech.cloudmt.co.kr/2019/08/09/post/"></a>
 </article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Datadog 알람을 Terraform으로 만들어 보자.
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>여러 클라우드 환경에서 이곳저곳 산재되어 있는 클라우드 리소스들을 통합적으로 모니터링이 가능하게 해주는 모니터링 솔루션인 Datadog을 알아 보자.
-Datadog은 Monitor 기능을 통해 리소스들에 문제가 발생 시 알람을 받을 수 있도록 하는 기능을 제공 한다.
-여러 서비스를 신규 런칭을 위해 이러한 알람을 새롭게 생성할 때 마다 Datadog Console에서 마우스로 직접 할 때의 과정은 여간 귀찮은게 아니다. -_-;
-여러 서비스에 대해 알람을 설정할 때마다 마우스로 직접하려고 하니 미쳐 날 뛸 뻔한 경험을 겪어왔다. 이러한 흔히 말하는 노가다성 작업을 할 때 마다 시간을 줄일 수 있는 방법이 있나 여러 고민을 하게 됬다....</p>
-  </section>
-  <footer class="entry-footer">
-
-2020. 12. 10.&nbsp;·&nbsp;
-  <a href="https://tech.cloudmt.co.kr/authors/junha-hwang/">황준하</a>&nbsp;·&nbsp;
-  
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://tech.cloudmt.co.kr/page/3/">« Prev Page</a>
+  </nav>
 </footer>
-  <a class="entry-link" aria-label="post link to Datadog 알람을 Terraform으로 만들어 보자." href="https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/"></a>
-</article>
 
     </main><footer class="footer">
     <span>&copy; 2020 <a href="https://tech.cloudmt.co.kr">CLOUDMATE Tech</a></span>

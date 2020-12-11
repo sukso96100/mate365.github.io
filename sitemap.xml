@@ -3,17 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
-    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+    <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/</loc>
-    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/aws/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/aws-jams/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/aws-reinvent/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/2020/12/11/ngfw%EB%A1%9C-acme%EC%9D%98-%ED%8A%B8%EB%9E%9C%EC%A7%93-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-%EB%B3%B4%ED%98%B8/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/fortigate/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/fortinet/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/post/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/transit-gateway/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
     <lastmod>2020-12-10T19:12:00+09:00</lastmod>
   </url>
   
@@ -33,21 +83,6 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/post/</loc>
-    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/</loc>
-    <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/aws/</loc>
-    <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</loc>
     <lastmod>2020-12-10T16:12:00+09:00</lastmod>
   </url>
@@ -55,11 +90,6 @@
   <url>
     <loc>https://tech.cloudmt.co.kr/tags/terraform/</loc>
     <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>

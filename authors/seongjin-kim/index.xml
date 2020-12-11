@@ -5,7 +5,20 @@
     <link>https://tech.cloudmt.co.kr/authors/seongjin-kim/</link>
     <description>Recent content on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/authors/seongjin-kim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/authors/seongjin-kim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Re:Invent 2020 JAM으로 알아보는 NGFW로 네트워크 보안 강화하기</title>
+      <link>https://tech.cloudmt.co.kr/2020/12/11/ngfw%EB%A1%9C-acme%EC%9D%98-%ED%8A%B8%EB%9E%9C%EC%A7%93-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-%EB%B3%B4%ED%98%B8/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/2020/12/11/ngfw%EB%A1%9C-acme%EC%9D%98-%ED%8A%B8%EB%9E%9C%EC%A7%93-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-%EB%B3%B4%ED%98%B8/</guid>
+      <description>개요
+올해 AWS 리인벤트는 COVID-19으로 인해 결국 온라인으로 진행되고있어요. 대개 이런 큰 이벤트에서 저는 주로 Hands On이나 직접 참여하는 활동을 즐기는데요. 이번에 들어가 보니 Re-Invent 페이지에서 Hands On Content 메뉴가 떡하니 보이네요! 반가운 마음에 바로 접속해봤어요.
+Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미있는 이벤트가 있어요!
+ 등록을 하고 접속하면 아래와 같이 다양한 챌린지들이 보입니다.
+ 이번 시간에는 영국에서 발생한 Acme 사의 네트워크 보안 관련 문제를 해결하러 가봅시다.</description>
+    </item>
+    
     <item>
       <title>AWS IAM을 사용한 Private 망 EC2 인스턴스 접근과 로깅</title>
       <link>https://tech.cloudmt.co.kr/2020/12/10/aws-iam%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-private-%EB%A7%9D-ec2-%EC%A0%91%EA%B7%BC%EA%B3%BC-%EB%A1%9C%EA%B9%85%ED%95%98%EA%B8%B0/</link>

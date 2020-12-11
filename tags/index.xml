@@ -5,7 +5,61 @@
     <link>https://tech.cloudmt.co.kr/tags/</link>
     <description>Recent content in Tags on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 19:12:00 +0900</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS</title>
+      <link>https://tech.cloudmt.co.kr/tags/aws/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Jams</title>
+      <link>https://tech.cloudmt.co.kr/tags/aws-jams/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/aws-jams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Re:Invent</title>
+      <link>https://tech.cloudmt.co.kr/tags/aws-reinvent/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/aws-reinvent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FortiGate</title>
+      <link>https://tech.cloudmt.co.kr/tags/fortigate/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/fortigate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fortinet</title>
+      <link>https://tech.cloudmt.co.kr/tags/fortinet/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/fortinet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transit Gateway</title>
+      <link>https://tech.cloudmt.co.kr/tags/transit-gateway/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/transit-gateway/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Datadog</title>
       <link>https://tech.cloudmt.co.kr/tags/datadog/</link>
@@ -21,15 +75,6 @@
       <pubDate>Thu, 10 Dec 2020 19:12:00 +0900</pubDate>
       
       <guid>https://tech.cloudmt.co.kr/tags/logs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://tech.cloudmt.co.kr/tags/aws/</link>
-      <pubDate>Thu, 10 Dec 2020 16:12:00 +0900</pubDate>
-      
-      <guid>https://tech.cloudmt.co.kr/tags/aws/</guid>
       <description></description>
     </item>
     

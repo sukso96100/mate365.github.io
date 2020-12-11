@@ -9,7 +9,10 @@
 
 <meta name="keywords" content="AWS, AWS Re:Invent, AWS Jams, Fortinet, FortiGate, Transit Gateway" />
 <meta name="description" content="개요
-올해 AWS 리인벤트는 COVID-19으로 인해 결국 온라인으로 진행되고있어요. 대개 이런 큰 이벤트에서 저는 주로 Hands On이나 직접 참여하는 활동을 즐기는데요. 이번에 들어가 보니 Re-Invent 페이지에서 Hands On Content 메뉴가 떡하니 보이네요! 반가운 마음에 바로 접속해봤어요.
+올해 AWS 리인벤트는 COVID-19으로 인해 결국 온라인으로 진행되고있어요.
+대개 이런 큰 이벤트에서 저는 주로 Hands On이나 직접 참여하는 활동을 즐기는데요.
+이번에 들어가 보니 Re-Invent 페이지에서 Hands On Content 메뉴가 떡하니 보이네요!
+반가운 마음에 바로 접속해봤어요.
 Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미있는 이벤트가 있어요!
  등록을 하고 접속하면 아래와 같이 다양한 챌린지들이 보입니다.
  이번 시간에는 영국에서 발생한 Acme 사의 네트워크 보안 관련 문제를 해결하러 가봅시다.">
@@ -139,7 +142,9 @@ Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미�
 <ol>
 <li>
 <p>개요<br>
-올해 AWS 리인벤트는 COVID-19으로 인해 결국 온라인으로 진행되고있어요. 대개 이런 큰 이벤트에서 저는 주로 Hands On이나 직접 참여하는 활동을 즐기는데요. 이번에 들어가 보니 Re-Invent 페이지에서 Hands On Content 메뉴가 떡하니 보이네요!
+올해 AWS 리인벤트는 COVID-19으로 인해 결국 온라인으로 진행되고있어요.<br>
+대개 이런 큰 이벤트에서 저는 주로 Hands On이나 직접 참여하는 활동을 즐기는데요.<br>
+이번에 들어가 보니 Re-Invent 페이지에서 Hands On Content 메뉴가 떡하니 보이네요!<br>
 반가운 마음에 바로 접속해봤어요.<br>
 Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미있는 이벤트가 있어요!</p>
 <p>
@@ -158,7 +163,8 @@ Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미�
 </li>
 <li>
 <p>작업 1 : 라우팅 문제 해결
-해야 할 작업은 총 5개인데요. 아래 그림에서 우측 위를 보시면 &lsquo;AWS 콘솔 열기&rsquo;로 콘솔로 가서 CloudFormation을 보면 구성된 정보를 볼 수 있어요.</p>
+해야 할 작업은 총 5개인데요.<br>
+아래 그림에서 우측 위를 보시면 &lsquo;AWS 콘솔 열기&rsquo;로 콘솔로 가서 CloudFormation을 보면 구성된 정보를 볼 수 있어요.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-03_12-39-21.png">
 </p>
@@ -166,27 +172,27 @@ Jam Lounge에서는 AWS 인프라에서 발생한 문제를 해결하는 재미�
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-03_12-39-48.png">
 </p>
-<p>일단 라우팅 문제를 해결하라고 하니 ping이 가는지부터 확인합니다.
-JumpBox에서 server1, 2로 핑을 보내보면 server2로 핑이 가지 않습니다.
+<p>일단 라우팅 문제를 해결하라고 하니 ping이 가는지부터 확인합니다.<br>
+JumpBox에서 server1, 2로 핑을 보내보면 server2로 핑이 가지 않습니다.<br>
 (완료하고 나서 캡처하려니 콘솔접근이 안 되네요. 이미지가 없어 죄송합니다.)</p>
 <p>그럼 방화벽 구성을 한번 보겠습니다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-03_23-35-44.png">
 </p>
-<p>포티넷이군요! 포티넷 방화벽을 무료로 사용해볼 기회라니!
+<p>포티넷이군요! 포티넷 방화벽을 무료로 사용해볼 기회라니!<br>
 위에서 확인한 URL로 ID, PW로 접속합니다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-03_23-50-29.png">
 </p>
-<p>일단 급한 마음에 정적 라우팅을 확인해봤는데 무슨 문제인지 잘 모르겠네요.
-그럼 문제에서 나온 &lsquo;재고&rsquo;에서 말하는 TGW 구성이 잘 되어있는지 확인해봐야겠네요.
+<p>일단 급한 마음에 정적 라우팅을 확인해봤는데 무슨 문제인지 잘 모르겠네요.<br>
+그럼 문제에서 나온 &lsquo;재고&rsquo;에서 말하는 TGW 구성이 잘 되어있는지 확인해봐야겠네요.<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-11_15-44-43.png">
-
-VPC는 3개이고 TGW는 한 개, Attach 된 VPC는 3개군요.
+<br>
+VPC는 3개이고 TGW는 한 개, Attach 된 VPC는 3개군요.<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-11_15-46-41.png">
-
+<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-11_15-46-51.png">
 </p>
@@ -199,29 +205,29 @@ VPC는 3개이고 TGW는 한 개, Attach 된 VPC는 3개군요.
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-05_0-05-22.png">
 </p>
-<p>이제 핑이 잘 갑니다. (이것도 캡처가 없네요.ㅠㅠ)
+<p>이제 핑이 잘 갑니다. (이것도 캡처가 없네요.ㅠㅠ)<br>
 지정된 S3 버킷에서 정답 Flag가 담진 파일을 열어서 입력합니다!</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-04_0-25-33.png">
-
+<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%851/2020-12-04_0-25-57.png">
 </p>
-<p>이번 작업 1에서는 TGW 구성에서 Routing Associate를 수정하여 VPC간 연결 문제를 해결했습니다.
-네트워크 구성 문제를 해결했으니 다음 문제는 뭘까요?
+<p>이번 작업 1에서는 TGW 구성에서 Routing Associate를 수정하여 VPC간 연결 문제를 해결했습니다.<br>
+네트워크 구성 문제를 해결했으니 다음 문제는 뭘까요?<br>
 궁금하네요.</p>
 </li>
 <li>
 <p>작업 2 : 공격 차단</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%852/2020-12-04_0-00-09.png">
-
-Fortigate를 사용해서 공격을 차단하라고 하네요.
+<br>
+Fortigate를 사용해서 공격을 차단하라고 하네요.<br>
 Websrv1에 열린 URL로 접속하면 DVWA가 나옵니다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%852/2020-12-04_0-19-38.png">
 </p>
-<p>DVWA(Damn Vulnerable Web App)는 웹 취약점 실습을 목적으로 웹 환경이 취약하게 구성되어 있습니다. 처음 웹 취약점 공부할때가 생각나네요.<br>
+<p>DVWA(Damn Vulnerable Web App)  는 웹 취약점 실습을 목적으로 웹 환경이 취약하게 구성되어 있습니다. 처음 웹 취약점 공부할때가 생각나네요.<br>
 (<del>사실 학생시절 BeeBox로 공부했다는건 함정</del>)</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%852/2020-12-04_0-19-22.png">
@@ -263,11 +269,11 @@ Log &amp; Report에서 Intrusion Prevention 로그를 보면 공격이 왔다는
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%853/2020-12-04_14-09-35.png">
 </p>
-<p>그럼 차단을 수행해봅시다.
-서버에서는 Outbound로 다운로드를 받는 것이니 Policy를 Outbound 정책으로 생성합니다.
-(보니 원래 있던 걸 수정해도 되더군요.)
+<p>그럼 차단을 수행해봅시다.<br>
+서버에서는 Outbound로 다운로드를 받는 것이니 Policy를 Outbound 정책으로 생성합니다.<br>
+(보니 원래 있던 걸 수정해도 되더군요.)<br>
 기존 정책에서 차단이 안되었던 이유가 아웃바운드 트래픽이 https Connection이어서 그랬던 것이었네요.<br>
-FortiGate에서 Policy &amp; Objects &gt; IPv4 Policy로 들어갑니다.
+FortiGate에서 Policy &amp; Objects &gt; IPv4 Policy로 들어갑니다.<br>
 아래와 같이 Security Policy애서 SSL Inspection을 ssl-mitm-https로 설정해서 Antivirus랑 같이 켜서 Policy를 수정 또는 생성합니다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%853/2020-12-04_14-28-29.png">
@@ -290,20 +296,21 @@ FortiGate에서 Policy &amp; Objects &gt; IPv4 Policy로 들어갑니다.
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%854/2020-12-04_0-00-37.png">
 </p>
-<p>이번에는 뭔가 주소를 수정하라는 것 같군요.
+<p>이번에는 뭔가 주소를 수정하라는 것 같군요.<br>
 일단 DevOps 팀에서 새 방화벽으로 통신이 안된다고하고 SDN 주소 개체를 수정하라고 하니 FortiGate에서 뭐가 안되는지 한번 봅시다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%854/2020-12-04_14-44-11.png">
 </p>
-<p>Addesses를 가보니 jumpbox1에 뭔가 좋지않은 느낌표가 붙어있네요.
-마우스 커서를 위에 놓으면 해당 SDN주소와 연결된 IP가 표시됩니다. 이를 이용해서 IP를 확인해보겠습니다.</p>
+<p>Addesses를 가보니 jumpbox1에 뭔가 좋지않은 느낌표가 붙어있네요.<br>
+마우스 커서를 위에 놓으면 해당 SDN주소와 연결된 IP가 표시됩니다.<br>
+이를 이용해서 IP를 확인해보겠습니다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%854/2020-12-04_14-50-25.png">
 </p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%854/2020-12-04_14-50-41.png">
 </p>
-<p>이런&hellip;jumpbox1에 대해 연결된 동적 주소가 없다고 나오네요.
+<p>이런&hellip;jumpbox1에 대해 연결된 동적 주소가 없다고 나오네요.<br>
 jumpbox1에 대한 SDN Connector 설정을 확인해봅시다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%854/2020-12-04_16-09-56.png">
@@ -330,16 +337,16 @@ jumpbox1에 대한 SDN Connector 설정을 확인해봅시다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_0-00-47.png">
 </p>
-<p>이번에는 웹페이지 접속이 안된다고 하네요.
+<p>이번에는 웹페이지 접속이 안된다고 하네요.<br>
 이 회사는 무슨 회사이길래 신입사원에서 이렇게 많은 것을 시킬까요&hellip;무섭네요.<br>
-(<del>다 해내는 신입사원도 괴&hellip;ㅁㅜㄹ..</del>)
+(<del>다 해내는 신입사원도 괴&hellip;ㅁㅜㄹ..</del>)<br>
 일단 어떤 웹 서비스가 접속이 안되는지 접속을 시도해 봅시다.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_16-18-20.png">
-
+<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_16-18-44.png">
-
+<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_16-19-12.png">
 </p>
@@ -351,7 +358,7 @@ jumpbox1에 대한 SDN Connector 설정을 확인해봅시다.</p>
 접속하는 도메인은 서로 같고 URI에서 path만 다른걸 보니 ALB 규칙에서 뭔가 잘못된게 있을 수도 있겠네요.</p>
 <p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_23-04-26.png">
-
+<br>
 
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-04_23-04-38.png">
 </p>
@@ -380,8 +387,8 @@ jumpbox1에 대한 SDN Connector 설정을 확인해봅시다.</p>
 <img src="/files/blog/2020-12-11/%ec%9e%91%ec%97%855/2020-12-05_0-05-36.png">
 </p>
 <p>잘 되는군요!</p>
-<p>이상 acme라는 엄청난 회사의 신입사원 도전기였습니다.
-많은 것을 배우고 처리한 하루였네요.
+<p>이상 acme라는 엄청난 회사의 신입사원 도전기였습니다.<br>
+많은 것을 배우고 처리한 하루였네요.<br>
 긴글 읽어주셔서 감사합니다.</p>
 </li>
 <li>

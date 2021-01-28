@@ -18,7 +18,7 @@ Azure와 AWS간 VPN 연결하기 (Terraform)
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/07/13/cloudontap-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -139,7 +139,7 @@ AWS DX와 같이 전용선 서비스를 사용하여 AWS 와 Azure 사이에 대
 <h2 id="1-환경">1. 환경<a hidden class="anchor" aria-hidden="true" href="#1-환경">#</a></h2>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/CVO-Architechure.png" alt="AWS-Azure Arch">
+    <img src="images/CVO-Architechure.png" alt="AWS-Azure Arch">
     <figcaption>AWS-Azure Arch</figcaption>
 </figure>
 </p>
@@ -208,7 +208,7 @@ AWS DX와 같이 전용선 서비스를 사용하여 AWS 와 Azure 사이에 대
 <p>에저 포탈에 &ldquo;가상 네트워크 게이트웨이 서비스&quot;를 검색합니다.<!-- raw HTML omitted --><!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG1.png" alt="VNG1">
+    <img src="images/VNG1.png" alt="VNG1">
     <figcaption>VNG1</figcaption>
 </figure>
 </p>
@@ -217,7 +217,7 @@ AWS DX와 같이 전용선 서비스를 사용하여 AWS 와 Azure 사이에 대
 <p>가상 네트워크 게이트웨이를 생성합니다.<!-- raw HTML omitted --><!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG2.png" alt="VNG2">
+    <img src="images/VNG2.png" alt="VNG2">
     <figcaption>VNG2</figcaption>
 </figure>
 </p>
@@ -234,7 +234,7 @@ A: AWS VPN 서비스는 라우팅 기반 솔루션입니다. 따라서 라우팅
 <li>BGP 구성 &ldquo;사용안함&quot;을 체크합니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG3.png" alt="VNG3">
+    <img src="images/VNG3.png" alt="VNG3">
     <figcaption>VNG3</figcaption>
 </figure>
 </li>
@@ -259,13 +259,13 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 <p>체크한 상태로 만들었다면 구성에서 변경 가능합니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG6.png" alt="VNG6">
+    <img src="images/VNG6.png" alt="VNG6">
     <figcaption>VNG6</figcaption>
 </figure>
 
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG4.png" alt="VNG4">
+    <img src="images/VNG4.png" alt="VNG4">
     <figcaption>VNG4</figcaption>
 </figure>
 </p>
@@ -275,7 +275,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 (만들어지는데 생각보다 오래걸립니다. 기다리지 말고 AWS콘솔로 넘어갑시다.)
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VNG5.png" alt="VNG5">
+    <img src="images/VNG5.png" alt="VNG5">
     <figcaption>VNG5</figcaption>
 </figure>
 <!-- raw HTML omitted --></p>
@@ -287,7 +287,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 <p>웹콘솔에서 VPC &gt; TGW 를 선택합니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VGW1.png" alt="VGW1">
+    <img src="images/VGW1.png" alt="VGW1">
     <figcaption>VGW1</figcaption>
 </figure>
 {: width=&ldquo;100&rdquo;}<!-- raw HTML omitted --></p>
@@ -296,7 +296,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 <p>기본값으로 생성합니다. (옵션설명은 생락한다!)<!-- raw HTML omitted --><!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VGW2.png" alt="VGW2">
+    <img src="images/VGW2.png" alt="VGW2">
     <figcaption>VGW2</figcaption>
 </figure>
 </p>
@@ -311,7 +311,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 <p>&ldquo;Static&rdquo; Check<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VGW3.png" alt="VGW3">
+    <img src="images/VGW3.png" alt="VGW3">
     <figcaption>VGW3</figcaption>
 </figure>
 </p>
@@ -320,7 +320,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 <p>TGW의 VPN Connection이 생성되는지 확인!<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VGW4.png" alt="VGW4">
+    <img src="images/VGW4.png" alt="VGW4">
     <figcaption>VGW4</figcaption>
 </figure>
 </p>
@@ -330,7 +330,7 @@ VPN 사이트 BGP 설정이 사용하도록 설정되면 항상 VPN 연결을 �
 (익숙한 장비가 conf가 있다면 그걸로 선택하셔도 무관합니다.)<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/VGW5.png" alt="VGW5">
+    <img src="images/VGW5.png" alt="VGW5">
     <figcaption>VGW5</figcaption>
 </figure>
 </p>
@@ -377,7 +377,7 @@ General information
 <li>Azure 콘솔에서 연결을 검색하여 연결을 생성합니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/AZ-Con1.png" alt="AZ-Con1">
+    <img src="images/AZ-Con1.png" alt="AZ-Con1">
     <figcaption>AZ-Con1</figcaption>
 </figure>
 </li>
@@ -386,7 +386,7 @@ General information
 <li>IP 주소는 AWS 네트워크 대역을 적어줍니다.
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/AZ-Con2.png" alt="AZ-Con2">
+    <img src="images/AZ-Con2.png" alt="AZ-Con2">
     <figcaption>AZ-Con2</figcaption>
 </figure>
 <!-- raw HTML omitted --></li>
@@ -405,7 +405,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 <p>경로전파는 사용으로 해야합니다.( 안하면 수동으로 입력해야 되니까요 )<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/AZ-Con4.png" alt="AZ-Con4">
+    <img src="images/AZ-Con4.png" alt="AZ-Con4">
     <figcaption>AZ-Con4</figcaption>
 </figure>
 </p>
@@ -414,7 +414,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 <p>여기까지 완료하셨다면 아래와 같이 두개의 커넥션이 생성됩니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/AZ-Con5.png" alt="AZ-Con5">
+    <img src="images/AZ-Con5.png" alt="AZ-Con5">
     <figcaption>AZ-Con5</figcaption>
 </figure>
 </p>
@@ -426,7 +426,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 <p>잠시 두 장비가 맺어지는 시간이 필요하기때문에 커피한잔 내라고 와서 아래와 같이 보면 성공입니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/AZ-Con6.png" alt="AZ-Con6">
+    <img src="images/AZ-Con6.png" alt="AZ-Con6">
     <figcaption>AZ-Con6</figcaption>
 </figure>
 </p>
@@ -436,7 +436,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 (Azure 쪽 네트워크 대역을 알려주는 라우팅설정을 진행합니다.)<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/TGW1.png" alt="TGW1">
+    <img src="images/TGW1.png" alt="TGW1">
     <figcaption>TGW1</figcaption>
 </figure>
 </p>
@@ -445,7 +445,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 <p>CIDR에 Azure 쪽 네트워크 대역을 적어줍니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/TGW2.png" alt="TGW2">
+    <img src="images/TGW2.png" alt="TGW2">
     <figcaption>TGW2</figcaption>
 </figure>
 </p>
@@ -458,7 +458,7 @@ AWS IPsec 터널이 무적이 아닙니다. <!-- raw HTML omitted -->
 <p>VPC 서브넷에 할당되어 있는 라우팅테이블을 변경합니다. (VPC 웹콘솔 - 라우팅테이블) <!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/TGW3.png" alt="TGW3">
+    <img src="images/TGW3.png" alt="TGW3">
     <figcaption>TGW3</figcaption>
 </figure>
 </p>
@@ -470,7 +470,7 @@ Azure 쪽에 클라우드매니저 VM을 배포하고 AWS 측에 TEST용 EC2를 
 <p>과연 잘됬을까요?</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/%ec%96%b4%eb%a6%bc%eb%8f%84%ec%97%86%ec%a7%80.png" alt="어림없는 소리!">
+    <img src="images/%ec%96%b4%eb%a6%bc%eb%8f%84%ec%97%86%ec%a7%80.png" alt="어림없는 소리!">
     <figcaption>어림없는 소리!</figcaption>
 </figure>
 </p>
@@ -478,14 +478,14 @@ Azure 쪽에 클라우드매니저 VM을 배포하고 AWS 측에 TEST용 EC2를 
 우리의 클라우드매니저가 Docker 이미지가 돌고 있는것이 확인됩니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/Trapcard.png" alt="Trapcard">
+    <img src="images/Trapcard.png" alt="Trapcard">
     <figcaption>Trapcard</figcaption>
 </figure>
 </p>
 <p>그리고 잘 해결했습니다.<!-- raw HTML omitted -->
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/Trapcard2.png" alt="Trapcard">
+    <img src="images/Trapcard2.png" alt="Trapcard">
     <figcaption>Trapcard</figcaption>
 </figure>
 </p>
@@ -497,7 +497,7 @@ Azure 쪽에 클라우드매니저 VM을 배포하고 AWS 측에 TEST용 EC2를 
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ec%95%88%ec%9a%b0%ec%98%81.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/wooyeoung-ahn/%ec%95%88%ec%9a%b0%ec%98%81.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -579,7 +579,7 @@ Azure 쪽에 클라우드매니저 VM을 배포하고 AWS 측에 TEST용 EC2를 
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -599,13 +599,17 @@ Azure 쪽에 클라우드매니저 VM을 배포하고 AWS 측에 TEST용 EC2를 
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

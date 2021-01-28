@@ -17,7 +17,7 @@ AWS Systems Manager에서는 Private 망에 위치한 인스턴스 접근을 위
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/12/10/aws-iam%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-private-%EB%A7%9D-ec2-%EC%A0%91%EA%B7%BC%EA%B3%BC-%EB%A1%9C%EA%B9%85%ED%95%98%EA%B8%B0/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -139,10 +139,10 @@ Systems Manager의 Session Manger를 이용하면 인스턴스 접근 뿐만 아
 <li>
 <p>EC2 Policy 설정<br>
 
-<img src="/files/blog/2020-12-10/image1.png">
+<img src="images/image1.png">
 <br>
 
-<img src="/files/blog/2020-12-10/image2.png">
+<img src="images/image2.png">
 </p>
 <p>JSON 편집기 창에 아래와 같은 Policy 정보를 입력합니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
@@ -184,18 +184,18 @@ Review Policy를 선택하여 적절한 Name을 입력하고 Create policy로 �
 다음은 EC2에 적용할 Role을 설정합니다.<br>
 IAM &gt; Role &gt; Create role에서 EC2를 선택합니다.<br>
 
-<img src="/files/blog/2020-12-10/image3.png">
+<img src="images/image3.png">
 <br>
 
-<img src="/files/blog/2020-12-10/image4.png">
+<img src="images/image4.png">
 <br>
 SSM을 사용하기 위한 기본 Policy를 선택<br>
 
-<img src="/files/blog/2020-12-10/image5.png">
+<img src="images/image5.png">
 <br>
 이전에 작성한 Policy를 선택<br>
 
-<img src="/files/blog/2020-12-10/image6.png">
+<img src="images/image6.png">
 <br>
 다음으로 넘어가 Tag 및 적절한 Role의 이름을 부여하여 Create role을 선택하여 Role을 생성합니다</p>
 </li>
@@ -204,24 +204,24 @@ SSM을 사용하기 위한 기본 Policy를 선택<br>
 다음은 EC2가 Private한 환경에서도 AWS 서비스를 사용할 수 있도록 앤드포인트를 생성합니다.<br>
 VPC &gt; Endpoint에서 Create Endpoint를 선택합니다.<br>
 
-<img src="/files/blog/2020-12-10/image7.png">
+<img src="images/image7.png">
 <br>
 Service Name을 검색합니다.<br>
 (*ssm, ssmmessages, ec2messages, s3 총 4개를 하나씩 생성해야합니다.)<br>
 
-<img src="/files/blog/2020-12-10/image8.png">
+<img src="images/image8.png">
 <br>
 앤드포인트 및 EC2 에 사용할 SG을 선택합니다.
 
-<img src="/files/blog/2020-12-10/image9.png">
+<img src="images/image9.png">
 <br>
 위 과정을 반복하여 아래와 같이 총 4개의 앤드포인트를 생성합니다.
 
-<img src="/files/blog/2020-12-10/image10.png">
+<img src="images/image10.png">
 <br>
 라우팅 테이블 확인<br>
 
-<img src="/files/blog/2020-12-10/image11.png">
+<img src="images/image11.png">
 <br>
 IGW 및 NAT가 없으므로 해당 라우팅 테이블이 속한 서브넷에서는 외부인터넷망에 접근이 불가능한 것을 확인할 수 있습니다.</p>
 </li>
@@ -229,10 +229,10 @@ IGW 및 NAT가 없으므로 해당 라우팅 테이블이 속한 서브넷에서
 <p>EC2 생성<br>
 EC2 &gt; Launch Instance를 선택합니다.<br>
 
-<img src="/files/blog/2020-12-10/image12.png">
+<img src="images/image12.png">
 <br>
 
-<img src="/files/blog/2020-12-10/image13.png">
+<img src="images/image13.png">
 <br>
 적절한 인스턴스 타입을 선택 후 Configure Instance에서 이전에 설정한 VPC 및 IAM Role을 선택하여 설정합니다.<br>
 (기존 사용중인 인스턴스에 적용할 경우 해당 인스턴스의 IAM Role만
@@ -240,32 +240,32 @@ EC2 &gt; Launch Instance를 선택합니다.<br>
 * Role 변경 시 기존 사용중인 Role의 정책에 의해 서비스에 영향이 있을 수
 있으니 주의하세요.)<br>
 
-<img src="/files/blog/2020-12-10/image14.png">
+<img src="images/image14.png">
 <br>
 이후 적절한 스토리지 및 Tag를 추가하신 후 Configure Security Group에서 이전에 설정한 SG를 적용합니다.<br>
 
-<img src="/files/blog/2020-12-10/image15.png">
+<img src="images/image15.png">
 </p>
 </li>
 <li>
 <p>Security Group 설정<br>
 SG를 아래와 같이 같은 SG를 가진 인터페이스간에는 통신이 가능하도록 같은 SG를 추가하고 HTTPS 정책을 VPC 내부의 CIDR을 적용하여 통신이 가능하도록 합니다.
 
-<img src="/files/blog/2020-12-10/image16.png">
+<img src="images/image16.png">
 </p>
 </li>
 <li>
 <p>System Manager<br>
 System Manager &gt; Managed Instances에서 생성한 EC2 인스턴스가 확인되기를 기다립니다.<br>
 
-<img src="/files/blog/2020-12-10/image17.png">
+<img src="images/image17.png">
 <br>
 인스턴스가 확인이 된다면 Session Manager에서 Preferences에서 로깅을 설정합니다.<br>
 
-<img src="/files/blog/2020-12-10/image18.png">
+<img src="images/image18.png">
 <br>
 
-<img src="/files/blog/2020-12-10/image19.png">
+<img src="images/image19.png">
 <br>
 *CloudWatch 로깅설정이 필요한 경우 CloudWatch logs를 체크합니다.<br>
 *로그 또는 세션 데이터에 대한 암호화가 필요한 경우는 KMS 설정 및 S3 버킷 암호화를 참고하시기 바랍니다.</p>
@@ -273,26 +273,26 @@ System Manager &gt; Managed Instances에서 생성한 EC2 인스턴스가 확인
 <li>
 <p>Session 시작하여 쉘 사용<br>
 
-<img src="/files/blog/2020-12-10/image20.png">
+<img src="images/image20.png">
 <br>
 
-<img src="/files/blog/2020-12-10/image21.png">
+<img src="images/image21.png">
 <br>
 작업이 완료된 후 Session을 Terminate합니다.<br>
 
-<img src="/files/blog/2020-12-10/image22.png">
+<img src="images/image22.png">
 <br>
 Session history에서 S3에 저장된 log를 확인할 수 있습니다.<br>
 
-<img src="/files/blog/2020-12-10/image23.png">
+<img src="images/image23.png">
 <br>
 S3에서 log 파일을 다운로드 받습니다.<br>
 
-<img src="/files/blog/2020-12-10/image24.png">
+<img src="images/image24.png">
 <br>
 Log를 확인합니다.<br>
 
-<img src="/files/blog/2020-12-10/image25.png">
+<img src="images/image25.png">
 <br>
 감사합니다.</p>
 </li>
@@ -302,7 +302,7 @@ Log를 확인합니다.<br>
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ea%b9%80%ec%84%b1%ec%a7%84.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/seongjin-kim/%ea%b9%80%ec%84%b1%ec%a7%84.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -385,7 +385,7 @@ Log를 확인합니다.<br>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -405,13 +405,17 @@ Log를 확인합니다.<br>
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

@@ -17,7 +17,7 @@ IDC나 서버에 있는 파일 시스템 기반 데이터와 오브젝트나 블
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/07/13/cloudontap-%EC%86%8C%EA%B0%9C/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -135,7 +135,7 @@ IDC나 서버에 있는 파일 시스템 기반 데이터와 오브젝트나 블
 Ontap 제품군을 통해 migration 및 동기화 백업등이 가능하며 데이터관리자가 각기 필요로 하는 곳에 데이터 제공하는 작업이 매우 간결해집니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/Cloudmanager.png" alt="Cloudmanager Console">
+    <img src="images/Cloudmanager.png" alt="Cloudmanager Console">
     <figcaption>Cloudmanager Console</figcaption>
 </figure>
 </p>
@@ -144,7 +144,7 @@ Ontap 제품군을 통해 migration 및 동기화 백업등이 가능하며 데�
 AWS에서 Azure에서 IDC에 구성되어 있는 k8s 환경에서 스토리지 관리자에게 요청이 쏟아집니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/gaviscon.png" alt="개비스콘">
+    <img src="images/gaviscon.png" alt="개비스콘">
     <figcaption>개비스콘</figcaption>
 </figure>
 </p>
@@ -152,7 +152,7 @@ AWS에서 Azure에서 IDC에 구성되어 있는 k8s 환경에서 스토리지 �
 CVO를 사용하신다면 Cloudmanager 콘솔에서 보다 쉽게 수행이 가능합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/gaviscon2.png" alt="개비스콘2">
+    <img src="images/gaviscon2.png" alt="개비스콘2">
     <figcaption>개비스콘2</figcaption>
 </figure>
 </p>
@@ -161,14 +161,14 @@ CVO를 사용하신다면 Cloudmanager 콘솔에서 보다 쉽게 수행이 가�
 <p>위 사이트에서 이메일 인증만 하시면 쉽게 회원가입이 가능합니다.
 
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/netappcloudsignin.png" alt="Sign in">
+    <img src="images/netappcloudsignin.png" alt="Sign in">
     <figcaption>Sign in</figcaption>
 </figure>
 </p>
 <p>웹콘솔 우측 상단 Fabric View에서 해당 계정과 연계된 Netapp 제품들을 확인 할 수 있습니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/CVO/netappFabricView.png" alt="FabricView">
+    <img src="images/netappFabricView.png" alt="FabricView">
     <figcaption>FabricView</figcaption>
 </figure>
 </p>
@@ -178,7 +178,7 @@ CVO를 사용하신다면 Cloudmanager 콘솔에서 보다 쉽게 수행이 가�
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ec%95%88%ec%9a%b0%ec%98%81.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/wooyeoung-ahn/%ec%95%88%ec%9a%b0%ec%98%81.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -260,7 +260,7 @@ CVO를 사용하신다면 Cloudmanager 콘솔에서 보다 쉽게 수행이 가�
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -280,13 +280,17 @@ CVO를 사용하신다면 Cloudmanager 콘솔에서 보다 쉽게 수행이 가�
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

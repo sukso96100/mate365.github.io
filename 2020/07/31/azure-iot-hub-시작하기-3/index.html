@@ -17,7 +17,7 @@
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -149,7 +149,7 @@
 </li>
 </ol>
 <p>
-<img src="/files/blog/2020-07-31/001.PNG">
+<img src="images/001.PNG">
 </p>
 <h2 id="2-iot-hub-사용자-엔드포인트-추가">2. IoT Hub 사용자 엔드포인트 추가<a hidden class="anchor" aria-hidden="true" href="#2-iot-hub-사용자-엔드포인트-추가">#</a></h2>
 <ol>
@@ -171,7 +171,7 @@
 </ol>
 <blockquote>
 <p>아래와 같은 쿼리를 입력하면 레벨이 critical로 설정된 메시지만 Service Bus 큐로 전송됩니다. 
-<img src="/files/blog/2020-07-31/002.PNG">
+<img src="images/002.PNG">
 </p>
 </blockquote>
 <ol start="6">
@@ -179,13 +179,13 @@
 </ol>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-07-31/003.png" alt="스토리지 계정에 전송된 메시지">
+    <img src="images/003.png" alt="스토리지 계정에 전송된 메시지">
     <figcaption>스토리지 계정에 전송된 메시지</figcaption>
 </figure>
 </p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-07-31/004.png" alt="Service Bus에 전송된 메시지">
+    <img src="images/004.png" alt="Service Bus에 전송된 메시지">
     <figcaption>Service Bus에 전송된 메시지</figcaption>
 </figure>
 </p>
@@ -210,13 +210,13 @@
 </ol>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-07-31/005.png" alt="3분마다 큐 검사">
+    <img src="images/005.png" alt="3분마다 큐 검사">
     <figcaption>3분마다 큐 검사</figcaption>
 </figure>
 </p>
 <blockquote>
 <p>참고 : 코드 보기를 클릭하여 frequency와 interval 변수 값을 수정할 수도 있습니다. 
-<img src="/files/blog/2020-07-31/006.png">
+<img src="images/006.png">
 </p>
 </blockquote>
 <ol start="6">
@@ -231,14 +231,14 @@
 </li>
 </ol>
 <p>
-<img src="/files/blog/2020-07-31/007.png">
+<img src="images/007.png">
 </p>
 <ol start="9">
 <li>저장 후 결과를 확인합니다.</li>
 </ol>
 <blockquote>
 <p>주의! : 앞서 큐에 모든 메시지를 저장하도록 설정한 경우, 메일 폭탄을 받을 수 있습니다. 
-<img src="/files/blog/2020-07-31/008.PNG">
+<img src="images/008.PNG">
 </p>
 </blockquote>
 <p>지금까지 3편의 포스팅에 걸쳐 IoT 허브를 생성하고, 다양한 엔드포인트로 데이터를 전송하는 방법을 알아보았습니다. <a href="https://tech.cloudmt.co.kr/2020/07/27/Azure-IoT-Architecture/">Azure IoT Architecture</a>에서 IoT 허브와 Azure의 다양한 PaaS 서비스를 연동한 아키텍처도 참고하시길 바랍니다.</p>
@@ -247,7 +247,7 @@
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/yerim-kim/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -328,7 +328,7 @@
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -348,13 +348,17 @@
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

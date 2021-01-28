@@ -14,7 +14,7 @@
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/06/16/website_monitoring_with_logicapp/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -141,7 +141,7 @@
 <p>한번 해보자! 우선 <a href="https://portal.azure.com/">Azure Portal</a>에 접속하여 Logic App을 새로 만든다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/create_logic_app.PNG" alt="Logic App 만들기">
+    <img src="images/create_logic_app.PNG" alt="Logic App 만들기">
     <figcaption>Logic App 만들기</figcaption>
 </figure>
 </p>
@@ -171,14 +171,14 @@
 <p>그렇다면 이 워크플로를 그대로 Logic App에 구현해 보자. 위에서 정의한 워크플로를 살펴보면 첫번째 하는 일이 <strong>주기를 가지고</strong> 작업이 된다. 우리는 이를 스케줄에 의한 작업으로 이야기 한다. 워크플로의 가장 처음은 **&ldquo;언제 시작 해야 하는가?&quot;**를 정의하기에 특정한 시점을 지칭하는 <code>트리거</code>와 반복적인 주기 또는 지정한 시각을 지칭하는 <code>스케줄</code>로 나눌 수 있다. 이번 사례에선 <code>스케줄</code>로 시작한다. Logic App에서 <strong>일정</strong>을 검색하여 <strong>되풀이</strong>를 이용하여 일정한 주기를 통해 작업을 수행해 보자. 웹사이트의 중요도에 따라 <strong>요청 주기</strong>를 설정할 수 있을 건데, 여기서 주의할 점은 Logic App이 Serverless라는 것에 있다. Serverless는 사용한 만큼 비용을 지불하기 때문에 자주 사용할 수록 비용이 높은 특징일 가진다. 앞서 설명했듯이 그리 중요하지 않은 웹사이트를 모니터링 하기에 1시간에 한번 정도 웹사이트의 상태를 체크하기로 하자.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/1_hour_interval.PNG" alt="Logic App 만들기">
+    <img src="images/1_hour_interval.PNG" alt="Logic App 만들기">
     <figcaption>Logic App 만들기</figcaption>
 </figure>
 </p>
 <p>그 다음은 특정 URL에 요청을 보내야 한다. 일반적으로 <code>curl</code> 또는 <code>invoke-webrequest</code>와 같은 요청을 CLI로 수행하면 얻어낼 수 있는 결과이다. 다행히도 Logic App에 기본적인 Plug-in이 있으며 이를 이용하여 URL에 요청해 보자. 일반적인 요청만 하면 되기 때문에 GET 메서드를 사용할 것이고, 테스트 할 URI는 <code>https://tech.cloudmt.co.kr</code>을 모니터링 할 것이다. 우리가 모니터링 할 웹사이트는 단순한 웹 페이지이며 Query String이나 Custom header는 별도로 필요로 하지 않는다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/request_http.PNG" alt="URL 요청">
+    <img src="images/request_http.PNG" alt="URL 요청">
     <figcaption>URL 요청</figcaption>
 </figure>
 </p>
@@ -186,7 +186,7 @@
 <p>그 다음은 프로그램에 ㅍ을 건드려본 사람은 다 아는 if문이다. <strong>URL의 상태코드가 OK가 아니면</strong>을 구현하려면 URL 요청의 결과값이 OK여야 한다는 것을 의미하거나, URL 요청의 결과값이 NO여야 한다는 것을 의미한다. 그렇다면 워크플로에 if문을 집어넣어야 한다.(!) 이를 가능하게 하는 것이 바로 조건(if, Condition)이다. Logic App의 <code>조건</code>은 <code>컨트롤</code>이라는 작업 내에 존재하기에 컨트롤을 먼저 검색한 후 조건을 찾아 들어가자.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/condition_control.PNG" alt="컨트롤 검색">
+    <img src="images/condition_control.PNG" alt="컨트롤 검색">
     <figcaption>컨트롤 검색</figcaption>
 </figure>
 </p>
@@ -194,14 +194,14 @@
 <p>우리가 모니터링을 해야 할 페이지는 고정이고, 그 페이지의 응답코드도 고정이라면 해당 HTTP 상태코드를 기준으로 Alert설정이 가능할 것이다. 따라서 다음과 같이 <code>컨트롤</code>을 설정한다. 설정할 때 앞서 출력된 결과인 HTTP의 상태 코드를 가져온다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/control_options.PNG" alt="컨트롤 조건 입력">
+    <img src="images/control_options.PNG" alt="컨트롤 조건 입력">
     <figcaption>컨트롤 조건 입력</figcaption>
 </figure>
 </p>
 <p>화면에서 보는 것 같이 <code>컨트롤</code>을 추가하면 <strong>Ture</strong>와 <strong>False</strong>인 경우를 입력할 수 있다. 우리는 상태코드가 고정인 페이지를 확인하는 것이기 때문에 <strong>True</strong>인 경우 웹사이트가 예상치 않게 동작하는 것임을 알 수 있다. 따라서 <strong>True</strong>에 작업을 추가해 보도록 하자. 다음과 같이 <code>Microsoft Teams</code>를 입력하여 Teams 채널에 연결해 보도록 하자. Slack이나 다른 Plug-In을 사용할 경우 검색 또는 Azure Functions를 연결하여 사용하자. <code>Microsoft Teams</code>를 선택하면 로그인 창이 뜰 것이고, 해당 계정으로 Microsoft Teams에 메시지가 게시될 것이다. 인증 값은 Microsoft Azure에 암호화되어 저장되며 이는 다음과 같이 <code>API 연결</code>로 저장된다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/APIConnection.PNG" alt="API 연결">
+    <img src="images/APIConnection.PNG" alt="API 연결">
     <figcaption>API 연결</figcaption>
 </figure>
 </p>
@@ -211,13 +211,13 @@
 <p>여러가지 작업 중에 <code>메시지 게시(V3) (미리 보기)</code>를 선택하고 메시지를 게시할 팀과 채널을 선택한다. 앞서 Microsoft Teams에 로그인한 계정이 접근 가능한 팀과 채널을 선택할 수 있다. 그런 후 다음과 같이 메시지를 입력하면 선택된 팀 채널에 메시지가 게시된다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/post_a_message.PNG" alt="메시지 게시">
+    <img src="images/post_a_message.PNG" alt="메시지 게시">
     <figcaption>메시지 게시</figcaption>
 </figure>
 
 
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-06-16/posted_a_message.PNG" alt="채널에 게시된 메시지">
+    <img src="images/posted_a_message.PNG" alt="채널에 게시된 메시지">
     <figcaption>채널에 게시된 메시지</figcaption>
 </figure>
 </p>
@@ -230,7 +230,7 @@
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ea%b9%80%ec%84%b8%ec%a4%80.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/sejun-kim/%ea%b9%80%ec%84%b8%ec%a4%80.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -317,7 +317,7 @@
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -337,13 +337,17 @@
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

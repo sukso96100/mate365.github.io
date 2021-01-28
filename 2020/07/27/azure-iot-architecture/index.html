@@ -16,7 +16,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -130,7 +130,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
 <h1 id="azure-iot-reference-architecture">Azure IoT Reference Architecture<a hidden class="anchor" aria-hidden="true" href="#azure-iot-reference-architecture">#</a></h1>
 <p>Microsoft가 제안하는 Azure PaaS component를 이용한 아키텍처는 다음과 같습니다.
 
-<img src="/files/blog/2020-07-27/IoT2.PNG">
+<img src="images/IoT2.PNG">
 </p>
 <p>Edge Device와 IoT 디바이스로부터 온 데이터의 형식을 변환해서 <em>Cold Path</em>와 <em>Warm Path</em>로 데이터를 나눠서 처리하고, 미리 수집한 데이터와 디바이스 데이터를 결합하여 머신러닝을 적용해 비즈니스 인사이트를 도출합니다.</p>
 <blockquote>
@@ -183,7 +183,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
 <h2 id="device-connectivity">Device Connectivity<a hidden class="anchor" aria-hidden="true" href="#device-connectivity">#</a></h2>
 <p>장치를 클라우드 게이트웨이에 연결하는 4가지 방법이 있습니다.</p>
 <p>
-<img src="/files/blog/2020-07-27/connectivity.png">
+<img src="images/connectivity.png">
 </p>
 <p>① <strong>클라우드 게이트웨이에 직접 장치를 연결</strong>: 인터넷을 통한 보안 연결을 의미합니다.</p>
 <p>② <strong>필드 게이트웨이를 통한 연결(IoT Edge Device)</strong>: 산업별 표준, 단거리 통신 기술(Bluetooth, ZigBee)을 사용하는 장치, TLS/SSL 스택을 호스팅할 수 없는 리소스 제약 장치 또는 인터넷에 노출되지 않은 장치를 연결할 때 사용합니다. 이 옵션은 스트림과 데이터 집계를 필드 게이트웨이에서 실행할 때 유용합니다.</p>
@@ -195,7 +195,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
 <h1 id="iot-시나리오별-아키텍처">IoT 시나리오별 아키텍처<a hidden class="anchor" aria-hidden="true" href="#iot-시나리오별-아키텍처">#</a></h1>
 <h3 id="1-건축-산업-iot-architecturehttpsdocsmicrosoftcomen-usazurearchitectureexample-scenariodatabig-data-with-iot">1. <a href="https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/big-data-with-iot">건축 산업 IoT Architecture</a><a hidden class="anchor" aria-hidden="true" href="#1-건축-산업-iot-architecturehttpsdocsmicrosoftcomen-usazurearchitectureexample-scenariodatabig-data-with-iot">#</a></h3>
 <p>
-<img src="/files/blog/2020-07-27/const.png">
+<img src="images/const.png">
 </p>
 <p>대규모 장치 데이터를 수집하여 건설 장비를 원격으로 자동 제어하는 기능을 구현하기 위한 아키텍처입니다. 사물인터넷(IoT)과 GPS 기술을 탑재한 차량, 미터기, 드론을 구축해 원격측정 데이터를 내보냅니다. 건설 현장 장비 및 데이터를 통합하고 분석하여 장비 다운타임을 최소화하고 도난을 방지합니다.</p>
 <ol>
@@ -221,12 +221,12 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
 </ol>
 <h3 id="2-음성-도우미-iot-architecturehttpsdocsmicrosoftcomen-usazurearchitectureexample-scenariodatabig-data-with-iot">2. <a href="https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/big-data-with-iot">음성 도우미 IoT Architecture</a><a hidden class="anchor" aria-hidden="true" href="#2-음성-도우미-iot-architecturehttpsdocsmicrosoftcomen-usazurearchitectureexample-scenariodatabig-data-with-iot">#</a></h3>
 <p>
-<img src="/files/blog/2020-07-27/voice.png">
+<img src="images/voice.png">
 </p>
 <p>사용자가 음성을 이용해 비서 애플리케이션을 사용하는 시나리오입니다. IoT devices가 타사 IoT 클라우드에 연결되면 <a href="https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0">Azure Bot Service</a>를 통해 타사 서비스 API에 연결하여 장치에 명령을 전송합니다.</p>
 <h3 id="3-covid-19-보호를-위한-iot-architecturehttpsdocsmicrosoftcomko-krazurearchitecturesolution-ideasarticlesiot-connected-platform">3. <a href="https://docs.microsoft.com/ko-kr/azure/architecture/solution-ideas/articles/iot-connected-platform">COVID-19 보호를 위한 IoT Architecture</a><a hidden class="anchor" aria-hidden="true" href="#3-covid-19-보호를-위한-iot-architecturehttpsdocsmicrosoftcomko-krazurearchitecturesolution-ideasarticlesiot-connected-platform">#</a></h3>
 <p>
-<img src="/files/blog/2020-07-27/covid.png">
+<img src="images/covid.png">
 </p>
 <p>열 감지 카메라 등 다양한 센서에서 수집된 온도 및 시각 데이터를 IoT Edge 게이트웨이에서 전처리합니다. 클라우드에서는 IoT hub와 통신하여 네트워크를 제어하고 데이터를 Azure 리소스로 스트리밍합니다. Azure API Management는 웹 앱, 모바일 앱, Azure maps 및 Power BI와 같은 엔드포인트에 배포 시 내부와 외부 API를 통합하는 역할을 합니다. 배포 된 앱은 Azure Active Directory, <a href="https://azure.microsoft.com/ko-kr/services/key-vault/">Azure Key Vault</a>및 <a href="https://azure.microsoft.com/ko-kr/services/monitor/">Azure Monitor</a> 같은 azure 서비스로 관리됩니다.</p>
 <p>지금까지 Azure IoT 참조 아키텍처를 기반으로 IoT를 위한 Azure PaaS 서비스를 알아보았습니다.</p>
@@ -235,7 +235,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/yerim-kim/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -316,7 +316,7 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -336,13 +336,17 @@ Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component�
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

@@ -17,7 +17,7 @@
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/08/25/azure-machine-learning-designer%EB%A1%9C-%EC%B6%94%EB%A1%A0-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -133,19 +133,19 @@
 <p>자동차에 대한 features를 바탕으로 가격 label을 학습한 모델을 이용하여 유추 파이프라인을 만들어보겠습니다. 추론에 사용할 데이터는 자동차 3대에 대한 새로운 데이터이며, 가격 column을 제외하고 입력합니다.</p>
 <p>(1) 학습 파이프라인 우측 상단의 유추 파이프라인을 클릭하고, 실시간 유추 파이프라인을 선택합니다.</p>
 <p>
-<img src="/files/blog/2020-08-24/infer.PNG">
+<img src="images/infer.PNG">
 </p>
 <p>아래 그림의 표시한 부분을 수정하여 유추 파이프라인을 완성합니다. 기존 Raw 데이터에는 가격 label이 포함되어 있으므로, 기존 모듈을 삭제하고 수동으로 데이터를 입력합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/pipeline2.PNG" alt="만들 유추 파이프라인">
+    <img src="images/pipeline2.PNG" alt="만들 유추 파이프라인">
     <figcaption>만들 유추 파이프라인</figcaption>
 </figure>
 </p>
 <p>(2) <strong>Enter Data Manually</strong> 모듈을 검색하여 파이프라인 창에 추가하고, 데이터를 입력합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/manuallydata.PNG" alt="데이터 입력">
+    <img src="images/manuallydata.PNG" alt="데이터 입력">
     <figcaption>데이터 입력</figcaption>
 </figure>
 </p>
@@ -167,7 +167,7 @@
 </code></pre></div><p>(6) <strong>제출</strong>을 클릭하여 파이프라인을 실행합니다. 완료되면 <strong>Execute Python Script</strong>를 마우스 우클릭하여 결과를 시각화합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/result.PNG" alt="결과 시각화">
+    <img src="images/result.PNG" alt="결과 시각화">
     <figcaption>결과 시각화</figcaption>
 </figure>
 </p>
@@ -177,21 +177,21 @@
 <p>(1) 실시간 유추 파이프라인 우측 상단의 <strong>배포</strong>를 클릭합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/endpoint.PNG" alt="배포">
+    <img src="images/endpoint.PNG" alt="배포">
     <figcaption>배포</figcaption>
 </figure>
 </p>
 <p>(2) 배포가 완료되면 엔드포인트 메뉴에서 생성된 엔드포인트를 선택합니다. REST 엔드포인트와 기본 키를 복사해둡니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/key.png" alt="엔드포인트">
+    <img src="images/key.png" alt="엔드포인트">
     <figcaption>엔드포인트</figcaption>
 </figure>
 </p>
 <p>(3) Notebooks 메뉴에서 <strong>auto_test.ipynb</strong> 파일을 생성합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/filecreate.PNG" alt="notebook file create">
+    <img src="images/filecreate.PNG" alt="notebook file create">
     <figcaption>notebook file create</figcaption>
 </figure>
 </p>
@@ -261,7 +261,7 @@ req <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</sp
 </code></pre></div><p>(6) 저장하고 실행한 후, 결과를 확인합니다.</p>
 <p>
 <figure style="text-align: center;">
-    <img src="/files/blog/2020-08-24/result2.png" alt="결과로 출력된 가격 label">
+    <img src="images/result2.png" alt="결과로 출력된 가격 label">
     <figcaption>결과로 출력된 가격 label</figcaption>
 </figure>
 </p>
@@ -272,7 +272,7 @@ req <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</sp
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/yerim-kim/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -354,7 +354,7 @@ req <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</sp
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -374,13 +374,17 @@ req <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</sp
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

@@ -15,7 +15,7 @@ Log Management Index 비용 ● Set retention period 기간별 가격 (한 달, 
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/12/10/datadog-log-indexing/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -152,12 +152,12 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 </ol>
 <p>[그림 1] Indexes 탭
 
-<img src="/files/blog/2020-12-10/Indexes_TAP.png">
+<img src="images/Indexes_TAP.png">
 </p>
 <p>인덱스가 없는 경우 New Index를 클릭하여 인덱스를 생성하고 인덱스가 있으면 위 [그림 1]과 같이 Edit을 클릭하면 [그림 2]와 같은 Index 수정 창이 표시됩니다.</p>
 <p>[그림 2] Index 수정
 
-<img src="/files/blog/2020-12-10/Indexes_TAP2.png">
+<img src="images/Indexes_TAP2.png">
 </p>
 <p>Define Index에서 Index를 처리할 로그에 대한 필터를 정의하고 Set retention period를 설정합니다.</p>
 <p>(수정을 위해서는 Case Open 필요)</p>
@@ -167,7 +167,7 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 </ul>
 <p>[그림 3] Set daily quota
 
-<img src="/files/blog/2020-12-10/Set_daily_quota.png">
+<img src="images/Set_daily_quota.png">
 </p>
 <p>모든 설정이 끝났다면 Save를 눌러주면 설정이 완료됩니다.</p>
 <ol start="2">
@@ -176,13 +176,13 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 </ol>
 <p>[그림 4] Add an Exclusion Filter
 
-<img src="/files/blog/2020-12-10/Add_Exclusion_Filter.png">
+<img src="images/Add_Exclusion_Filter.png">
 </p>
 <p>[그림 4]와 같이 설정한 Index 아래의 Add an Exclusion Filter를 클릭합니다.</p>
 <p>Define exclusion query에서 제외할 로그의 쿼리를 설정 후 Set exclusion percentage에서 해당 쿼리에 걸리는 로그에서 제외할 비중(퍼센트)을 설정하고 저장합니다.</p>
 <p>[그림 5] Exclusion Filter 설정 창
 
-<img src="/files/blog/2020-12-10/Exclusion_Filter.png">
+<img src="images/Exclusion_Filter.png">
 </p>
 <ol start="3">
 <li>Index된 로그를 별도 저장소로 아카이브
@@ -194,7 +194,7 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 <p>Logs &gt; Configuration 에서 Archives 탭으로 들어갑니다.</p>
 <p>[그림 6] Archive 생성
 
-<img src="/files/blog/2020-12-10/Create_Archive.png">
+<img src="images/Create_Archive.png">
 </p>
 <p>[그림 6]와 같이 New archives를 클릭하면 아카이브 생성 창이 표시됩니다.</p>
 <p>Archive 설정을 진행 합니다.</p>
@@ -206,19 +206,19 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 </code></pre>
 <p>[그림 7] Archive 설정
 
-<img src="/files/blog/2020-12-10/Archive_Config.png">
+<img src="images/Archive_Config.png">
 </p>
 <p>앞서 Archive 할 스토리지를 확인해보면 아래와 같이 정상적으로 Archive 된 로그를 확인 할 수 있습니다.
 [그림 8] Archive 된 로그들
 
-<img src="/files/blog/2020-12-10/Archive_logs.png">
+<img src="images/Archive_logs.png">
 </p>
 
 </div>
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%ed%99%a9%ec%a4%80%ed%95%98.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/junha-hwang/%ed%99%a9%ec%a4%80%ed%95%98.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -298,7 +298,7 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -318,13 +318,17 @@ Logs &gt; Configuration 에서 Indexes 탭으로 들어갑니다.</li>
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

@@ -17,7 +17,7 @@ Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된
   
 ">
 <link rel="canonical" href="https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.dd8880218de039fe9acb23d48360e312cf853dd63cb9f6c2e8260d1ccfc3d683.css" integrity="sha256-3YiAIY3gOf6ayyPUg2DjEs&#43;FPdY8ufbC6CYNHM/D1oM=" rel="preload stylesheet"
+<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.4f1ad98d0bbc51ea2c950f063c7e29522bc8945c9dd06348318cd4cce6be44bb.css" integrity="sha256-TxrZjQu8UeoslQ8GPH4pUivIlFyd0GNIMYzUzOa&#43;RLs=" rel="preload stylesheet"
     as="style">
 <link href="/assets/css/style.css" rel="stylesheet"/>
 
@@ -132,7 +132,7 @@ Azure Devops와 AKS배포 관리 2편 - Docker 이미지의 AKS 배포 빌드된
 <p>빌드된 어플리케이션을 배포하는 방법은 여러가지 방법이 있다. 통합된 Devops 툴을 사용하기 전에는 Jenkins와 같은 빌드서버에서 Ansible과 같은 배포툴로 서버에 배포했다. 그러기 위해서는 어플리케이션에 따른 빌드환경과 배포환경을 직접 셋팅이 필요했다. 통합된 Devops와 Cloud Service는 이러한 작업을 상당히 줄여준다.</p>
 <p>아래는 전체 아키텍쳐이다. 상당히 통합되어 있어보인다.
 
-<img src="/files/blog/2020-07-22/%ec%95%84%ed%82%a4%ed%85%8d%ec%b3%90.png">
+<img src="images/%ec%95%84%ed%82%a4%ed%85%8d%ec%b3%90.png">
 </p>
 <blockquote>
 <p>여러개의 어플리케이션 구현을 위해 Mysql을 직접 배포해보았다.</p>
@@ -378,42 +378,42 @@ server {
 <h2 id="artifact-배포">Artifact 배포<a hidden class="anchor" aria-hidden="true" href="#artifact-배포">#</a></h2>
 <p>작성된 Manifest를 Release 파이프라인에서 사용하기위해 Artifact에 저장해야한다. Build Pipeline에서 Git에 저장된 Manifest를 Artifact로 보내는 작업을 추가한다. 준비한 Manifest를 프로젝트의 특정 위치에 업로드 후 아래와 같이 Artifact로 drop 한다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-15-10-32-31.png">
+<img src="images/2020-07-15-10-32-31.png">
 <br>
 
-<img src="/files/blog/2020-07-22/2020-07-15-10-33-13.png">
+<img src="images/2020-07-15-10-33-13.png">
 </p>
 <h2 id="release-파이프라인">Release 파이프라인<a hidden class="anchor" aria-hidden="true" href="#release-파이프라인">#</a></h2>
 <p>배포한 AKS, Artifact를 통해 어플리케이션을 Kubernetes환경에 올릴 차례이다. Release 파이프라인에 아래와 같이 설정을 배포하기만 하면된다.</p>
 <h3 id="apply-secret">apply secret<a hidden class="anchor" aria-hidden="true" href="#apply-secret">#</a></h3>
 <p>어플리케이션 배포시 <code>Keyvault</code>에서 관리되는 <code>환경변수</code>들을 Kubernetes <code>Secret</code>으로 배포할 수 있다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-20-09-32-37.png">
+<img src="images/2020-07-20-09-32-37.png">
 </p>
 <h3 id="apply-imagepullsecret">apply imagepullsecret<a hidden class="anchor" aria-hidden="true" href="#apply-imagepullsecret">#</a></h3>
 <p>ACR에서 Pull 하기위한 인증을 위해 <code>Imagepullsecret</code>을 설정하자.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-20-09-41-25.png">
+<img src="images/2020-07-20-09-41-25.png">
 </p>
 <h3 id="apply-configmap">apply configmap<a hidden class="anchor" aria-hidden="true" href="#apply-configmap">#</a></h3>
 <p><code>configmap</code>은 데이터를 저장하는데 사용하는 API오브젝트이다. 파일을 통한 저장이 가능하다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-20-09-45-23.png">
+<img src="images/2020-07-20-09-45-23.png">
 </p>
 <h3 id="apply-deployment">apply deployment<a hidden class="anchor" aria-hidden="true" href="#apply-deployment">#</a></h3>
 <p>Artifact에 저장한 yaml을 경로로 deployment를 설정하고, Deploy를 해준다. <code>ImagePullSecret</code>은 위에서 설정한 값 그대로 써준다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-20-09-47-14.png">
+<img src="images/2020-07-20-09-47-14.png">
 </p>
 <h3 id="apply-service">apply service<a hidden class="anchor" aria-hidden="true" href="#apply-service">#</a></h3>
 <p>위처럼 Service도 설정해준다.
 
-<img src="/files/blog/2020-07-22/2020-07-20-09-57-15.png">
+<img src="images/2020-07-20-09-57-15.png">
 </p>
 <h3 id="성공">성공<a hidden class="anchor" aria-hidden="true" href="#성공">#</a></h3>
 <p>배포가 성공되면 아래와 같이 <code>Azure shell</code>에서 명령어를 통해 목록을 볼 수있다. 실패시 파이프라인의 로그를 보고 슈팅을 하도록하자.
 
-<img src="/files/blog/2020-07-22/2020-07-10-13-55-58.png">
+<img src="images/2020-07-10-13-55-58.png">
 </p>
 <h2 id="모니터링">모니터링<a hidden class="anchor" aria-hidden="true" href="#모니터링">#</a></h2>
 <h3 id="helm-chart">Helm Chart<a hidden class="anchor" aria-hidden="true" href="#helm-chart">#</a></h3>
@@ -437,20 +437,20 @@ helm install grafana stable/grafana --set persistence.enabled=true --set service
 
 </code></pre><p>위 명령어를 통해 기본 설정으로 배포해주었다. 그 다음 <code>kubectl get service -n monitoring</code> 명령어를 통해 Grafana IP로 접속해서, 대시보드를 Import 해보자.</p>
 <p>
-<img src="/files/blog/2020-07-22/2020-07-21-15-01-00.png">
+<img src="images/2020-07-21-15-01-00.png">
 </p>
 <ul>
 <li>위 스크린샷처럼 접속 후 왼쪽에 있는 <code>+</code> 메뉴에서 <code>Import</code>로 들어간다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-21-15-02-29.png">
+<img src="images/2020-07-21-15-02-29.png">
 </li>
 <li>위 칸에 <code>6417</code>를 적으면 아래 스크린샷처럼 나온다. <a href="https://grafana.com/grafana/dashboards/6417">Grafana Labs 참조</a><br>
 
-<img src="/files/blog/2020-07-22/2020-07-21-15-03-21.png">
+<img src="images/2020-07-21-15-03-21.png">
 </li>
 <li>Import를 하고 생성한 대시보드를 띄우면 아래와 같이 나온다.<br>
 
-<img src="/files/blog/2020-07-22/2020-07-21-15-04-42.png">
+<img src="images/2020-07-21-15-04-42.png">
 </li>
 </ul>
 <p>이렇게 쉬운 셋팅으로 쿠버네티스의 인프라에 대해 모니터링을 할 수있게 되었다. 필요한 Metric을 설정하고 alert 설정도 가능하다. 자세한 사용방법은 넘어가겠다.</p>
@@ -465,7 +465,7 @@ Azure resource를 코드로써 배포하기위한, 인프라 및 구성을 정�
 <ul>
 <li>Azure Devops에서는 Service간 connection을 한번의 설정만으로 관리해준다.</li>
 <li>
-<img src="/files/blog/2020-07-22/2020-07-20-10-10-23.png">
+<img src="images/2020-07-20-10-10-23.png">
 </li>
 </ul>
 </li>
@@ -484,7 +484,7 @@ Azure resource를 코드로써 배포하기위한, 인프라 및 구성을 정�
   <div class="post-content">
       <hr/>
   <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(/files/authors/%eb%b0%95%ec%98%81%ec%a7%84.jpg) no-repeat center; 
+    <div style="background: url(https://tech.cloudmt.co.kr/authors/youngjin-park/%eb%b0%95%ec%98%81%ec%a7%84.jpg) no-repeat center; 
         background-size: cover; width: 80px; height: 80px; 
         border-radius: 100%;">
     </div>
@@ -566,7 +566,7 @@ Azure resource를 코드로써 배포하기위한, 인프라 및 구성을 정�
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
     </button>
@@ -586,13 +586,17 @@ Azure resource를 코드로써 배포하기위한, 인프라 및 구성을 정�
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                behavior: "smooth"
-            });
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

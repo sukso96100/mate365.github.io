@@ -3,12 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+    <loc>https://tech.cloudmt.co.kr/authors/jiyoung-sung/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/architecture/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/azure/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/devops/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/devtest/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/post/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/tags/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,27 +78,12 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/tags/fortigate/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tech.cloudmt.co.kr/tags/fortinet/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/post/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,11 +218,6 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/tags/azure/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/tags/azure-devops/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -248,11 +273,6 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/tags/devops/</loc>
-    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/2020/08/07/nambu_womanup_mentoring/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url>
@@ -275,11 +295,6 @@
   <url>
     <loc>https://tech.cloudmt.co.kr/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/tags/architecture/</loc>
-    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -629,10 +644,6 @@
   </url>
   
   <url>
-    <loc>https://tech.cloudmt.co.kr/authors/jiyoung-sung/</loc>
-  </url>
-  
-  <url>
     <loc>https://tech.cloudmt.co.kr/authors/junhyun-bae/</loc>
   </url>
   
@@ -646,10 +657,6 @@
   
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/yeongkwan-shin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://tech.cloudmt.co.kr/archives/</loc>
   </url>
   
   <url>

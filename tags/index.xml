@@ -5,7 +5,43 @@
     <link>https://tech.cloudmt.co.kr/tags/</link>
     <description>Recent content in Tags on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://tech.cloudmt.co.kr/tags/architecture/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://tech.cloudmt.co.kr/tags/azure/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://tech.cloudmt.co.kr/tags/devops/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevTest</title>
+      <link>https://tech.cloudmt.co.kr/tags/devtest/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tech.cloudmt.co.kr/tags/devtest/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AWS</title>
       <link>https://tech.cloudmt.co.kr/tags/aws/</link>
@@ -205,15 +241,6 @@
     </item>
     
     <item>
-      <title>Azure</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tech.cloudmt.co.kr/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Azure Devops</title>
       <link>https://tech.cloudmt.co.kr/tags/azure-devops/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
@@ -259,29 +286,11 @@
     </item>
     
     <item>
-      <title>Devops</title>
-      <link>https://tech.cloudmt.co.kr/tags/devops/</link>
-      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tech.cloudmt.co.kr/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>IoT</title>
       <link>https://tech.cloudmt.co.kr/tags/iot/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tech.cloudmt.co.kr/tags/iot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Architecture</title>
-      <link>https://tech.cloudmt.co.kr/tags/architecture/</link>
-      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tech.cloudmt.co.kr/tags/architecture/</guid>
       <description></description>
     </item>
     

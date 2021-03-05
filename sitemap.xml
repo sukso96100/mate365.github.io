@@ -1,697 +1,417 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://tech.cloudmt.co.kr/authors/yerim-kim/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/aws/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/budget/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/netapp/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/post/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/spot/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2021/02/17/spot_by_netapp_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/daniel-lim/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/jiyoung-sung/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/architecture/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/azure/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/cloud-service/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/devops/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/devtest/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/expenses/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2021/02/16/%EC%A0%81%EC%A0%88%ED%95%9Cazure%EC%9A%B4%EC%98%81%EC%9C%BC%EB%A1%9C%EB%B9%84%EC%9A%A9%EC%9D%84%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EC%8B%9C%EB%A9%B4%EB%90%A9%EB%8B%88%EB%8B%A4/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/seongjin-kim/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/aws-jams/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/aws-reinvent/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/12/11/ngfw%EB%A1%9C-acme%EC%9D%98-%ED%8A%B8%EB%9E%9C%EC%A7%93-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4-%EB%B3%B4%ED%98%B8/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/fortigate/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/fortinet/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/transit-gateway/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/junha-hwang/</loc>
     <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/datadog/</loc>
     <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-log-indexing/</loc>
     <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/logs/</loc>
     <lastmod>2020-12-10T19:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</loc>
     <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/terraform/</loc>
     <lastmod>2020-12-10T16:12:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/12/10/aws-iam%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-private-%EB%A7%9D-ec2-%EC%A0%91%EA%B7%BC%EA%B3%BC-%EB%A1%9C%EA%B9%85%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/ec2/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/iam/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/session-manager/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/systems-manager/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/jungwoo-kim/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/amazon-web-services/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/11/16/db_migration_from_oracle_to_mysql_in_aws_ec2/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/cloud/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/db-migration/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/dms/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/mysql/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/on-premise/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/oracle/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/sct/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/youngbin-han/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/app-service/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part1/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/11/15/quick-aspnet-dev-azmanaged-deploy-part2/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/azure-devops/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft-azure/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/dev-test-labs/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/10/15/azure_devtestlab%EC%9C%BC%EB%A1%9C_%EB%8C%80%EB%9F%89_%EB%B0%B0%ED%8F%AC_%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/data-science/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/machine-learning/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/08/25/azure-machine-learning-designer%EB%A1%9C-%EC%B6%94%EB%A1%A0-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/08/24/azure-machine-learning-designer%EB%A1%9C-%ED%9A%8C%EA%B7%80-%EB%AA%A8%EB%8D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
     <lastmod>2020-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/08/19/azure-machine-learning/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/seungyoon-lee/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/08/07/nambu_womanup_mentoring/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/iot/</loc>
     <lastmod>2020-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/youngjin-park/</loc>
     <lastmod>2020-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/aks/</loc>
     <lastmod>2020-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/22/azuredevopsonaks2/</loc>
     <lastmod>2020-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/monitoring/</loc>
     <lastmod>2020-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/wooyeoung-ahn/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/13/cloudontap-%EC%86%8C%EA%B0%9C/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/13/cloudontap-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/cvo/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/07/10/azuredevopsonaks1/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/sejun-kim/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/logic-app/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/06/16/website_monitoring_with_logicapp/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft-365/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft-teams/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/office-365/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/teams/</loc>
     <lastmod>2020-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/chansung-park/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/aws-cloudfront/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/azure-cdn/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/06/09/%EB%A9%80%ED%8B%B0cdn%EA%B5%AC%EC%84%B1/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/cdn/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/codespace/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/visual-studio/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/06/01/vsonlinereview2/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vscode/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vscodespace/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vsonline/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/sangyeop-park/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/azure-active-directory/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/05/11/gsuitsyncazuread/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/azure-ad/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/g-suite/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/04/22/vsonlinereview/</loc>
     <lastmod>2020-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/access-package/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/01/09/azadsyncprovisioning/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/01/09/azure-ad-entitlement-management/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/compliance-center/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/compliance-score/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/entitlement-management/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2020/01/09/compliancecenter/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/provisioning/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/sync/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/ignite-2019/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft-ignite/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/microsoft-ignite-2019/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2019/11/29/ignite2019_1/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/%ED%9B%84%EA%B8%B0/</loc>
     <lastmod>2019-11-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/data-fabric/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/gcp/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/netapp-insight/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/netapp-insight-2019/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2019/11/28/insight2019_1/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2019/11/28/insight2019_2/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/service-fabric/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/tip/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/2019/08/09/post/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/hands-on-lab/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/hol/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/peering/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vgw/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vnet/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vpc/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/tags/vpn/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/hyukmin-kwon/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/jaewhi-song/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/jinchul-jung/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/junhyun-bae/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/ryan-jung/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/sangpil-lee/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/authors/yeongkwan-shin/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tech.cloudmt.co.kr/categories/</loc>
   </url>
-  
 </urlset>

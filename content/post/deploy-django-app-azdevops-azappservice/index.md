@@ -95,10 +95,105 @@ Azure Pipelines 에서 Azure 리소스에 접근하려면, Service Connection �
 - Tenant ID: 앞 단계에서 복사한 *생성한 앱 등록의 **디렉터리(테넌트) ID***
 
 입력 완료 후, *Verify* 버튼을 클릭하여, 입력한 설정값이 정상적으로 작동하는지 확인합니다. 
-문제가 없다면, *Service connection name*과 *Description (optional)*을 마저 입력 후,
+문제가 없다면, *Service connection name* 과 *Description (optional)* 을 마저 입력 후,
 프로젝트 내 모든 파이프라인에서 접근하도록 하려면, *Grant access permission to all pipelines*를 체크한 후, *Verify and save*를 클릭하여 Service connection 생성을 마무리 합니다.
 
+# Azure Pipelines - YAML Pipeline 구축하기
+App Service 리소스 구성과 Service Connection 구성을 완료 했으니, 이제 이를 이용하여 Django 앱을 App Service 에 배포하는 파이프라인을 구축해 봅시다.
+보통은 Azure DevOps의 Pipelines 화면에서 새 파이프라인 생성시 *Python to Linux Web App on Azure* 를 선택해서 진행하면 파이프라인 파일까지 자동을 생성해 주지만, 
+그 과정에서 Service Connection 을 자동을 생성하고 구성하기 때문에, 앞에서 설정한 Service Connection 을 선택하여 진행할 수 없으며, Azure 구독에 SP 생성 권한이 없으면 권한 부족 오류가 발생합니다.
 
+때문에 파이프라인을 정의한 YAML 파일을 먼저 저장소에 커밋하고, 이를 이용하여 파이프라인을 구성해 보겠습니다.
+
+```yml
+# Python to Linux Web App on Azure
+# Build your Python project and deploy it to Azure as a Linux Web App.
+# Change python version to one thats appropriate for your application.
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- main
+
+variables:
+  # Azure Resource Manager connection created during pipeline creation
+  azureServiceConnectionId: 'svcconnid'
+
+  # Web app name
+  webAppName: 'webappname'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+  # Environment name
+  environmentName: 'evname'
+
+  # Project root folder. Point to the folder containing manage.py file.
+  projectRoot: $(System.DefaultWorkingDirectory)
+
+  # Python version: 3.7
+  pythonVersion: '3.7'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: BuildJob
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+      displayName: 'Use Python $(pythonVersion)'
+
+    - script: |
+        python -m venv antenv
+        source antenv/bin/activate
+        python -m pip install --upgrade pip
+        pip install setup
+        pip install -r requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: "Install requirements"
+
+    - task: ArchiveFiles@2
+      displayName: 'Archive files'
+      inputs:
+        rootFolderOrFile: '$(projectRoot)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Upload package'
+      artifact: drop
+
+- stage: Deploy
+  displayName: 'Deploy Web App'
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: DeploymentJob
+    pool:
+      vmImage: $(vmImageName)
+    environment: $(environmentName)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '$(pythonVersion)'
+            displayName: 'Use Python version'
+
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : hybtest'
+            inputs:
+              azureSubscription: $(azureServiceConnectionId)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+```
 
 # 참고 자료
 - [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals)

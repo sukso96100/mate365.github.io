@@ -38,3 +38,36 @@ Key Vault 에 등록된 비밀의 상세 정보를 조회하면, `https://` 로 
 # 예시
 # @Microsoft.KeyVault(SecretUri=https://mysecret.vault.azure.net/secrets/DbPass/1234cff7f231420aa785e17a12345038)
 ```
+
+# Azure DevOps에 Service Connection 설정 추가하기
+Azure Pipelines 에서 Azure 리소스에 접근하려면, Service Connection 을 Azure DevOps 워크스페이스에 설정해서 둘을 연결해 주어야 합니다. 
+보통 Service Connection 설정 시, Azure 구독에 대해 Service Principal 을 생성할 수 있는 권한이 있다면, Azure DevOps 에서 자동으로 연결을 설정할 수 있습니다.
+하지만 그렇지 않은 경우도 많죠. 여기서는 SP(Service Principal) 을 수동을 생성하고, 이를 이용해 Service Connection 을 설정하는 방법을 알아보겠습니다.
+
+## SP 생성 권한 유뮤 확인
+먼저 SP 생성 권한이 있는지 Azure AD 및 Azure 구독에서 확인합니다.
+1. Azure Portal 에서 Azure AD 로 이동한 후, *개요* 의 *로그인* 부분에서 본인의 **역할**을 확인합니다. *사용자* 역할인 경우, 관리자가 아닌 사람도 앱 등록이 가능한지 확인이 필요합니다.
+![](images/devopssvc1.png)
+2. 관리자가 아닌 사용자도 앱 등록이 가능한지 확인하려면, *사용자 설정* 으로 이동하여, *앱 등록* 이 **예** 로 되어 있는지 확인합니다.
+3. **아니오** 인 경우, 관리자 분께 문의하셔서 앱 등록(SP 발급)을 요청하셔야 합니다.
+![](images/devopssvc2.png)
+
+4. Azure 구독에서 권한이 있는지도 확인하기 위해, *구독* 화면에서 앞서 생성한 App Service 리소스가 사용하는 Azure 구독을 선택합니다.
+5. *액세스 제어(IAM)* 에서 *내 액세스 보기* 를 클릭하여 할당된 역할을 확인합니다. 아래 사진처럼 **기여자** 로 되어 있으면, 앱 등록 생성이 불가능 합니다. 관리자분께 문의하여 [권한을 부여 받으시거나](https://docs.microsoft.com/ko-kr/azure/active-directory/roles/custom-available-permissions) 대신 SP를 생성해 달라고 요청하셔야 합니다.
+![](images/devopssvc3.png)
+## 앱 등록(또는 Service Principal) 생성
+앱 등록 권한이 있다면, 앱 등록을 직접 생성해서 Azure DevOps에 Service Connection을 생성할 수 있습니다. 
+앱 등록을 생성하려면, Azure Portal 검색 바에서 *앱 등록* 을 검색하여 이동합니다. 이후, *새 등록* 을 클릭하여 새 앱 등록을 생성합니다.
+![](images/appreg1.png)
+
+새로 생성한 앱 등록 리소스에서, *인증서 및 암호* 에서 *클라이언트 암호*를 새로 생성합니다. 여기서 생성한 클라이언트 암호를, Azure DevOps에 Service Connection 등록 시 사용합니다.
+![](images/appreg2.png)
+
+
+
+
+
+
+
+# 참고 자료
+- [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals)

@@ -9,6 +9,11 @@ tags:
 ShowToc: false # 글 개요 보여줄지 여부
 TocOpen: false # 글 개요를 보여주는 경우, 펼처서 보여줄지 여부.
 draft: false # 초안 작성 모드. true 설정시 커밋해도 나오지 않습니다.
+cover: # 게시물 커버 이미지
+    image: "<image path/url>" # 이미지 파일 경로
+    alt: "<alt text>" # 이미지 깨질 때 보일 설명
+    caption: "<text>" # 이미지 설명
+    relative: true # 포스트 파일 폴더에 포함된 이미지 사용시, true 유지.
 ---
 
 아래 내용은 마크다운 문법입니다. 확인 후, 모두 지우고 마크다운 문법으로 내용을 작성하세요.

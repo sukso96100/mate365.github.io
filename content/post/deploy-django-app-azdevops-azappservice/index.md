@@ -10,6 +10,11 @@ tags:
 - Azure DevOps
 - Azure Pipelines
 ShowToc: true # 글 개요 보여줄지 여부
+cover: # 게시물 커버 이미지
+    image: "images/appsvc.png" # 이미지 파일 경로
+    alt: "<alt text>" # 이미지 깨질 때 보일 설명
+    caption: "<text>" # 이미지 설명
+    relative: true # 포스트 파일 폴더에 포함된 이미지 사용시, true 유지.
 ---
 최근 사내에서 클라우드 3사 통합 빌링 시스템 개발에 참여하면서, Django 기반 웹앱 개발에도 참여했고 이를 Azure App Service 에 배포하는 것을 구성하기도 했습니다. 이 글에서는, 개발 초기에 앱 배포를 위해 인프라와 배포 파이프라인을 어떻게 구성했는지 살펴보고, 배포 파이프라인을 어떻게 개선해 왔는지에 대한 경험을 공유하고자 합니다.
 
@@ -101,9 +106,15 @@ Azure Pipelines 에서 Azure 리소스에 접근하려면, Service Connection �
 # Azure Pipelines - YAML Pipeline 구축하기
 App Service 리소스 구성과 Service Connection 구성을 완료 했으니, 이제 이를 이용하여 Django 앱을 App Service 에 배포하는 파이프라인을 구축해 봅시다.
 보통은 Azure DevOps의 Pipelines 화면에서 새 파이프라인 생성시 *Python to Linux Web App on Azure* 를 선택해서 진행하면 파이프라인 파일까지 자동을 생성해 주지만, 
-그 과정에서 Service Connection 을 자동을 생성하고 구성하기 때문에, 앞에서 설정한 Service Connection 을 선택하여 진행할 수 없으며, Azure 구독에 SP 생성 권한이 없으면 권한 부족 오류가 발생합니다.
+그 과정에서 Service Connection 을 자동으로 생성하고 구성하기 때문에, 앞에서 설정한 Service Connection 을 선택하여 진행할 수 없으며, Azure 구독에 SP 생성 권한이 없으면 권한 부족 오류가 발생합니다.
 
 때문에 파이프라인을 정의한 YAML 파일을 먼저 저장소에 커밋하고, 이를 이용하여 파이프라인을 구성해 보겠습니다.
+아래 코드는 파이프라인 생성 시, *Python to Linux Web App on Azure* 선택하면 나오는 파이프라인 YAML 코드입니다. 
+이 코드에서 다음과 같은 부분만 수정하여 `.pipelines/deploy-pipeline.yml`에 저장 후 커밋합니다.
+
+- `azureServiceConnectionId`: 앞에서 생성한 Service Connection 의 이름을 입력합니다.
+- `webAppName`: 앞에서 생성한 Azure App Service 리소스의 이름을 입력합니다.
+- `environmentName`: 파이프라인 빌드 배포 환경을 정의합니다. 원하는 이름으로 입력하세요.
 
 ```yml
 # Python to Linux Web App on Azure
@@ -116,22 +127,22 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'svcconnid'
+  azureServiceConnectionId: '<Service Connection Name>'
 
   # Web app name
-  webAppName: 'webappname'
+  webAppName: '<Azure Web App Resource Name>'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'evname'
+  environmentName: '<Pipeline Environment Name>'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-  # Python version: 3.7
-  pythonVersion: '3.7'
+  # Python version: 3.8
+  pythonVersion: '3.8'
 
 stages:
 - stage: Build
@@ -188,12 +199,32 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : hybtest'
+            displayName: 'Deploy Azure Web App : $(webAppName)'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 ```
+저장한 YAML 파이프라인 파일로 파이프라인을 구성하려면, *Pipelines -> Pipelines -> New Pipeline(화면 우측 상단)* 을 클릭하여 아래와 같은 화면으로 들어갑니다. 
+순서대로 *Azure Repos Git* -> 파이프라인 파일을 커밋한 저장소 -> *Existing Azure Pipelines YAML file* 를 선택하고, 파이프라인 파일을 커밋한 브랜치와 파일 경로를 입력합니다.
+![](images/pipeline1.png)
+
+## YAML 파이프라인 기본 구조 살펴보기
+파이프라인 파일 정보를 입력하고 다음 단계로 넘어가면 파이프라인 코드를 리뷰하는 화면이 나타납니다. 파이프라인 코드를 훝어보며 YAML 파이프라인의 기본 구조와, 파이프라인 구성에 사용한 코드에서 어떤 작업을 수행하는지 살펴보도록 하겠습니다. 
+
+먼저 위 코드를 보면 크게 세 부분으로 나눠 볼 수 있습니다. 
+
+- `trigger`: 파이프라인 실행 조건 지정(커밋 푸시 트리거)
+- `variables`: 파이프라인에서 사용할 변수 설정
+- `stages`, `jobs`, `steps`, `task` 실행할 작업 정의
+
+그 외에도 몇 가지가 더 있습니다.
+
+- `name`: 빌드 넘버링 포맷 지정
+- `resources`: 파이프라인 실행 시, 저장소에 포함된 파일과 파이프라인 변수 이외에 추가적으로 필요한 리소스 정의
+
+### `trigger`
+커밋이 푸시되면 어떤 조건 하에서 트리거 되도록 할 지 조건을 지정할 수 있습니다.
 
 # 참고 자료
 - [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals)

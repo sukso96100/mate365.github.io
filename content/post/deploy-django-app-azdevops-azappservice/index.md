@@ -216,15 +216,41 @@ stages:
 
 - `trigger`: 파이프라인 실행 조건 지정(커밋 푸시 트리거)
 - `variables`: 파이프라인에서 사용할 변수 설정
-- `stages`, `jobs`, `steps`, `task` 실행할 작업 정의
+- `stages`, `jobs`, `steps`, 실행할 작업 정의
 
 그 외에도 몇 가지가 더 있습니다.
 
 - `name`: 빌드 넘버링 포맷 지정
 - `resources`: 파이프라인 실행 시, 저장소에 포함된 파일과 파이프라인 변수 이외에 추가적으로 필요한 리소스 정의
+- `pr`: Pull Request 트리거 지정
+- `schedules`: 주기적으로 트리거 할 일정 지정
 
 ### `trigger`
 커밋이 푸시되면 어떤 조건 하에서 트리거 되도록 할 지 조건을 지정할 수 있습니다.
-
+브랜치, 태그, 변경된 파일 경로 등을 조건으로 설정할 수 있습니다.
+```yaml
+trigger:
+  batch: boolean # true 로 설정시, 실행중인 빌드가 있으면 대기 했다가 대기 중 푸시된 커밋을 한번에 빌드합니다.
+  branches:
+    include: [ string ] # 빌드 트리거 할 브랜치
+    exclude: [ string ] # 빌드 트리거에서 제외할 브랜치
+  tags:
+    include: [ string ] # 빌드 트리거 할 태그
+    exclude: [ string ] # 빌드 트리거에서 제외할 태그
+  paths:
+    include: [ string ] # 빌드 트리거 할 파일 경로
+    exclude: [ string ] # 빌드 트리거에서 제외할 파일 경로
+```
+### `variables`
+이름 그대로, 파이프라인 실행 중 사용할 변수를 선언하는 곳 입니다.
+파이프라인 전역에서 사용하도록 정의 할 수도 있고, 뒤에 나올 Stage, Job 단위에서 사용하도록 정의할 수도 있습니다.
+```yaml
+variables:
+  var1: 123
+  var2: 'hello'
+  arr: [1, 2, 3]
+```
+### `stage`, `job`, `step`
+여기에서 실제로 자동화 할 작업을 정의합니다. 가장 작은 단위인 `step`부터, 이를 묶은 `job`, 여러`job`을 논리적인 단위로 묶는 `stage` 까지 다양한 단계로 세분화하고 그룹화 할 수 있습니다. 
 # 참고 자료
 - [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals)

@@ -218,7 +218,7 @@ stages:
 - `variables`: 파이프라인에서 사용할 변수 설정
 - `stages`, `jobs`, `steps`, 실행할 작업 정의
 
-그 외에도 몇 가지가 더 있습니다.
+그 외에도 사용할 수 있는것이 몇 가지가 더 있습니다.
 
 - `name`: 빌드 넘버링 포맷 지정
 - `resources`: 파이프라인 실행 시, 저장소에 포함된 파일과 파이프라인 변수 이외에 추가적으로 필요한 리소스 정의
@@ -251,6 +251,75 @@ variables:
   arr: [1, 2, 3]
 ```
 ### `stage`, `job`, `step`
-여기에서 실제로 자동화 할 작업을 정의합니다. 가장 작은 단위인 `step`부터, 이를 묶은 `job`, 여러`job`을 논리적인 단위로 묶는 `stage` 까지 다양한 단계로 세분화하고 그룹화 할 수 있습니다. 
+여기에서 실제로 자동화 할 작업을 정의합니다. 가장 작은 단위인 `step`부터, 이를 묶은 `job`, 여러`job`을 논리적인 단위로 묶는 `stage` 까지 다양한 단계로 세분화하고 그룹화 할 수 있습니다. `job` 단위에서 하위 `step`을 실행할 에이전트를 지정할 수 있습니다. 또한 이러한 여러 `job` 을 `stage` 로 묶으면, `job` 별로 다른 환경에서 작업을 실행하는 것을 물론, 동시에 여러 `job` 을 실행하는 것도 가능합니다.
+
+`stage` 단위로 나누는 경우, 각 `stage` 단계별로 승인 절차를 설정하거나 하나의 `stage` 단계가 다른 `stage` 에 의존하도록(예: A Stage 가 성공해야 B Stage 를 실행하도록) 설정할 수도 있습니다.
+
+```yaml
+stages:
+- stage: Build # Stage
+  displayName: Build stage
+  jobs:
+  - job: BuildJob # Job
+    steps:
+    - task: UsePythonVersion@0 # Step
+      inputs:
+        versionSpec: '$(pythonVersion)'
+      displayName: 'Use Python $(pythonVersion)'
+```
+## 자동화된 작업 살펴보기
+YAML 파이프라인의 기본 구조를 살펴 보았으니, 우리가 앞서 생성한 파이프라인 파일에서 어떤 작업을 자동화 하는지도 살펴봅시다.
+
+### Build Stage, Deploy Stage
+우선 빌드 스테이지와 배포 스테이지가 나눠져 있습니다. 이 경우, 배포 스테이지로 넘어가기 전 승인 절차를 넣거나, 빌드가 성공해야만 배포를 실행하도록 구성할 수 있습니다.
+
+```yaml
+stages:
+- stage: Build
+...
+- stage: Deploy
+```
+
+### Build Job
+Build Job 에서는 빌드 작업에서 할 작업을 정의하고, `vmImage`를 통해 빌드에 사용할 가상머신 환경을 지정하고 있는것을 보실 수 있습니다.
+기본적으로 Windows(`windows-latest`), Ubuntu(`ubuntu-latest`), macOS(`macOS-latest`) 중 하나의 환경을 사용할 수 있습니다. [작업 실행에 사용 가능한 에이전트 VM 이미지 정보는 이 문서에서 더 자세히 보실 수 있습니다.](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software)
+
+```yaml
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: BuildJob
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    ...
+```
+하위 `step` 의 경우, 먼저 작업에 쓸 Python 버전을 [`UsePythonVersion` Task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/tool/use-python-version?view=azure-devops) 를 이용하여 지정하고 있습니다.
+
+```yaml
+...
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(pythonVersion)'
+  displayName: 'Use Python $(pythonVersion)'
+  ...
+```
+이후 `scripts` 유형의 `task`를 통해, 실행할 명령줄을 직접 지정하여 필요한 작업을 실행하도록 정의되어 있습니다.
+이 `task` 의 경우, Python 가상환경을 생성한 다음 활성화 하고, 활성화된 가상환경에서 앱 실행에 필요한 의존성을 설치하도록 작업을 정의해 둔것을 확인할 수 있습니다. 앞에서처럼 `task`로 미리 정의된 `step`을 실행하거나, `scripts`로 실행할 명령줄을 직접 나열할 수도 있습니다.
+```yaml
+steps:
+  ...
+- script: |
+    python -m venv antenv
+    source antenv/bin/activate
+    python -m pip install --upgrade pip
+    pip install setup
+    pip install -r requirements.txt        
+  workingDirectory: $(projectRoot)
+  displayName: "Install requirements"
+  ...
+```
+
 # 참고 자료
 - [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals)

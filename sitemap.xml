@@ -14,6 +14,12 @@
     <loc>/tags/budget/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/cloud/</loc>
+    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -413,7 +419,5 @@
     <loc>/authors/yeongkwan-shin/</loc>
   </url><url>
     <loc>/archives/</loc>
-  </url><url>
-    <loc>/categories/</loc>
   </url>
 </urlset>

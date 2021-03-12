@@ -12,7 +12,7 @@
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/2021/02/16/%EC%A0%81%EC%A0%88%ED%95%9Cazure%EC%9A%B4%EC%98%81%EC%9C%BC%EB%A1%9C%EB%B9%84%EC%9A%A9%EC%9D%84%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EC%8B%9C%EB%A9%B4%EB%90%A9%EB%8B%88%EB%8B%A4/</guid>
-      <description>우선 방금의 문장에서 어떠한 인물을 떠올렸다면&amp;hellip;본인의 과거를 돌아보며 반성하시기 바란다. (본인 포함해서&amp;hellip;)인류는 항상 예산과 싸웠다. 어느 시대에 살든 어떠한 정부형태를 가졌든 얼만큼의 경제력을 갖추었든 간에 인류는 항상 예산과의 싸움이 시달렸었다.그건 코로나시대 (COVID Era)에도 현재 진행형이고 앞으로도 계속 될 것이다.결국 어느 기업이던 간에 항상 고민하게 되는 부분은 &amp;ldquo;비용을 어떻게 줄일 수 있을까?&amp;quot;&amp;ldquo;어떻게 하면 획기적으로 줄일 수 있을까?등을 고민하게 된다.당장 우리들만 봐도 &amp;ldquo;전기세를 어떻게 아낄 수 있을까?&amp;ldquo;라고 고민하지 않는가?그렇다면 클라우드 서비스에서는 어떻게 해야 가장 적절하게 비용을 최적화 시킬 수 있을까?</description>
+      <description>우선 방금의 문장에서 어떠한 인물을 떠올렸다면&amp;hellip;본인의 과거를 돌아보며 반성하시기 바란다. (본인 포함해서&amp;hellip;)인류는 항상 예산</description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/06/16/website_monitoring_with_logicapp/</guid>
-      <description>주저리주저리 웹사이트가 죽었다. 모니터링을 별도로 할 만큼 중요한 서비스는 아니었지만, 이대로 두다간 우리가 멍청이가 될 것 같아 모니터링을 설정하기로 했다. 우선 대응은 휴먼 드리븐으로 결정! 대응까지 자동화 하기엔 아직 이 사이트의 경험치가 부족하다고 판단되었기 때문이다. 그럼 어디 한번 모니터링을 걸어볼까? 그런데 문제가 생겼다. 이 사이트는 돈을 1원도 벌어오지 못하고 오히려 돈을 써서 유지해야 하는 사이트다 보니 유료 모니터링이 부담스러웠다. 그래서 예~~~전 Global Azure BootCamp 2017때 김영재님께서 공유해주셨던 Logic App으로 웹사이트 모니터링 하기를 설정하기로 했다.</description>
+      <description>주저리주저리 웹사이트가 죽었다. 모니터링을 별도로 할 만큼 중요한 서비스는 아니었지만, 이대로 두다간 우리가 멍청이가 될 것 같아 모니터링을 설정하기로 했다. 우</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/06/01/vsonlinereview2/</guid>
-      <description>Visual Studio Codespace 협업기능 사용방법 1. Azure Account 설치 2. Live Share Extension 설치  Live Share Extension Pack Live Share Whiteboard 설치 후 Reload  3. Start (세션 시작)  협업 세션 시작을 통해 시작할 수 있으며, 세션 만들어지고 url공유 또는 초대 메일를 통해 세션에 참가 가능하다. 읽기전용 세션은 참가자는 수정권한이 없으며, 오직 읽기만 가능하다.  4. Join (세션 참가)  초대 url을 통해 web에서 실행하거나, app에서 url을 입력해서 참가 할 수있다.</description>
+      <description>Visual Studio Codespace 협업기능 사용방법 1. Azure Account 설치 2. Live Share Extension 설치 Live Share Extension Pack Live Share Whiteboard 설치 후 Reload 3. Start (세션 시작) 협업 세션 시작을 통해 시작할 수 있으며, 세션 만들어지고 url공유</description>
     </item>
     
     <item>
@@ -39,9 +39,7 @@
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/04/22/vsonlinereview/</guid>
-      <description>Visual Studio Codespace.  (추가) 5월 1일 일자로 서비스 명 변경.
-Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프로그래밍 언어를 지원하는 가상 환경(Cloud-hosted)을 제공하고, 최소한의 IDE 셋팅으로 어디서든 같은환경에서 작업 혹은 협업이 가능하다. VS의 확장기능을 그대로 사용하고있어, 확장성이 뛰어나다.  사용법 로그인  https://online.visualstudio.com/login 로그인 후 초기 화면
-  Setting  Billing이 이루어질 Azure Subscription에 Plan을 생성한다. 생성한 Plan에서 Codespace(프로젝트 단위)들을 생성할 수 있다.  1.</description>
+      <description>Visual Studio Codespace. (추가) 5월 1일 일자로 서비스 명 변경. Visual Studio Online -&amp;gt; Visual Studio Codespace 특징 대부분의 프로그래밍 언어를 지원하는 가상 환경(Cloud-hosted)을 제공하고,</description>
     </item>
     
     <item>
@@ -50,10 +48,7 @@ Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/01/09/azadsyncprovisioning/</guid>
-      <description>Azure AD Cloud Provisioning은 Azure AD에 대 한 사용자, 그룹 및 연락처의 동기화를 위해 하이브리드 id 목표를 충족 하 고 달성 하기 위해 설계 된 새로운 Microsoft 에이전트입니다.
-•	Azure AD Sync의 경우 온프레미스의 AD에서 Azure AD로의 단일 포리스트를 지원했었지만, Azure AD Cloud Provisioning은 다중 온프레미스 AD를 추가할 수 있습니다.
-•	에이전트가 간소화되어, 프로비저닝 작업 및 설치에 대한 부담이 줄었습니다. 이제 동기화 작업 수행은 Azure AD에서 실행할 수 있습니다.
-•	프로비전 에이전트의 고가용성 배포가 간소화됩니다.</description>
+      <description>Azure AD Cloud Provisioning은 Azure AD에 대 한 사용자, 그룹 및 연락처의 동기화를 위해 하이브리드 id 목표를 충족 하 고 달성 하기 위해 설계 된 새로운 Microsoft 에이전트입</description>
     </item>
     
     <item>
@@ -62,8 +57,7 @@ Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/01/09/azure-ad-entitlement-management/</guid>
-      <description>Azure AD Identity Governance를 통한 리소스 접근 제어 Azure Active Directory에 대한 권한 관리를 통해 조직이 정보에 대한 액세스를 관리하도록 돕고 있습니다. 권한 관리는 직원 및 파트너 액세스 요청, 승인, 감사 및 워크 플로우를 특정 코드를 이용하지 않고 GUI를 통해서 간단하게 만들 수 있습니다. 뿐만 아니라, ID 관리 및 특정 민감한 정보에 대한 접근 제어와 함께 약관을 명시하여 동의를 해야만 하는 약관 기능도 제공을 합니다.
-해당 기능을 활성화를 할 경우 다음의 라이선스 중 하나가 있어야 합니다.</description>
+      <description>Azure AD Identity Governance를 통한 리소스 접근 제어 Azure Active Directory에 대한 권한 관리를 통해 조직이 정보에 대한 액세스를 관리하도록 돕고 있습니다. 권한</description>
     </item>
     
     <item>
@@ -72,8 +66,7 @@ Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/01/09/compliancecenter/</guid>
-      <description>Microsoft Compliance Score and Microsoft 365 Compliance Center Microsoft에서는 보안을 위한 대비책으로 규정 준수라는 이름의 서비스를 활성화하기 시작했습니다. 이 Microsoft 준수 점수 미리보기 기능은, Microsoft 365 SKU를 사용하는 고객에게 활성화 되어 있으며 고객의 보안에 대한 진척도 및 중요도를 점수로 표현하여 보다 안전한 사용 관리를 위해 제공되고 있습니다.
-특히 이 규정 준수 점수를 통하여 모든 위험 평가를 추적하는 도구로 사용할 수 있으며, 간소화 된 준수 관리를 통해 지속적인 평가와 권장 작업 그리고 기본 제공 컨트롤 매핑을 제공합니다.</description>
+      <description>Microsoft Compliance Score and Microsoft 365 Compliance Center Microsoft에서는 보안을 위한 대비책으로 규정 준수라는 이름의 서비스를 활성화하기 시작했습니다. 이 Microsoft 준수 점수 미리보기 기능은, Microsoft</description>
     </item>
     
     <item>
@@ -82,7 +75,7 @@ Visual Studio Online -&amp;gt; Visual Studio Codespace  특징  대부분의 프
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/11/29/ignite2019_1/</guid>
-      <description>주저리주저리 Microsoft Ignite 2019는 놀이공원의 성지, 꿈과 희망의 올랜도에서 개최되었습니다. 그래서 전 디즈니랜드도 아닌 디즈니월드를 다녀왔죠.(또 가고싶다 디즈니) 이번 출장은 지난 후기에서도 언급했듯이 NetApp Insight 2019를 가는 겸 Microsoft Ignite 2019를 다녀왔습니다. 일정상으론 NetApp Insight 2019가 라스베가스에서 10월 28-30일, Microsoft Ignite 2019가 올랜도에서 11월 4-8일로 바로 행사가 있는 셈이죠. 하지만 라스베가스는 미국 서부고 올랜도는 미국 동부인 관계로 국내 비행이 4시간 30분이라는 놀라움을 금치 못하며 비행을 하였습니다. 도착해보니 미국동부시와 서부시가 3시간 차이가 있더군요?</description>
+      <description>주저리주저리 Microsoft Ignite 2019는 놀이공원의 성지, 꿈과 희망의 올랜도에서 개최되었습니다. 그래서 전 디즈니랜드도 아닌 디즈니월드를 다녀왔죠.(또 가고싶다 디즈</description>
     </item>
     
   </channel>

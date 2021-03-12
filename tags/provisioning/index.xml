@@ -12,10 +12,7 @@
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/01/09/azadsyncprovisioning/</guid>
-      <description>Azure AD Cloud Provisioning은 Azure AD에 대 한 사용자, 그룹 및 연락처의 동기화를 위해 하이브리드 id 목표를 충족 하 고 달성 하기 위해 설계 된 새로운 Microsoft 에이전트입니다.
-•	Azure AD Sync의 경우 온프레미스의 AD에서 Azure AD로의 단일 포리스트를 지원했었지만, Azure AD Cloud Provisioning은 다중 온프레미스 AD를 추가할 수 있습니다.
-•	에이전트가 간소화되어, 프로비저닝 작업 및 설치에 대한 부담이 줄었습니다. 이제 동기화 작업 수행은 Azure AD에서 실행할 수 있습니다.
-•	프로비전 에이전트의 고가용성 배포가 간소화됩니다.</description>
+      <description>Azure AD Cloud Provisioning은 Azure AD에 대 한 사용자, 그룹 및 연락처의 동기화를 위해 하이브리드 id 목표를 충족 하 고 달성 하기 위해 설계 된 새로운 Microsoft 에이전트입</description>
     </item>
     
   </channel>

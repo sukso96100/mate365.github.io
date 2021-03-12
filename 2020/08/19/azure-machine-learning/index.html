@@ -1,158 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name=" robots" content="noindex, nofollow">
-<title>데린이의 Azure Machine Learning 실습 | CLOUDMATE Tech</title>
+    
+    
+    <title>데린이의 Azure Machine Learning 실습 · CLOUDMATE Tech</title>
 
-<meta name="keywords" content="Azure, Microsoft Azure, Data Science, Machine Learning" />
-<meta name="description" content="이번 포스팅은 Azure Machine Learning 실습 자료를 바탕으로 작성하였습니다. 해당 모듈은 Azure Machine Learning을 사용하여 코드 없이 예측 모델 만들기 실습의 첫 번째 모듈입니다.
-다양한 머신러닝 모델을 알아보고, Azure Machine Learning의 자동화된 머신러닝 기능을 사용하여 예측 모델을 학습하고 배포하기 위한 실습입니다.
-1. What is machine learning? 머신러닝은 알려지지 않은 값을 예측하기 위해 수학과 통계를 사용하는 기술입니다. 머신러닝 모델을 하나 이상의 연산을 수행하는 함수로 이해할 수 있습니다. 예를 들어 도시에 자전거 대여 회사가 있다고 가정해봅시다.">
-<meta name="author" content="
-  김예림&nbsp;·&nbsp;
-  
-">
-<link rel="canonical" href="https://tech.cloudmt.co.kr/2020/08/19/azure-machine-learning/" />
-<link href="https://tech.cloudmt.co.kr/assets/css/stylesheet.min.1eef9c740af75b4e5f773d9d5f757e03e3df71f3a308e73070cc73d55a59a7d7.css" integrity="sha256-Hu&#43;cdAr3W05fdz2dX3V&#43;A&#43;PfcfOjCOcwcMxz1VpZp9c=" rel="preload stylesheet"
-    as="style">
-<link href="/assets/css/style.css" rel="stylesheet"/>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="icon" href="https://tech.cloudmt.co.kr/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://tech.cloudmt.co.kr/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://tech.cloudmt.co.kr/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://tech.cloudmt.co.kr/apple-touch-icon.png">
-<link rel="mask-icon" href="https://tech.cloudmt.co.kr/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.81.0" />
-
-
+    
+    <link rel="stylesheet" href="/style.main.min.70a829cbb17a0113b633175fe446bf0d75034a2e6783eb94f9800fbb843a857b.css" />
 
 </head>
+<body class=" post-template ">
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+    <div class="site-wrapper">
 
-</script>
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-</noscript>
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://tech.cloudmt.co.kr" accesskey="h" title="  (Alt + H)">
-                <img src="/assets/images/CMLOGO_SHADOW.png" alt="logo" aria-label="logo"
-                    height="50"> </a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
+<header class="site-header"><div class="outer site-nav-main">
+    <div class="inner"><nav class="site-nav">
+    <div class="site-nav-left">
+        
+            <a class="site-nav-logo" href="">CLOUDMATE Tech</a>
+        
+        
+        <div class="site-nav-content">
+            <ul class="nav" role="menu">
                 
+                <li class="nav-home" role="menuitem"><a href="/archives/">Archives</a></li>
                 
-            </span>
+                <li class="nav-home" role="menuitem"><a href="/tags/">Tags</a></li>
+                
+                <li class="nav-home" role="menuitem"><a href="https://recruit.cloudmt.co.kr">Recruit</a></li>
+                
+                <li class="nav-home" role="menuitem"><a href="https://cloudmt.co.kr">cloudmt.co.kr</a></li>
+                
+            </ul>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
-            <li>
-                <a href="https://tech.cloudmt.co.kr/archives/" title="Archives">
-                    <span>Archives</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://tech.cloudmt.co.kr/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://recruit.cloudmt.co.kr" title="Recruit">
-                    <span>Recruit</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://cloudmt.co.kr" title="cloudmt.co.kr">
-                    <span>cloudmt.co.kr</span>
-                </a>
-            </li></ul>
-    </nav>
-</header>
-
-    <main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">
-      데린이의 Azure Machine Learning 실습
-    </h1>
-    <div class="post-meta">
-
-2020. 08. 19.&nbsp;·&nbsp;
-  <a href="https://tech.cloudmt.co.kr/authors/yerim-kim/">김예림</a>&nbsp;·&nbsp;
-  
-
+        
     </div>
-  </header> 
+</nav>
 
-  <div class="post-content">
-<p>이번 포스팅은 <a href="https://docs.microsoft.com/learn/modules/use-automated-machine-learning/">Azure Machine Learning 실습 자료</a>를 바탕으로 작성하였습니다. 해당 모듈은 Azure Machine Learning을 사용하여 코드 없이 예측 모델 만들기 실습의 첫 번째 모듈입니다.</p>
+</div>
+</div></header>
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post  no-image ">
+
+            <header class="post-full-header">
+
+                
+                    
+                    <section class="post-full-tags">
+                        <a href="/tags/azure">Azure</a>
+                    </section>
+                
+
+                <h1 class="post-full-title">데린이의 Azure Machine Learning 실습</h1>
+
+                
+
+                <div class="post-full-byline">
+                    <section class="post-full-byline-content">
+
+                        
+
+                        <section class="post-full-byline-meta">
+                            
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2020-128-08">19 August 2020</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 5 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>이번 포스팅은 <a href="https://docs.microsoft.com/learn/modules/use-automated-machine-learning/">Azure Machine Learning 실습 자료</a>를 바탕으로 작성하였습니다. 해당 모듈은 Azure Machine Learning을 사용하여 코드 없이 예측 모델 만들기 실습의 첫 번째 모듈입니다.</p>
 <p>다양한 머신러닝 모델을 알아보고, Azure Machine Learning의 자동화된 머신러닝 기능을 사용하여 예측 모델을 학습하고 배포하기 위한 실습입니다.</p>
-<h3 id="1-what-is-machine-learning">1. What is machine learning?<a hidden class="anchor" aria-hidden="true" href="#1-what-is-machine-learning">#</a></h3>
+<h3 id="1-what-is-machine-learning">1. What is machine learning?</h3>
 <p>머신러닝은 알려지지 않은 값을 예측하기 위해 수학과 통계를 사용하는 기술입니다. 머신러닝 모델을 하나 이상의 연산을 수행하는 함수로 이해할 수 있습니다. 예를 들어 도시에 자전거 대여 회사가 있다고 가정해봅시다. 날짜별, 요일별, 날씨별 데이터를 바탕으로 자전거 대여 수요를 예측해 필요한 직원과 자전거 수를 조절하려고 합니다. 한 주의 특정한 요일이나 날씨같은 세부 정보를 X로 둘 수 있고, 그 날의 대여량을 Y로 둘 수 있습니다. 해당 정보에 따라 대여량을 계산하는 함수 F 는 머신러닝 모델 안에 있습니다.</p>
 <blockquote>
 <p>Y = F(X)</p>
 </blockquote>
-<p>
-<figure style="text-align: center;">
-    <img src="images/p1.jpg" alt="자전거라서 자전거 그림">
-    <figcaption>자전거라서 자전거 그림</figcaption>
-</figure>
-</p>
-<h3 id="2-azure-machine-learning">2. Azure Machine Learning<a hidden class="anchor" aria-hidden="true" href="#2-azure-machine-learning">#</a></h3>
+<p><img src="images/p1.jpg" alt="자전거라서 자전거 그림"></p>
+<h3 id="2-azure-machine-learning">2. Azure Machine Learning</h3>
 <p>머신러닝 모델을 효율적으로 학습시키고 배포하는 데에는 많은 시간과 자원이 듭니다. 머신러닝 모델 학습에 사용하는 대부분 데이터는 선가공이 필요합니다. 또한 데이터 과학자들은 정확한 모델을 만들기 위해 다양한 모델 학습 알고리즘을 시도합니다. 이 과정에서 비싼 컴퓨팅 하드웨어를 비효율적으로 사용하게 됩니다.</p>
 <p>Azure Machine Learning은 데이터 과학자들이 데이터를 준비하고, 모델을 학습시키고, 예측 서비스를 배포하는 등 작업을 간단히하여 시간을 단축할 수 있도록 도와주는 클라우드 기반 서비스입니다. 데이터 과학자들이 데이터를 준비하고 모델을 학습하고 예측 서비스를 배포하고 사용량을 모니터링하기 위한 다양한 기능을 제공합니다. 많은 시간을 소요하는 모델 학습과 관련한 일을 자동화함으로써 일의 효율성을 높일 수 있습니다. 또한, Azure Machine Learning을 사용하면 많은 데이터를 효율적으로 확장할 수 있으며, 사용할 때만 과금하는 정책을 통해 비용을 절약할 수 있습니다.</p>
-<h3 id="3-create-an-azure-machine-learning-workspace">3. Create an Azure Machine Learning Workspace<a hidden class="anchor" aria-hidden="true" href="#3-create-an-azure-machine-learning-workspace">#</a></h3>
+<h3 id="3-create-an-azure-machine-learning-workspace">3. Create an Azure Machine Learning Workspace</h3>
 <p>Azure Machine Learning을 사용하기 위해서 Azure 구독에 Workspace를 생성합니다. Workspace에서 데이터, 컴퓨트 자원, 코드, 모델, 그리고 머신러닝 워크로드와 관련한 다양한 아티팩트를 관리할 수 있습니다.</p>
 <p><strong>참고 :</strong> Azure Machine learning은 2020년 8월 기준 Enterprise와 Basic 두 가지 버전을 제공합니다. Basic 버전은 GA로 사용 가능하며, Enterprise Edition은 미리보기 상태입니다. 이 기간에는 ML 추가 요금이 없습니다. Enterprise Edition은 UI, Azure ML 디자이너, 작업 영역 간 용량 공유 및 할당량 지정 등 기능을 추가 제공합니다.</p>
 <p>(1) Azure Portal에서 <em>Machine Learning(기계 학습)</em> 리소스를 만듭니다.</p>
-<p>
-<img src="images/p2.PNG">
-</p>
+<p><img src="images/p2.PNG" alt=""></p>
 <p>(2) 리소스 배포가 완료되면 Machine Learning Studio를 엽니다.  - <a href="https://ml.azure.com">https://ml.azure.com</a> 로 접속하거나 Portal에서 클릭합니다.</p>
-<p>
-<img src="images/p3.PNG">
-</p>
-<h3 id="4-create-compute-resources">4. Create Compute Resources<a hidden class="anchor" aria-hidden="true" href="#4-create-compute-resources">#</a></h3>
+<p><img src="images/p3.PNG" alt=""></p>
+<h3 id="4-create-compute-resources">4. Create Compute Resources</h3>
 <p>Azure Machine Learning에서 생성할 수 있는 컴퓨팅 자원은 다음과 같습니다.</p>
 <ul>
 <li>Compute Instance : 데이터 과학자가 데이터와 모델로 작업할 수 있는 개발 Workstation입니다. 이번 실습에서는 모델을 테스트하기 위해 사용합니다.</li>
@@ -161,71 +114,41 @@
 <li>Attached Compute : 가상머신이나 Azure Databricks 클러스터와 같은 기존 Azure 컴퓨트 리소스를 연결할 수 있습니다.</li>
 </ul>
 <p>(1) 모델 테스트 시 Workstation으로 사용할 Compute Instance를 생성합니다.</p>
-<p>
-<figure style="text-align: center;">
-    <img src="images/p4.PNG" alt="인스턴스 이름 짓는게 제일 어렵다">
-    <figcaption>인스턴스 이름 짓는게 제일 어렵다</figcaption>
-</figure>
-</p>
+<p><img src="images/p4.PNG" alt="인스턴스 이름 짓는게 제일 어렵다"></p>
 <p>(2) 모델을 학습시키는데 사용할 Compute Cluster를 생성합니다.</p>
-<p>
-<figure style="text-align: center;">
-    <img src="images/p5.PNG" alt="인스턴스 이름 짓는게 제일 어렵다2">
-    <figcaption>인스턴스 이름 짓는게 제일 어렵다2</figcaption>
-</figure>
-</p>
+<p><img src="images/p5.PNG" alt="인스턴스 이름 짓는게 제일 어렵다2"></p>
 <p><strong>참고 :</strong> 프로덕션 환경에서는 최소 노드 수를 0으로 설정하여 필요한 경우에만 컴퓨팅 자원을 시작하도록 합니다. VM을 시작하는데 시간이 걸리므로 이 모듈에서는 기다리는 시간을 최소화하기 위해 2개의 노드를 계속 동작하도록 설정합니다. 불필요한 과금을 방지하려면 실습을 진행하지 않을 때는 최소 노드 수를 다시 0으로 조절하는 것이 좋습니다. 또는 빠르게 실습을 진행한 후 리소스 그룹을 삭제합시다.</p>
-<h3 id="5-explore-data">5. Explore data<a hidden class="anchor" aria-hidden="true" href="#5-explore-data">#</a></h3>
+<h3 id="5-explore-data">5. Explore data</h3>
 <p>머신러닝 모델에 넣을 데이터가 필요합니다. Microsoft에서 제공하는 데이터를 이용합니다. 자전거 대여 세부사항 데이터셋을 사용하여 계절 및 기상학적 특징을 기준으로 특정 날짜의 자전거 대여 횟수를 예측하는 모델을 학습시킬 것입니다.</p>
 <p>(1) 데이터 세트를 만듭니다.</p>
 <p><em>로컬 파일에서 / 데이터 저장소에서 / 웹 파일에서 / 열린 데이터 세트에서</em> 옵션이 있습니다. 여기서는 웹(<a href="https://aka.ms/bike-rentals">https://aka.ms/bike-rentals</a>)에서 데이터를 불러옵니다.</p>
 <p><strong>참고 :</strong> 데이터 저장소는 Azure Blob Storage, Azure 파일 공유, Azure Data Lake Storage Gen1, Azure Data Lake Storage Gen2, Azure SQL Database, Azure PostgreSQL 데이터베이스를 지원합니다.</p>
 <p><strong>참고 :</strong> 열린 데이터세트란 <a href="https://azure.microsoft.com/ko-kr/services/open-datasets/">Azure에서 제공하는 개방형 데이터 세트</a>를 말합니다.</p>
-<p>
-<img src="images/p6.png">
-</p>
-<p>
-<img src="images/p7.PNG">
-</p>
-<p>
-<img src="images/p8.PNG">
-</p>
-<p>
-<img src="images/p9.PNG">
-</p>
+<p><img src="images/p6.png" alt=""></p>
+<p><img src="images/p7.PNG" alt=""></p>
+<p><img src="images/p8.PNG" alt=""></p>
+<p><img src="images/p9.PNG" alt=""></p>
 <p>(2) 만들어진 데이터 세트를 검토합니다.</p>
-<p>
-<img src="images/p10.PNG">
-</p>
-<h3 id="6-train-a-machine-learning-model">6. Train a machine learning model<a hidden class="anchor" aria-hidden="true" href="#6-train-a-machine-learning-model">#</a></h3>
+<p><img src="images/p10.PNG" alt=""></p>
+<h3 id="6-train-a-machine-learning-model">6. Train a machine learning model</h3>
 <p>Azure Machine Learning은 클라우드 컴퓨팅의 확장성을 활용하여 다중 전처리 기법과 모델 학습 알고리즘을 병렬로 사용해 데이터에 가장 적합한 모델을 찾는 자동화된 머신러닝 기능을 포함하고 있습니다.</p>
 <p>자동화된 머신러닝 <em>experience</em>를 구성합니다. (해당 기능은 아직 Preview 상태입니다.)</p>
 <p>(1) 데이터 세트를 선택하고, 대상 열로 <em>rentals</em>를 지정합니다. 우리는 이 실험을 통해 자전거 대여량을 예측할 것입니다. 학습에 사용할 컴퓨팅 클러스터로 앞서 만든 클러스터를 지정합니다.</p>
-<p>
-<img src="images/p11.PNG">
-</p>
+<p><img src="images/p11.PNG" alt=""></p>
 <p>(2) 작업 형식을 <em>회귀</em>로 선택하고, 추가 구성을 설정합니다. <em>RandomForest</em>와 <em>LightGBM</em>을 빼고 모든 알고리즘을 차단합니다. 보통은 이렇게 하지 않지만 학습에 너무 오랜 시간이 소요되기 때문에 다음과 같이 구성합니다.</p>
 <p><strong>참고 :</strong> 회귀분석(Regression Test)이란?
 독립 변인이 종속 변인에 영향을 미치는지 알아보고자 할 때 실시하는 분석 방법입니다. 단순 선형 회귀 분석은 독립변수 X(설명변수)에 대하여 종속변수 Y(반응변수)들 사이의 관계를 수학적 모형을 이용하여 규명하는 것입니다.</p>
-<p>
-<img src="images/p12.PNG">
-</p>
+<p><img src="images/p12.PNG" alt=""></p>
 <p>(3) 기능화(Featurization) 사용을 체크합니다.</p>
 <p><strong>참고 :</strong> 방대한 데이터에서 어떤 feature가 유용한지 아닌지 확인하는 작업이 필요합니다. 이 과정을 특징 선택(feature selection) 또는 특징 추출(feature extraction)이라고 합니다. Azure에서는 데이터 정규화, 누락된 데이터 처리, 텍스트를 숫자로 변환하는 작업을 자동으로 수행합니다.</p>
-<p>
-<img src="images/p13.PNG">
-</p>
+<p><img src="images/p13.PNG" alt=""></p>
 <p>세부 사항 설정을 마치면 자동으로 학습이 시작됩니다.</p>
-<h3 id="7-review-the-best-model">7. Review the best model<a hidden class="anchor" aria-hidden="true" href="#7-review-the-best-model">#</a></h3>
+<h3 id="7-review-the-best-model">7. Review the best model</h3>
 <p>(1) 세부 정보 탭에서 최적의 모델을 검토할 수 있습니다.</p>
-<p>
-<img src="images/p14.PNG">
-</p>
+<p><img src="images/p14.PNG" alt=""></p>
 <p>최적 모형은 지정한 평가 메트릭(정규화된 제곱 평균 오차)을 기반으로 식별됩니다. 이 메트릭을 계산하기 위해서 일부 데이터를 사용해 모델을 학습시킨 후, 학습에 사용되지 않은 데이터로 테스트를 진행합니다. cross-validation 기법을 적용해 예측 값과 실제 값을 비교합니다. 비교한 결과로 나온 오차를 제곱하여 평균을 구한 다음 제곱근을 구합니다. 이 값이 작을수록 모형의 예측도가 높은 것입니다.</p>
 <p>(2) 메트릭 탭에서 실제 값과 예측 값을 비교하여 시각화한 자료를 검토할 수 있습니다.</p>
-<p>
-<img src="images/p15.PNG">
-</p>
+<p><img src="images/p15.PNG" alt=""></p>
 <blockquote>
 <p>Predicted vs True 그래프에서는 모델의 평균 예측 값 그래프가 실제 값에 가까울수록 좋은 성능을 가진 모델임을 의미합니다.</p>
 </blockquote>
@@ -233,175 +156,144 @@
 <p>Redisual Histogram은 예측 값과 실제 값 사이의 분산을 나타냅니다. 0쪽에 값이 군집되어 있다는 것은 실제 값과 예측 값의 차이가 0인 경우가 많았다는 의미입니다.</p>
 </blockquote>
 <p>(3) 설명 탭에서 Global Importance 차트를 볼 수 있습니다. 이는 dataset 내의 어떤 feature가 모델의 예측에 가장 많은 영향을 줬는지 보여줍니다.</p>
-<p>
-<img src="images/p16.PNG">
-</p>
+<p><img src="images/p16.PNG" alt=""></p>
 <p>모델을 만들었으면 성능이 가장 좋은 모델을 배포해야 합니다. Azure Machine Learning에서는 ACI(Azure Container Instance)나 AKS(Azure Kubernetes Service) 클러스터에 서비스를 배포할 수 있습니다. 프로덕션 시나리오에서는 Inference Clusters를 생성하여 AKS에 배포하는 것이 권장됩니다. 실습에서는 ACI를 이용해 배포하는 방법을 소개하고 있습니다.
 다음 모듈 실습에서 배포 방법에 대해 다루도록 하겠습니다.</p>
 <p><a href="https://docs.microsoft.com/learn/modules/use-automated-machine-learning/deploy-model">https://docs.microsoft.com/learn/modules/use-automated-machine-learning/deploy-model</a></p>
 <p>자동화된 머신러닝 기능은 현재 미리보기 기능으로 제공됩니다. 향후 GA로 전환될 경우 여러가지 머신러닝 모델을 빠르게 적용하여 최적의 모델을 찾아야 하는 고객에게 유용한 기능이 될 것 같습니다. 많은 데이터에서 유용한 feature를 찾아내고, 분석 목적에 맞게 데이터를 전처리하는 작업도 제공하기 때문에 데이터 과학자가 데이터로부터 의미 있는 인사이트를 도출해내는 일에 더 집중할 수 있습니다.</p>
 
-</div>
-  <div class="post-content">
-      <hr/>
-  <div style="display: flex; flex-direction: row; margin: 10px;">
-    <div style="background: url(https://tech.cloudmt.co.kr/authors/yerim-kim/%ea%b9%80%ec%98%88%eb%a6%bc.jpg) no-repeat center; 
-        background-size: cover; width: 80px; height: 80px; 
-        border-radius: 100%;">
+                </div>
+            </section>
+
+        </article>
+
     </div>
-      <div style="margin-left: 10px; padding-top: 5px;">
-        <strong>김예림</strong>
-        <p>
-            <a href="https://tech.cloudmt.co.kr/authors/yerim-kim/">저자의 글 더 보기.</a>
-        </p>
-      </div>
-  </div>
-  
-</div>
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://tech.cloudmt.co.kr/tags/azure">Azure</a></li>
-      <li><a href="https://tech.cloudmt.co.kr/tags/microsoft-azure">Microsoft Azure</a></li>
-      <li><a href="https://tech.cloudmt.co.kr/tags/data-science">Data Science</a></li>
-      <li><a href="https://tech.cloudmt.co.kr/tags/machine-learning">Machine Learning</a></li>
-    </ul>
-    <nav class="paginav">
-      <a class="prev" href="https://tech.cloudmt.co.kr/2020/08/24/azure-machine-learning-designer%EB%A1%9C-%ED%9A%8C%EA%B7%80-%EB%AA%A8%EB%8D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
-        <span class="title">« Prev Page</span>
-        <br>
-        <span>데린이의 Azure Machine Learning Designer로 회귀 모델 만들기</span>
-      </a>
-      <a class="next" href="https://tech.cloudmt.co.kr/2020/08/07/nambu_womanup_mentoring/">
-        <span class="title">Next Page »</span>
-        <br>
-        <span>남부여성발전센터 멘토링데이 강연 후기</span>
-      </a>
-    </nav>
+</main>
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+    
+    <article class="read-next-card">
+        <header class="read-next-card-header">
+            <h3><span>More in</span> <a href="/tags/azure">Azure</a></h3>
+        </header>
+        <div class="read-next-card-content">
+            <ul>
+                
+            </ul>
+        </div>
+    </article>
+<article class="post-card post
+ no-image
+ ">
 
+        
+    
+        <div class="post-card-content">
+    
+            <a class="post-card-content-link" href="/2020/08/07/nambu_womanup_mentoring/">
+    
+                <header class="post-card-header">
+                    
+                        
+                        <div class="post-card-primary-tag">Cloud</div>
+                    
 
+                    <h2 class="post-card-title">남부여성발전센터 멘토링데이 강연 후기</h2>
+                </header>
+    
+                <section class="post-card-excerpt">
+                    <p>강연 제의 얼마 전, 좋은 기회가 생겨 남부여성발전센터 에서 주최하는 멘토링데이의 멘토로 학생들 앞에서 짧은 강연을 하였습니다.
+강연이라 하기에도 부끄러운 짧은 1시간 동안의 토크.. 정도 이지만, 외부 강연에서의 첫 발을 내딛는다 생각하고 강연에 임하게 되었습니다.
+사실, 평소 사람들 앞에 나서 무언가 발표하고 이야기 하는 것을 어려워 하는 편입니다. 진행을 매끄럽게 하기가 어렵달까요. 물흐르듯 자연스럽게 진행하시는 분들을 보면 너무 신기하고 부럽습니다.
+그래서 처음 남부여성발전센터에서 강연 제의를 받았을 때 많이 망설였었는데요,
+지금 겁난다고 피하고 안하면 앞으로도 영원히 안하게 될 것 같아 도전(?</p>
+                </section>
+    
+            </a>
 
+            <footer class="post-card-meta">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <div class="author-name-tooltip"></div>
+                            <a href="#" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg></a>
+                        </li>
+                    </ul>
+                    <div class="post-card-byline-content">
+                        <span></span>
+                        <span class="post-card-byline-date"><time datetime="2020-128-08">7 August 2020</time>
+                            <span class="bull">&bull;</span> 5 min read</span>
+                    </div>
+                </footer>
+    
+        </div>
 
-
-
-<div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on twitter"
-        href="https://twitter.com/intent/tweet/?text=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5&amp;url=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f&amp;hashtags=Azure%2cMicrosoftAzure%2cDataScience%2cMachineLearning">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f&amp;title=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5&amp;summary=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5&amp;source=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on reddit"
-        href="https://reddit.com/submit?url=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f&title=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on facebook"
-        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on whatsapp"
-        href="https://api.whatsapp.com/send?text=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5%20-%20https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share 데린이의 Azure Machine Learning 실습 on telegram"
-        href="https://telegram.me/share/url?text=%eb%8d%b0%eb%a6%b0%ec%9d%b4%ec%9d%98%20Azure%20Machine%20Learning%20%ec%8b%a4%ec%8a%b5&amp;url=https%3a%2f%2ftech.cloudmt.co.kr%2f2020%2f08%2f19%2fazure-machine-learning%2f">
-        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
-            <path
-                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
-        </svg>
-    </a>
-</div>
-
-  </footer>
 </article>
-    </main><footer class="footer">
-    <span>&copy; 2021 <a href="https://tech.cloudmt.co.kr">CLOUDMATE Tech</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
-</a>
+    
+
+            <article class="post-card post
+ no-image
+ ">
+
+        
+    
+        <div class="post-card-content">
+    
+            <a class="post-card-content-link" href="/2020/08/24/azure-machine-learning-designer%EB%A1%9C-%ED%9A%8C%EA%B7%80-%EB%AA%A8%EB%8D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+    
+                <header class="post-card-header">
+                    
+                        
+                        <div class="post-card-primary-tag">Azure</div>
+                    
+
+                    <h2 class="post-card-title">데린이의 Azure Machine Learning Designer로 회귀 모델 만들기</h2>
+                </header>
+    
+                <section class="post-card-excerpt">
+                    <p>이번 포스팅은 Azure Machine Learning 실습 자료를 바탕으로 작성하였습니다. 해당 모듈은 Azure Machine Learning을 사용하여 코드 없이 예측 모델 만들기 실습의 두 번째 모듈입니다.
+1. 회귀란 무엇일까? 지난 포스팅에서도 특정 날짜의 자전거 대여 수를 예측하기 위해 회귀 분석을 사용하였습니다. 회귀는 특징(features)을 기반으로 numeric label을 예측하기 위해 사용하는 머신러닝 모델입니다. 예를 들어 중고 자동차 판매 회사는 엔진 크기, 시트 개수, 주행량 등 차의 특징을 이용하여 판매 가능한 가격을 예측할 수 있습니다. 이 경우, 차의 특징은 feature가 되고, 판매 가격은 label이 됩니다.</p>
+                </section>
+    
+            </a>
+
+            <footer class="post-card-meta">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <div class="author-name-tooltip"></div>
+                            <a href="#" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg></a>
+                        </li>
+                    </ul>
+                    <div class="post-card-byline-content">
+                        <span></span>
+                        <span class="post-card-byline-date"><time datetime="2020-128-08">24 August 2020</time>
+                            <span class="bull">&bull;</span> 5 min read</span>
+                    </div>
+                </footer>
+    
+        </div>
+
+</article>
+    
+        </div>
+    </div>
+</aside>
 
 
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="">CLOUDMATE Tech</a> &copy; 2020</section>
+                <nav class="site-footer-nav">
+                    <a href="">Latest Posts</a>
+                    
+                    
+                    
+                    <a href="https://jonathanjanssens.com" target="_blank" rel="noopener" style="opacity: 0.5;">Hugo Casper3 by Jonathan Janssens</a>
+                </nav>
+            </div>
+        </footer>
 
-<script defer src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
-    }
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+    </div>
 
 </body>
-
 </html>

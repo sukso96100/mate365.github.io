@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NetApp Insight 2019 on CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/tags/netapp-insight-2019/</link>
+    <link>/tags/netapp-insight-2019/</link>
     <description>Recent content in NetApp Insight 2019 on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/netapp-insight-2019/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/netapp-insight-2019/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NetApp Insight 2019 후기(1/2)</title>
-      <link>https://tech.cloudmt.co.kr/2019/11/28/insight2019_1/</link>
+      <link>/2019/11/28/insight2019_1/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2019/11/28/insight2019_1/</guid>
+      <guid>/2019/11/28/insight2019_1/</guid>
       <description>주저리주저리 10월 28일~30일에 라스베가스에서 NetApp의 최대 행사인 NetApp Insight 2019를 다녀왔습니다. 이미 한달(!!)이나 지난 후기입니다만, 그래도 너그러운 마음으로 봐주시면 감사하겠습니다. 우선 행사에 참석할 수 있게 많은 도움을 주신 NetApp 관계자 여러분들께 진심으로 감사의 말씀 올립니다.(열심히 하겠습니다!) 이번 행사는 곧이어 쓸 Microsoft Ignite 2019 행사와 패키지(?)로 가게되어 앞뒤로 휴가를 붙여서 샌프란시스코-라스베가스(행사)-올랜도(행사)-뉴욕 이렇게 다녀왔습니다. 이번 라스베가스에서 느낀 점은 사막은 사막이라는 겁니다. 엄청 건조해서 로션을 하루에 두번씩 발라도 몸이 갈라지는게 느껴질 정도네요. 사막인데다 미국은 온풍기가 돌기에 물에 젖은 수건이 4시간만에 마르는 기적을 볼 수 있었습니다.</description>
     </item>
     
     <item>
       <title>NetApp Insight 2019 후기(2/2)</title>
-      <link>https://tech.cloudmt.co.kr/2019/11/28/insight2019_2/</link>
+      <link>/2019/11/28/insight2019_2/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2019/11/28/insight2019_2/</guid>
+      <guid>/2019/11/28/insight2019_2/</guid>
       <description>Insight 2019 행사 2일차 행사 2일차엔 Keynote가 있어서 모든 행사가 9시에 시작합니다. 오전 내내 Keynote를 하는 일정입니다. 동영상과 행사 스케치는 NetApp Insight Keynote에서 확인하실 수 있습니다. Keynote에서 주요하게 다룬 내용은 총 5가지입니다.
   Build Your Data Fabric 앞서 1일차때 들었던 두번째 세션의 내용입니다. Data Fabric은 온프레스 및 멀티클라우드 환경에 걸친 다양한 엔드 포인트에서 일관된 기능을 제공하는 아키텍처 및 데이터 서비스 세트입니다. 최근 많은 기업이 디지털 트랜스포밍을 하고 인프라를 혁신하는 가운데 데이터 관리에 대한 고민이 깊어질 것입니다.</description>
     </item>

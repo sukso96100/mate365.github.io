@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IoT on CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/tags/iot/</link>
+    <link>/tags/iot/</link>
     <description>Recent content in IoT on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure IoT Hub 시작하기 -2</title>
-      <link>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2/</link>
+      <link>/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2/</guid>
+      <guid>/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2/</guid>
       <description>Stream Analytics job은 여러 원본으로부터 스트리밍 데이터를 동시에 분석 및 처리하도록 설계된 이벤트 처리 엔진입니다. Azure IoT Hub, Azure Event Hubs, Azure Blob Storage에서 원본 데이터를 수집할 수 있습니다. 이번 포스팅에서는 IoT Hub에서 Azure Stream Analytics job으로 데이터를 전송하고, 결과를 Blob 스토리지에 저장하는 방법을 소개합니다.
- Stream Analytics job  목차는 다음과 같습니다.
- Azure Stream Analytics job 생성 Blob Storage 생성 입력 및 출력 설정 쿼리 수정 작동 테스트  1.</description>
+목차는 다음과 같습니다.
+ Azure Stream Analytics job 생성 Blob Storage 생성 입력 및 출력 설정 쿼리 수정 작동 테스트  1. Azure Stream Analytics job 생성   Azure Portal에서 스트림 분석 작업을 검색하여 선택합니다.</description>
     </item>
     
     <item>
       <title>Azure IoT Hub 시작하기 -3</title>
-      <link>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/</link>
+      <link>/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/</guid>
+      <guid>/2020/07/31/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3/</guid>
       <description>IoT Hub에서 서비스 버스로 라우팅을 설정하고, Logic Apps를 이용해 메일 알람을 설정하는 방법을 알아보겠습니다.
 장비의 이상 탐지를 위해 IoT Hub에서 특정 값이 있는 메시지를 Azure Service Bus의 큐로 전송합니다. Logic Apps를 통해 큐의 메시지를 3분마다 한 번 검색하여 큐에 내용이 있으면 메일로 해당 내용을 전송하도록 합니다.
 목차는 다음과 같습니다.
@@ -31,10 +31,10 @@
     
     <item>
       <title>Azure IoT Hub 시작하기 -1</title>
-      <link>https://tech.cloudmt.co.kr/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>/2020/07/30/azure-iot-hub-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       <description>지난 포스팅에서 Azure에서 제안하는 IoT 아키텍처를 소개하고, 각 구성 요소를 살펴보았습니다. 이번에는 예제 애플리케이션을 사용하여 원격 장치 데이터를 IoT 허브로 전송하는 방법을 알아보겠습니다. 해당 예제의 시뮬레이터는 MQTT를 통해 IoT 허브로 온습도 정보를 1초에 한 번 전송하도록 구성되어 있습니다.
 목차는 다음과 같습니다.
  실습 환경 설정 SDK 다운로드 및 빌드 IoT 허브 생성 및 디바이스 등록 허브에서 데이터 읽기 스토리지 계정으로 메시지 라우팅  1. 실습 환경 설정  Visual Studio 2019 설치 - C++를 사용한 데스크톱 개발 워크로드 사용 설정 최신 버전의 Git 설치 애플리케이션을 실행할 환경의 방화벽에서 8883 포트를 열어 MQTT 프로토콜 통신 허용 운영 체제에 맞는 CMake 빌드 시스템 다운로드하고 환경 변수에 추가  2.</description>
@@ -42,10 +42,10 @@
     
     <item>
       <title>Azure IoT Architecture</title>
-      <link>https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/</link>
+      <link>/2020/07/27/azure-iot-architecture/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/07/27/azure-iot-architecture/</guid>
+      <guid>/2020/07/27/azure-iot-architecture/</guid>
       <description>IoT란 각종 사물에 센서와 통신 기능을 내장하여 무선 네트워크 상에서 데이터를 수집하고 전송하는 시스템을 말합니다. Azure Architecture Center에서 제안하는 IoT 참조 아키텍처를 설명합니다.
 Azure IoT Reference Architecture Microsoft가 제안하는 Azure PaaS component를 이용한 아키텍처는 다음과 같습니다. Edge Device와 IoT 디바이스로부터 온 데이터의 형식을 변환해서 Cold Path와 Warm Path로 데이터를 나눠서 처리하고, 미리 수집한 데이터와 디바이스 데이터를 결합하여 머신러닝을 적용해 비즈니스 인사이트를 도출합니다.
  Cold Path, Warm Path? 측정 데이터 처리 방식에 따라 나눌 수 있습니다.</description>

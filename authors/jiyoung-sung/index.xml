@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/authors/jiyoung-sung/</link>
+    <link>/authors/jiyoung-sung/</link>
     <description>Recent content on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/authors/jiyoung-sung/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/authors/jiyoung-sung/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DevTest 통한 DevOps 구성하기</title>
-      <link>https://tech.cloudmt.co.kr/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</link>
+      <link>/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</guid>
+      <guid>/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</guid>
       <description>1. DevOps 정의 DevOps란 개발(Development)과 운영(Operation)을 결합한 혼성어로 소프트웨어 개발 방법론의 하나이다.
 개발 과정을 들어가게 되면 개발 환경 구축, 모니터링 등의 업무처럼 담당자가 명확히 정해지지 않은 업무들이 생기고 대부분을 개발자들이 처리하다 보니 업무 처리하는 데에 있어 불균형이 발생하여 업무 분배를 명확히 하고 이에 집중하는 것이 매우 중요하다. 이를 위해서 DevOps는 애자일 방법론, 파이프라인 구축, 자동화 도구를 조직에 도입하여 개발과 운영을 보다 쉽게 실행하고 그 과정을 대시보드를 통해 공유하고 투명하게 공개하여 소통과 협업을 할 수 있게 해준다.</description>
     </item>

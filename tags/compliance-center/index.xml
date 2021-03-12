@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Compliance Center on CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/tags/compliance-center/</link>
+    <link>/tags/compliance-center/</link>
     <description>Recent content in Compliance Center on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/compliance-center/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/compliance-center/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microsoft 365 규정 준수 센터의 규정 준수 점수</title>
-      <link>https://tech.cloudmt.co.kr/2020/01/09/compliancecenter/</link>
+      <link>/2020/01/09/compliancecenter/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/01/09/compliancecenter/</guid>
+      <guid>/2020/01/09/compliancecenter/</guid>
       <description>Microsoft Compliance Score and Microsoft 365 Compliance Center Microsoft에서는 보안을 위한 대비책으로 규정 준수라는 이름의 서비스를 활성화하기 시작했습니다. 이 Microsoft 준수 점수 미리보기 기능은, Microsoft 365 SKU를 사용하는 고객에게 활성화 되어 있으며 고객의 보안에 대한 진척도 및 중요도를 점수로 표현하여 보다 안전한 사용 관리를 위해 제공되고 있습니다.
 특히 이 규정 준수 점수를 통하여 모든 위험 평가를 추적하는 도구로 사용할 수 있으며, 간소화 된 준수 관리를 통해 지속적인 평가와 권장 작업 그리고 기본 제공 컨트롤 매핑을 제공합니다.</description>
     </item>

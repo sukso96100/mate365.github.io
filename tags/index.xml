@@ -2,727 +2,727 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS</title>
-      <link>https://tech.cloudmt.co.kr/tags/aws/</link>
+      <link>/tags/aws/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/aws/</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Budget</title>
-      <link>https://tech.cloudmt.co.kr/tags/budget/</link>
+      <link>/tags/budget/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/budget/</guid>
+      <guid>/tags/budget/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NetApp</title>
-      <link>https://tech.cloudmt.co.kr/tags/netapp/</link>
+      <link>/tags/netapp/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/netapp/</guid>
+      <guid>/tags/netapp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spot</title>
-      <link>https://tech.cloudmt.co.kr/tags/spot/</link>
+      <link>/tags/spot/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/spot/</guid>
+      <guid>/tags/spot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Architecture</title>
-      <link>https://tech.cloudmt.co.kr/tags/architecture/</link>
+      <link>/tags/architecture/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/architecture/</guid>
+      <guid>/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure/</link>
+      <link>/tags/azure/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/azure/</guid>
+      <guid>/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud Service</title>
-      <link>https://tech.cloudmt.co.kr/tags/cloud-service/</link>
+      <link>/tags/cloud-service/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/cloud-service/</guid>
+      <guid>/tags/cloud-service/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>https://tech.cloudmt.co.kr/tags/devops/</link>
+      <link>/tags/devops/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/devops/</guid>
+      <guid>/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DevTest</title>
-      <link>https://tech.cloudmt.co.kr/tags/devtest/</link>
+      <link>/tags/devtest/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/devtest/</guid>
+      <guid>/tags/devtest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expenses</title>
-      <link>https://tech.cloudmt.co.kr/tags/expenses/</link>
+      <link>/tags/expenses/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/expenses/</guid>
+      <guid>/tags/expenses/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft/</link>
+      <link>/tags/microsoft/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft/</guid>
+      <guid>/tags/microsoft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS Jams</title>
-      <link>https://tech.cloudmt.co.kr/tags/aws-jams/</link>
+      <link>/tags/aws-jams/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/aws-jams/</guid>
+      <guid>/tags/aws-jams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS Re:Invent</title>
-      <link>https://tech.cloudmt.co.kr/tags/aws-reinvent/</link>
+      <link>/tags/aws-reinvent/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/aws-reinvent/</guid>
+      <guid>/tags/aws-reinvent/</guid>
       <description></description>
     </item>
     
     <item>
       <title>FortiGate</title>
-      <link>https://tech.cloudmt.co.kr/tags/fortigate/</link>
+      <link>/tags/fortigate/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/fortigate/</guid>
+      <guid>/tags/fortigate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fortinet</title>
-      <link>https://tech.cloudmt.co.kr/tags/fortinet/</link>
+      <link>/tags/fortinet/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/fortinet/</guid>
+      <guid>/tags/fortinet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transit Gateway</title>
-      <link>https://tech.cloudmt.co.kr/tags/transit-gateway/</link>
+      <link>/tags/transit-gateway/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/transit-gateway/</guid>
+      <guid>/tags/transit-gateway/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Datadog</title>
-      <link>https://tech.cloudmt.co.kr/tags/datadog/</link>
+      <link>/tags/datadog/</link>
       <pubDate>Thu, 10 Dec 2020 19:12:00 +0900</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/datadog/</guid>
+      <guid>/tags/datadog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logs</title>
-      <link>https://tech.cloudmt.co.kr/tags/logs/</link>
+      <link>/tags/logs/</link>
       <pubDate>Thu, 10 Dec 2020 19:12:00 +0900</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/logs/</guid>
+      <guid>/tags/logs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>https://tech.cloudmt.co.kr/tags/terraform/</link>
+      <link>/tags/terraform/</link>
       <pubDate>Thu, 10 Dec 2020 16:12:00 +0900</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/terraform/</guid>
+      <guid>/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>EC2]</title>
-      <link>https://tech.cloudmt.co.kr/tags/ec2/</link>
+      <link>/tags/ec2/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/ec2/</guid>
+      <guid>/tags/ec2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IAM</title>
-      <link>https://tech.cloudmt.co.kr/tags/iam/</link>
+      <link>/tags/iam/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/iam/</guid>
+      <guid>/tags/iam/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Session Manager</title>
-      <link>https://tech.cloudmt.co.kr/tags/session-manager/</link>
+      <link>/tags/session-manager/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/session-manager/</guid>
+      <guid>/tags/session-manager/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Systems Manager</title>
-      <link>https://tech.cloudmt.co.kr/tags/systems-manager/</link>
+      <link>/tags/systems-manager/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/systems-manager/</guid>
+      <guid>/tags/systems-manager/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Amazon Web Services</title>
-      <link>https://tech.cloudmt.co.kr/tags/amazon-web-services/</link>
+      <link>/tags/amazon-web-services/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/amazon-web-services/</guid>
+      <guid>/tags/amazon-web-services/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>https://tech.cloudmt.co.kr/tags/cloud/</link>
+      <link>/tags/cloud/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/cloud/</guid>
+      <guid>/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DB Migration</title>
-      <link>https://tech.cloudmt.co.kr/tags/db-migration/</link>
+      <link>/tags/db-migration/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/db-migration/</guid>
+      <guid>/tags/db-migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DMS</title>
-      <link>https://tech.cloudmt.co.kr/tags/dms/</link>
+      <link>/tags/dms/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/dms/</guid>
+      <guid>/tags/dms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MySQL</title>
-      <link>https://tech.cloudmt.co.kr/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On-premise</title>
-      <link>https://tech.cloudmt.co.kr/tags/on-premise/</link>
+      <link>/tags/on-premise/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/on-premise/</guid>
+      <guid>/tags/on-premise/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle</title>
-      <link>https://tech.cloudmt.co.kr/tags/oracle/</link>
+      <link>/tags/oracle/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/oracle/</guid>
+      <guid>/tags/oracle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SCT</title>
-      <link>https://tech.cloudmt.co.kr/tags/sct/</link>
+      <link>/tags/sct/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/sct/</guid>
+      <guid>/tags/sct/</guid>
       <description></description>
     </item>
     
     <item>
       <title>App Service</title>
-      <link>https://tech.cloudmt.co.kr/tags/app-service/</link>
+      <link>/tags/app-service/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/app-service/</guid>
+      <guid>/tags/app-service/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Devops</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure-devops/</link>
+      <link>/tags/azure-devops/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/azure-devops/</guid>
+      <guid>/tags/azure-devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft Azure</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft-azure/</link>
+      <link>/tags/microsoft-azure/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft-azure/</guid>
+      <guid>/tags/microsoft-azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dev Test Labs</title>
-      <link>https://tech.cloudmt.co.kr/tags/dev-test-labs/</link>
+      <link>/tags/dev-test-labs/</link>
       <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/dev-test-labs/</guid>
+      <guid>/tags/dev-test-labs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>https://tech.cloudmt.co.kr/tags/data-science/</link>
+      <link>/tags/data-science/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/data-science/</guid>
+      <guid>/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>https://tech.cloudmt.co.kr/tags/machine-learning/</link>
+      <link>/tags/machine-learning/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/machine-learning/</guid>
+      <guid>/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IoT</title>
-      <link>https://tech.cloudmt.co.kr/tags/iot/</link>
+      <link>/tags/iot/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/iot/</guid>
+      <guid>/tags/iot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AKS</title>
-      <link>https://tech.cloudmt.co.kr/tags/aks/</link>
+      <link>/tags/aks/</link>
       <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/aks/</guid>
+      <guid>/tags/aks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monitoring</title>
-      <link>https://tech.cloudmt.co.kr/tags/monitoring/</link>
+      <link>/tags/monitoring/</link>
       <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/monitoring/</guid>
+      <guid>/tags/monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CVO</title>
-      <link>https://tech.cloudmt.co.kr/tags/cvo/</link>
+      <link>/tags/cvo/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/cvo/</guid>
+      <guid>/tags/cvo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logic App</title>
-      <link>https://tech.cloudmt.co.kr/tags/logic-app/</link>
+      <link>/tags/logic-app/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/logic-app/</guid>
+      <guid>/tags/logic-app/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft 365</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft-365/</link>
+      <link>/tags/microsoft-365/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft-365/</guid>
+      <guid>/tags/microsoft-365/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microsoft teams</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft-teams/</link>
+      <link>/tags/microsoft-teams/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft-teams/</guid>
+      <guid>/tags/microsoft-teams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Office 365</title>
-      <link>https://tech.cloudmt.co.kr/tags/office-365/</link>
+      <link>/tags/office-365/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/office-365/</guid>
+      <guid>/tags/office-365/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teams</title>
-      <link>https://tech.cloudmt.co.kr/tags/teams/</link>
+      <link>/tags/teams/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/teams/</guid>
+      <guid>/tags/teams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS Cloudfront</title>
-      <link>https://tech.cloudmt.co.kr/tags/aws-cloudfront/</link>
+      <link>/tags/aws-cloudfront/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/aws-cloudfront/</guid>
+      <guid>/tags/aws-cloudfront/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure CDN</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure-cdn/</link>
+      <link>/tags/azure-cdn/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/azure-cdn/</guid>
+      <guid>/tags/azure-cdn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CDN</title>
-      <link>https://tech.cloudmt.co.kr/tags/cdn/</link>
+      <link>/tags/cdn/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/cdn/</guid>
+      <guid>/tags/cdn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>codespace</title>
-      <link>https://tech.cloudmt.co.kr/tags/codespace/</link>
+      <link>/tags/codespace/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/codespace/</guid>
+      <guid>/tags/codespace/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visual Studio</title>
-      <link>https://tech.cloudmt.co.kr/tags/visual-studio/</link>
+      <link>/tags/visual-studio/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/visual-studio/</guid>
+      <guid>/tags/visual-studio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VScode</title>
-      <link>https://tech.cloudmt.co.kr/tags/vscode/</link>
+      <link>/tags/vscode/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vscode/</guid>
+      <guid>/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VSCodespace</title>
-      <link>https://tech.cloudmt.co.kr/tags/vscodespace/</link>
+      <link>/tags/vscodespace/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vscodespace/</guid>
+      <guid>/tags/vscodespace/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VSonline</title>
-      <link>https://tech.cloudmt.co.kr/tags/vsonline/</link>
+      <link>/tags/vsonline/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vsonline/</guid>
+      <guid>/tags/vsonline/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Active Directory</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure-active-directory/</link>
+      <link>/tags/azure-active-directory/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/azure-active-directory/</guid>
+      <guid>/tags/azure-active-directory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure AD</title>
-      <link>https://tech.cloudmt.co.kr/tags/azure-ad/</link>
+      <link>/tags/azure-ad/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/azure-ad/</guid>
+      <guid>/tags/azure-ad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>G Suite</title>
-      <link>https://tech.cloudmt.co.kr/tags/g-suite/</link>
+      <link>/tags/g-suite/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/g-suite/</guid>
+      <guid>/tags/g-suite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Access Package</title>
-      <link>https://tech.cloudmt.co.kr/tags/access-package/</link>
+      <link>/tags/access-package/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/access-package/</guid>
+      <guid>/tags/access-package/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compliance Center</title>
-      <link>https://tech.cloudmt.co.kr/tags/compliance-center/</link>
+      <link>/tags/compliance-center/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/compliance-center/</guid>
+      <guid>/tags/compliance-center/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compliance Score</title>
-      <link>https://tech.cloudmt.co.kr/tags/compliance-score/</link>
+      <link>/tags/compliance-score/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/compliance-score/</guid>
+      <guid>/tags/compliance-score/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Entitlement management</title>
-      <link>https://tech.cloudmt.co.kr/tags/entitlement-management/</link>
+      <link>/tags/entitlement-management/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/entitlement-management/</guid>
+      <guid>/tags/entitlement-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Provisioning</title>
-      <link>https://tech.cloudmt.co.kr/tags/provisioning/</link>
+      <link>/tags/provisioning/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/provisioning/</guid>
+      <guid>/tags/provisioning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sync</title>
-      <link>https://tech.cloudmt.co.kr/tags/sync/</link>
+      <link>/tags/sync/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/sync/</guid>
+      <guid>/tags/sync/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ignite 2019</title>
-      <link>https://tech.cloudmt.co.kr/tags/ignite-2019/</link>
+      <link>/tags/ignite-2019/</link>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/ignite-2019/</guid>
+      <guid>/tags/ignite-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft Ignite</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft-ignite/</link>
+      <link>/tags/microsoft-ignite/</link>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft-ignite/</guid>
+      <guid>/tags/microsoft-ignite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft Ignite 2019</title>
-      <link>https://tech.cloudmt.co.kr/tags/microsoft-ignite-2019/</link>
+      <link>/tags/microsoft-ignite-2019/</link>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/microsoft-ignite-2019/</guid>
+      <guid>/tags/microsoft-ignite-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>후기</title>
-      <link>https://tech.cloudmt.co.kr/tags/%ED%9B%84%EA%B8%B0/</link>
+      <link>/tags/%ED%9B%84%EA%B8%B0/</link>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/%ED%9B%84%EA%B8%B0/</guid>
+      <guid>/tags/%ED%9B%84%EA%B8%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Fabric</title>
-      <link>https://tech.cloudmt.co.kr/tags/data-fabric/</link>
+      <link>/tags/data-fabric/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/data-fabric/</guid>
+      <guid>/tags/data-fabric/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GCP</title>
-      <link>https://tech.cloudmt.co.kr/tags/gcp/</link>
+      <link>/tags/gcp/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/gcp/</guid>
+      <guid>/tags/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NetApp Insight</title>
-      <link>https://tech.cloudmt.co.kr/tags/netapp-insight/</link>
+      <link>/tags/netapp-insight/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/netapp-insight/</guid>
+      <guid>/tags/netapp-insight/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NetApp Insight 2019</title>
-      <link>https://tech.cloudmt.co.kr/tags/netapp-insight-2019/</link>
+      <link>/tags/netapp-insight-2019/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/netapp-insight-2019/</guid>
+      <guid>/tags/netapp-insight-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Fabric</title>
-      <link>https://tech.cloudmt.co.kr/tags/service-fabric/</link>
+      <link>/tags/service-fabric/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/service-fabric/</guid>
+      <guid>/tags/service-fabric/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tip</title>
-      <link>https://tech.cloudmt.co.kr/tags/tip/</link>
+      <link>/tags/tip/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/tip/</guid>
+      <guid>/tags/tip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hands on Lab</title>
-      <link>https://tech.cloudmt.co.kr/tags/hands-on-lab/</link>
+      <link>/tags/hands-on-lab/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/hands-on-lab/</guid>
+      <guid>/tags/hands-on-lab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HOL</title>
-      <link>https://tech.cloudmt.co.kr/tags/hol/</link>
+      <link>/tags/hol/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/hol/</guid>
+      <guid>/tags/hol/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Peering</title>
-      <link>https://tech.cloudmt.co.kr/tags/peering/</link>
+      <link>/tags/peering/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/peering/</guid>
+      <guid>/tags/peering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VGW</title>
-      <link>https://tech.cloudmt.co.kr/tags/vgw/</link>
+      <link>/tags/vgw/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vgw/</guid>
+      <guid>/tags/vgw/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vNet</title>
-      <link>https://tech.cloudmt.co.kr/tags/vnet/</link>
+      <link>/tags/vnet/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vnet/</guid>
+      <guid>/tags/vnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPC</title>
-      <link>https://tech.cloudmt.co.kr/tags/vpc/</link>
+      <link>/tags/vpc/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vpc/</guid>
+      <guid>/tags/vpc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPN</title>
-      <link>https://tech.cloudmt.co.kr/tags/vpn/</link>
+      <link>/tags/vpn/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/tags/vpn/</guid>
+      <guid>/tags/vpn/</guid>
       <description></description>
     </item>
     

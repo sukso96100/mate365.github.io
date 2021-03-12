@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terraform on CLOUDMATE Tech</title>
-    <link>https://tech.cloudmt.co.kr/tags/terraform/</link>
+    <link>/tags/terraform/</link>
     <description>Recent content in Terraform on CLOUDMATE Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 16:12:00 +0900</lastBuildDate><atom:link href="https://tech.cloudmt.co.kr/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2020 16:12:00 +0900</lastBuildDate><atom:link href="/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Datadog 알람을 Terraform으로 만들어 보자.</title>
-      <link>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</link>
+      <link>/2020/12/10/datadog-terraform/</link>
       <pubDate>Thu, 10 Dec 2020 16:12:00 +0900</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2020/12/10/datadog-terraform/</guid>
+      <guid>/2020/12/10/datadog-terraform/</guid>
       <description>여러 클라우드 환경에서 이곳저곳 산재되어 있는 클라우드 리소스들을 통합적으로 모니터링이 가능하게 해주는 모니터링 솔루션인 Datadog을 알아 보자.
 Datadog은 Monitor 기능을 통해 리소스들에 문제가 발생 시 알람을 받을 수 있도록 하는 기능을 제공 한다.
 여러 서비스를 신규 런칭을 위해 이러한 알람을 새롭게 생성할 때 마다 Datadog Console에서 마우스로 직접 할 때의 과정은 여간 귀찮은게 아니다. -_-;
@@ -20,13 +20,13 @@ Datadog은 Monitor 기능을 통해 리소스들에 문제가 발생 시 알람�
     
     <item>
       <title>Azure와 AWS간 VPN 연결하기 (Terraform)</title>
-      <link>https://tech.cloudmt.co.kr/2019/08/09/post/</link>
+      <link>/2019/08/09/post/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tech.cloudmt.co.kr/2019/08/09/post/</guid>
+      <guid>/2019/08/09/post/</guid>
       <description>Azure Virtual Network와 AWS VPC(Virtual Private Cloud)를 논리적으로 연동하고 싶은 분들이 계실 것입니다. Azure를 사용하면서 AWS도 함께 사용하고 싶고, 각각 Cloud 업체의 장점을 활용하고 싶을 수도 있습니다. 그러한 경우 두 개의 Network를 논리적으로 연결하고 싶은 욕망이 생길 것이고 이를 관리하길 원하실 것입니다.
 그러한 요구사항을 해소하기 위해 Azure Virtual Network Gateway와 AWS VPN Connection을 연결하여 Azure Virtual Network와 AWS VPC를 논리적으로 연결하는 방법에 대해 알아봅시다.
- Azure_to_AWS_VPN  Azure Virtual Network Gateway Azure Virtual Network Gateway(Network GW)는 IPSec VPN(Site-to-Site)과 SSL VPN(Point to Site)을 모두 지원합니다.</description>
+Azure Virtual Network Gateway Azure Virtual Network Gateway(Network GW)는 IPSec VPN(Site-to-Site)과 SSL VPN(Point to Site)을 모두 지원합니다.</description>
     </item>
     
   </channel>

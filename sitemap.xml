@@ -17,9 +17,6 @@
     <loc>/categories/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/netapp/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -36,6 +33,9 @@
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/authors/daniel-lim/</loc>

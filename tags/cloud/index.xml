@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud on CLOUDMATE Tech</title>
+    <title>Cloud on 클라우드메이트 기술 블로그</title>
     <link>/tags/cloud/</link>
-    <description>Recent content in Cloud on CLOUDMATE Tech</description>
+    <description>Recent content in Cloud on 클라우드메이트 기술 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>

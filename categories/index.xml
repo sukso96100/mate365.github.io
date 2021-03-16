@@ -24,5 +24,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Cloumn</title>
+      <link>/categories/column/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/column/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hands On</title>
+      <link>/categories/hands-on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/hands-on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mate Story</title>
+      <link>/categories/mate-story/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/mate-story/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

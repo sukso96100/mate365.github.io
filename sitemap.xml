@@ -17,10 +17,10 @@
     <loc>/categories/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/netapp/</loc>
+    <loc>/categories/hands-on/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/post/</loc>
+    <loc>/tags/netapp/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
@@ -53,19 +53,25 @@
     <loc>/tags/cloud-service/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/column/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/devops/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/devtest/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/2021/02/16/devtest-%ED%86%B5%ED%95%9C-devops-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
+    <loc>/2021/02/16/devtest_%ED%86%B5%ED%95%9C_devops_%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/expenses/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/microsoft/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/tech/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/2021/02/16/%EC%A0%81%EC%A0%88%ED%95%9Cazure%EC%9A%B4%EC%98%81%EC%9C%BC%EB%A1%9C%EB%B9%84%EC%9A%A9%EC%9D%84%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EC%8B%9C%EB%A9%B4%EB%90%A9%EB%8B%88%EB%8B%A4/</loc>
@@ -173,9 +179,6 @@
     <loc>/tags/microsoft-azure/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/tech/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/dev-test-labs/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -198,6 +201,9 @@
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/authors/seungyoon-lee/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/mate-story/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/2020/08/07/nambu_womanup_mentoring/</loc>
@@ -422,11 +428,5 @@
     <loc>/authors/yeongkwan-shin/</loc>
   </url><url>
     <loc>/archives/</loc>
-  </url><url>
-    <loc>/categories/column/</loc>
-  </url><url>
-    <loc>/categories/hands-on/</loc>
-  </url><url>
-    <loc>/categories/mate-story/</loc>
   </url>
 </urlset>
